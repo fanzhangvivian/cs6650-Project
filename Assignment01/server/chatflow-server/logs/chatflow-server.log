@@ -1,0 +1,192 @@
+2026-02-08T17:30:29.039-08:00  INFO 6365 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Starting ChatFlowServerApplication v1.0.0 using Java 17.0.18 with PID 6365 (/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment01/server/chatflow-server/target/chatflow-server.jar started by vivianzhang in /Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment01/server/chatflow-server)
+2026-02-08T17:30:29.042-08:00 DEBUG 6365 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-08T17:30:29.042-08:00  INFO 6365 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-08T17:30:29.770-08:00  INFO 6365 --- [chatflow-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-08T17:30:29.776-08:00  INFO 6365 --- [chatflow-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-08T17:30:29.776-08:00  INFO 6365 --- [chatflow-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-08T17:30:29.804-08:00  INFO 6365 --- [chatflow-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-08T17:30:29.805-08:00  INFO 6365 --- [chatflow-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 684 ms
+2026-02-08T17:30:29.860-08:00 DEBUG 6365 --- [chatflow-server] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/chat/{roomId}] in 'webSocketHandlerMapping'
+2026-02-08T17:30:30.029-08:00  INFO 6365 --- [chatflow-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-08T17:30:30.044-08:00  INFO 6365 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Started ChatFlowServerApplication in 1.306 seconds (process running for 1.591)
+2026-02-08T17:31:11.302-08:00  INFO 6365 --- [chatflow-server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-08T17:31:11.302-08:00  INFO 6365 --- [chatflow-server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-08T17:31:11.304-08:00  INFO 6365 --- [chatflow-server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-08T17:33:42.199-08:00  INFO 7087 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Starting ChatFlowServerApplication v1.0.0 using Java 17.0.18 with PID 7087 (/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment01/server/chatflow-server/target/chatflow-server.jar started by vivianzhang in /Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment01/server/chatflow-server)
+2026-02-08T17:33:42.201-08:00 DEBUG 7087 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-02-08T17:33:42.202-08:00  INFO 7087 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-08T17:33:43.133-08:00  INFO 7087 --- [chatflow-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-08T17:33:43.145-08:00  INFO 7087 --- [chatflow-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-08T17:33:43.146-08:00  INFO 7087 --- [chatflow-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-08T17:33:43.191-08:00  INFO 7087 --- [chatflow-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-08T17:33:43.191-08:00  INFO 7087 --- [chatflow-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 924 ms
+2026-02-08T17:33:43.267-08:00 DEBUG 7087 --- [chatflow-server] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/chat/{roomId}] in 'webSocketHandlerMapping'
+2026-02-08T17:33:43.477-08:00  INFO 7087 --- [chatflow-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-08T17:33:43.491-08:00  INFO 7087 --- [chatflow-server] [main] com.chatflow.ChatFlowServerApplication   : Started ChatFlowServerApplication in 1.637 seconds (process running for 2.032)
+2026-02-08T17:35:12.519-08:00  INFO 7087 --- [chatflow-server] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-08T17:35:12.520-08:00  INFO 7087 --- [chatflow-server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-08T17:35:12.522-08:00  INFO 7087 --- [chatflow-server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-08T17:35:12.533-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-2] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@4195105b
+2026-02-08T17:35:12.541-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-2] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /chat/room1
+2026-02-08T17:35:12.567-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-2] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=58b7b839-42d0-0ad1-5b4f-0131cee48e38, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:36:04.296-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-8] s.w.s.h.LoggingWebSocketHandlerDecorator : Transport error in StandardWebSocketSession[id=58b7b839-42d0-0ad1-5b4f-0131cee48e38, uri=ws://localhost:8080/chat/room1]
+
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1296) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1184) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-02-08T17:36:04.304-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-8] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=58b7b839-42d0-0ad1-5b4f-0131cee48e38, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:36:04.308-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-8] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=58b7b839-42d0-0ad1-5b4f-0131cee48e38, uri=ws://localhost:8080/chat/room1] closed with CloseStatus[code=1011, reason=null]
+2026-02-08T17:36:11.876-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-10] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@4195105b
+2026-02-08T17:36:11.877-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-10] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /chat/room1
+2026-02-08T17:36:11.879-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-10] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=29b95fbb-e9e9-89d2-639a-6fa7c6e0b818, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:36:37.947-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-12] s.w.s.h.LoggingWebSocketHandlerDecorator : Transport error in StandardWebSocketSession[id=29b95fbb-e9e9-89d2-639a-6fa7c6e0b818, uri=ws://localhost:8080/chat/room1]
+
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1296) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1184) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-02-08T17:36:37.952-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-12] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=29b95fbb-e9e9-89d2-639a-6fa7c6e0b818, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:36:37.954-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-12] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=29b95fbb-e9e9-89d2-639a-6fa7c6e0b818, uri=ws://localhost:8080/chat/room1] closed with CloseStatus[code=1011, reason=null]
+2026-02-08T17:36:46.947-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-14] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@4195105b
+2026-02-08T17:36:46.949-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-14] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /chat/room1
+2026-02-08T17:36:46.952-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-14] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=2a597f75-49a6-74f6-a0cf-3e2b9eb0fdb1, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:40:06.186-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-27] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@4195105b
+2026-02-08T17:40:06.187-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-27] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /chat/room2
+2026-02-08T17:40:06.192-08:00 DEBUG 7087 --- [chatflow-server] [http-nio-8080-exec-27] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=f50b167d-6e9f-302a-f964-c6df1e7ad3fb, uri=ws://localhost:8080/chat/room2]
+2026-02-08T17:47:27.816-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : Transport error in StandardWebSocketSession[id=2a597f75-49a6-74f6-a0cf-3e2b9eb0fdb1, uri=ws://localhost:8080/chat/room1]
+
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:321) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:257) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:718) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:587) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:554) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:542) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1019) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4466) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5093) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:496) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:969) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:498) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:277) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:350) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:269) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1635) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:165) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:516) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:308) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	... 37 common frames omitted
+
+2026-02-08T17:47:27.822-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=2a597f75-49a6-74f6-a0cf-3e2b9eb0fdb1, uri=ws://localhost:8080/chat/room1]
+2026-02-08T17:47:27.823-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=2a597f75-49a6-74f6-a0cf-3e2b9eb0fdb1, uri=ws://localhost:8080/chat/room1] closed with CloseStatus[code=1001, reason=The web application is stopping]
+2026-02-08T17:47:27.825-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : Transport error in StandardWebSocketSession[id=f50b167d-6e9f-302a-f964-c6df1e7ad3fb, uri=ws://localhost:8080/chat/room2]
+
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:321) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:257) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:718) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:587) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:554) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:542) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1019) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4466) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5093) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:496) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:969) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:498) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:277) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:350) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:269) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1635) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337) ~[tomcat-embed-core-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:165) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:516) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:308) ~[tomcat-embed-websocket-10.1.16.jar!/:na]
+	... 37 common frames omitted
+
+2026-02-08T17:47:27.834-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=f50b167d-6e9f-302a-f964-c6df1e7ad3fb, uri=ws://localhost:8080/chat/room2]
+2026-02-08T17:47:27.834-08:00 DEBUG 7087 --- [chatflow-server] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=f50b167d-6e9f-302a-f964-c6df1e7ad3fb, uri=ws://localhost:8080/chat/room2] closed with CloseStatus[code=1001, reason=The web application is stopping]

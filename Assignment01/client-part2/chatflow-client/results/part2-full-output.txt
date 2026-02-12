@@ -1,0 +1,245 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://52.90.172.30:8080/chat/
+Total messages: 500000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 100 threads × 4680 messages = 468000 messages
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=999, failed=1
+  ✅ Thread pool-1-thread-17 completed: sent=998, failed=2
+  ✅ Thread pool-1-thread-28 completed: sent=997, failed=3
+  ✅ Thread pool-1-thread-15 completed: sent=997, failed=3
+  ✅ Thread pool-1-thread-13 completed: sent=996, failed=4
+  ✅ Thread pool-1-thread-23 completed: sent=996, failed=4
+  ✅ Thread pool-1-thread-25 completed: sent=995, failed=5
+  ✅ Thread pool-1-thread-10 completed: sent=995, failed=5
+  ✅ Thread pool-1-thread-7 completed: sent=995, failed=5
+  ✅ Thread pool-1-thread-32 completed: sent=995, failed=5
+  ✅ Thread pool-1-thread-2 completed: sent=995, failed=5
+  ✅ Thread pool-1-thread-12 completed: sent=994, failed=6
+  ✅ Thread pool-1-thread-4 completed: sent=994, failed=6
+MessageGenerator completed: 32000 messages in 19660ms
+  ✅ Thread pool-1-thread-22 completed: sent=994, failed=6
+  ✅ Thread pool-1-thread-14 completed: sent=993, failed=7
+  ✅ Thread pool-1-thread-27 completed: sent=992, failed=8
+  ✅ Thread pool-1-thread-6 completed: sent=992, failed=8
+  ✅ Thread pool-1-thread-18 completed: sent=991, failed=9
+  ✅ Thread pool-1-thread-33 completed: sent=991, failed=9
+  ✅ Thread pool-1-thread-21 completed: sent=991, failed=9
+  ✅ Thread pool-1-thread-3 completed: sent=990, failed=10
+  ✅ Thread pool-1-thread-8 completed: sent=990, failed=10
+  ✅ Thread pool-1-thread-20 completed: sent=989, failed=11
+  ✅ Thread pool-1-thread-19 completed: sent=989, failed=11
+  ✅ Thread pool-1-thread-31 completed: sent=989, failed=11
+  ✅ Thread pool-1-thread-5 completed: sent=988, failed=12
+  ✅ Thread pool-1-thread-26 completed: sent=988, failed=12
+  ✅ Thread pool-1-thread-9 completed: sent=988, failed=12
+  ✅ Thread pool-1-thread-29 completed: sent=988, failed=12
+  ✅ Thread pool-1-thread-16 completed: sent=987, failed=13
+  ✅ Thread pool-1-thread-11 completed: sent=986, failed=14
+
+✅ Warmup Phase Completed:
+   Duration: 44105 ms
+   Throughput: 725.54 msg/sec
+   Active connections: 20
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Starting 100 threads to send 468000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 468000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  ✅ Thread pool-72-thread-97 completed: sent=4663, failed=17
+  Generated: 200000 messages
+  Generated: 250000 messages
+  ✅ Thread pool-72-thread-94 completed: sent=4656, failed=24
+  Generated: 300000 messages
+  ✅ Thread pool-72-thread-90 completed: sent=4651, failed=29
+  ✅ Thread pool-72-thread-20 completed: sent=4651, failed=29
+  ✅ Thread pool-72-thread-27 completed: sent=4651, failed=29
+  ✅ Thread pool-72-thread-91 completed: sent=4650, failed=30
+  ✅ Thread pool-72-thread-69 completed: sent=4649, failed=31
+  ✅ Thread pool-72-thread-23 completed: sent=4649, failed=31
+  ✅ Thread pool-72-thread-58 completed: sent=4649, failed=31
+  ✅ Thread pool-72-thread-70 completed: sent=4649, failed=31
+  ✅ Thread pool-72-thread-83 completed: sent=4649, failed=31
+  ✅ Thread pool-72-thread-40 completed: sent=4648, failed=32
+  ✅ Thread pool-72-thread-65 completed: sent=4648, failed=32
+  ✅ Thread pool-72-thread-60 completed: sent=4648, failed=32
+  Generated: 350000 messages
+  ✅ Thread pool-72-thread-71 completed: sent=4647, failed=33
+  ✅ Thread pool-72-thread-79 completed: sent=4647, failed=33
+  ✅ Thread pool-72-thread-52 completed: sent=4647, failed=33
+  ✅ Thread pool-72-thread-99 completed: sent=4647, failed=33
+  ✅ Thread pool-72-thread-82 completed: sent=4647, failed=33
+  ✅ Thread pool-72-thread-76 completed: sent=4646, failed=34
+  ✅ Thread pool-72-thread-63 completed: sent=4646, failed=34
+  ✅ Thread pool-72-thread-46 completed: sent=4644, failed=36
+  ✅ Thread pool-72-thread-61 completed: sent=4645, failed=35
+  ✅ Thread pool-72-thread-15 completed: sent=4644, failed=36
+  ✅ Thread pool-72-thread-89 completed: sent=4644, failed=36
+  ✅ Thread pool-72-thread-87 completed: sent=4644, failed=36
+  ✅ Thread pool-72-thread-93 completed: sent=4644, failed=36
+  ✅ Thread pool-72-thread-21 completed: sent=4643, failed=37
+  ✅ Thread pool-72-thread-74 completed: sent=4643, failed=37
+  ✅ Thread pool-72-thread-37 completed: sent=4642, failed=38
+  ✅ Thread pool-72-thread-12 completed: sent=4643, failed=37
+  ✅ Thread pool-72-thread-29 completed: sent=4643, failed=37
+  ✅ Thread pool-72-thread-98 completed: sent=4643, failed=37
+  ✅ Thread pool-72-thread-50 completed: sent=4643, failed=37
+  Generated: 400000 messages
+  ✅ Thread pool-72-thread-42 completed: sent=4642, failed=38
+  ✅ Thread pool-72-thread-55 completed: sent=4641, failed=39
+  ✅ Thread pool-72-thread-53 completed: sent=4642, failed=38
+  ✅ Thread pool-72-thread-92 completed: sent=4642, failed=38
+  ✅ Thread pool-72-thread-44 completed: sent=4641, failed=39
+  ✅ Thread pool-72-thread-88 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-100 completed: sent=4641, failed=39
+  ✅ Thread pool-72-thread-13 completed: sent=4641, failed=39
+  ✅ Thread pool-72-thread-33 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-3 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-9 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-39 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-11 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-43 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-78 completed: sent=4640, failed=40
+  ✅ Thread pool-72-thread-64 completed: sent=4639, failed=41
+  ✅ Thread pool-72-thread-86 completed: sent=4639, failed=41
+  ✅ Thread pool-72-thread-101 completed: sent=4639, failed=41
+  ✅ Thread pool-72-thread-80 completed: sent=4639, failed=41
+  ✅ Thread pool-72-thread-72 completed: sent=4639, failed=41
+  ✅ Thread pool-72-thread-67 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-18 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-36 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-31 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-10 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-34 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-45 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-48 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-66 completed: sent=4638, failed=42
+  ✅ Thread pool-72-thread-77 completed: sent=4637, failed=43
+  ✅ Thread pool-72-thread-19 completed: sent=4637, failed=43
+  ✅ Thread pool-72-thread-68 completed: sent=4637, failed=43
+  ✅ Thread pool-72-thread-17 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-57 completed: sent=4637, failed=43
+  ✅ Thread pool-72-thread-2 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-8 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-56 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-85 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-32 completed: sent=4636, failed=44
+  ✅ Thread pool-72-thread-84 completed: sent=4636, failed=44
+  Generated: 450000 messages
+  ✅ Thread pool-72-thread-59 completed: sent=4635, failed=45
+  ✅ Thread pool-72-thread-28 completed: sent=4634, failed=46
+  ✅ Thread pool-72-thread-96 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-75 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-73 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-30 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-38 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-22 completed: sent=4633, failed=47
+  ✅ Thread pool-72-thread-49 completed: sent=4632, failed=48
+  ✅ Thread pool-72-thread-41 completed: sent=4632, failed=48
+  ✅ Thread pool-72-thread-47 completed: sent=4632, failed=48
+  ✅ Thread pool-72-thread-95 completed: sent=4632, failed=48
+  ✅ Thread pool-72-thread-4 completed: sent=4631, failed=49
+MessageGenerator completed: 468000 messages in 152384ms
+  ✅ Thread pool-72-thread-81 completed: sent=4630, failed=50
+  ✅ Thread pool-72-thread-24 completed: sent=4630, failed=50
+  ✅ Thread pool-72-thread-62 completed: sent=4629, failed=51
+  ✅ Thread pool-72-thread-16 completed: sent=4629, failed=51
+  ✅ Thread pool-72-thread-7 completed: sent=4629, failed=51
+  ✅ Thread pool-72-thread-35 completed: sent=4629, failed=51
+  ✅ Thread pool-72-thread-54 completed: sent=4629, failed=51
+  ✅ Thread pool-72-thread-51 completed: sent=4628, failed=52
+  ✅ Thread pool-72-thread-26 completed: sent=4628, failed=52
+  ✅ Thread pool-72-thread-25 completed: sent=4626, failed=54
+  ✅ Thread pool-72-thread-14 completed: sent=4626, failed=54
+  ✅ Thread pool-72-thread-6 completed: sent=4626, failed=54
+  ✅ Thread pool-72-thread-5 completed: sent=4625, failed=55
+
+✅ Main Phase Completed:
+   Duration: 171006 ms
+   Throughput: 2736.75 msg/sec
+   Active connections: 20
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 495702
+Failed messages: 4298
+Total runtime: 216130 ms
+Throughput: 2293.54 msg/sec
+Total connections: 70
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    44105 ms (725.54 msg/sec)
+  Main Load: 171006 ms (2736.75 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics:
+  (Based on 23360 measured samples)
+  Mean response time: 47 ms
+  Median response time: 14 ms
+  95th percentile: 100 ms
+  99th percentile: 886 ms
+  Min response time: 1 ms
+  Max response time: 2983 ms
+
+--- Throughput per Room ---
+  Room 1: 25185 messages
+  Room 2: 24784 messages
+  Room 3: 24866 messages
+  Room 4: 25040 messages
+  Room 5: 25012 messages
+  Room 6: 24925 messages
+  Room 7: 24861 messages
+  Room 8: 24939 messages
+  Room 9: 25004 messages
+  Room 10: 25091 messages
+  Room 11: 24917 messages
+  Room 12: 25146 messages
+  Room 13: 25016 messages
+  Room 14: 25086 messages
+  Room 15: 25308 messages
+  Room 16: 24995 messages
+  Room 17: 25001 messages
+  Room 18: 24929 messages
+  Room 19: 24876 messages
+  Room 20: 25019 messages
+
+--- Message Type Distribution ---
+  TEXT: 450076 messages (90.02%)
+  JOIN: 25084 messages (5.02%)
+  LEAVE: 24840 messages (4.97%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 500000
+
+✅ All tests completed successfully!

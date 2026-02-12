@@ -1,0 +1,41 @@
+# Server Configuration
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 400        
+      min-spare: 100  
+    connection-timeout: 20000  
+
+# Spring Application
+spring:
+  application:
+    name: chatflow-server
+  
+  # WebSocket Configuration
+  websocket:
+    message-size-limit: 64KB
+    send-buffer-size-limit: 512KB
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.chatflow: DEBUG
+    org.springframework.web.socket: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/chatflow-server.log
+    max-size: 10MB
+    max-history: 10
+
+# Management Endpoints 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
