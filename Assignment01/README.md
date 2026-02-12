@@ -11,9 +11,9 @@ cs6650-assignment1/
 ├── server/              # Part 1: WebSocket Server
 ├── client-part1/        # Part 2: Basic Load Testing Client
 ├── client-part2/        # Part 3: Detailed Performance Analysis Client
-├── screenshots/         # All test result screenshots
-├── results/             # Test outputs and CSV data
-└── DESIGN_DOCUMENT.pdf  # System design documentation
+├── results/             # Test outputs, Per-Message Metrics CSV, Statistical Analysis and Visualization
+└── README.md.           # running instructions
+└── Design_Document.pdf. # Design documents and screenshots
 ```
 
 
@@ -46,12 +46,12 @@ address changes each time the lab session restarts.
 ```bashcd client-part1/chatflow-client
 mvn clean package
 java -jar target/chatflow-client-part1-jar-with-dependencies.jar
-
+```
 ### 3. Client Part 2 (Detailed Metrics + Visualization)
 ```bashcd client-part2/chatflow-client
 mvn clean package
 java -jar target/chatflow-client-part2-jar-with-dependencies.jar
-
+```
 ## Performance Highlights
 
 | Metric | Client Part 1 | Client Part 2 |
@@ -73,5 +73,7 @@ java -jar target/chatflow-client-part2-jar-with-dependencies.jar
 ## Documentation
 
 - **Design Document:** See `DESIGN_DOCUMENT.pdf`
-- **Deployment Guide:** See `server/chatflow-server/DEPLOYMENT.md`
-- **Test Results:** See `screenshots/` and `results/`
+- **Deployment Guide:** See [README.md](.server/chatflow-server/README.md)
+- **Client1 Part 1 Guide"** See [README.md](./client-part1/chatflow-client/README.md) 
+- **Client1 Part 2 Guide"** See [README.md](./client-part2/chatflow-client/README.md) 
+- **Test Results and Analysis:** See `results/`
