@@ -72,8 +72,9 @@ java -jar target/chatflow-client-part2-jar-with-dependencies.jar
 
 ## Documentation
 
-- **Design Document:** See `DESIGN_DOCUMENT.pdf`
-- **Deployment Guide:** See [README.md](.server/chatflow-server/README.md)
-- **Client1 Part 1 Guide"** See [README.md](client-part1/chatflow-client/README.md) 
-- **Client1 Part 2 Guide"** See [README.md](./client-part2/chatflow-client/README.md) 
-- **Test Results and Analysis:** See `results/`
+- **Design Document:** See [DESIGN_DOCUMENT.pdf]
+- **Deployment Guide:** See [README.md](https://github.com/fanzhangvivian/cs6650-Project/blob/main/Assignment01/server/chatflow-server/README.md)
+- **Client1 Part 1 Guide"** See [README.md](https://github.com/fanzhangvivian/cs6650-Project/blob/main/Assignment01/client-part1/chatflow-client/README.md
+) 
+- **Client1 Part 2 Guide"** See [README.md](https://github.com/fanzhangvivian/cs6650-Project/blob/main/Assignment01/client-part2/chatflow-client/README.md) 
+- **Test Results and Analysis:** See [results](https://github.com/fanzhangvivian/cs6650-Project/tree/main/Assignment01/results)
