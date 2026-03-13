@@ -1,0 +1,58 @@
+# Server Configuration
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 400
+      min-spare: 100
+    connection-timeout: 20000
+
+# Spring Application
+spring:
+  application:
+    name: chatflow-server
+
+  # WebSocket Configuration
+  websocket:
+    message-size-limit: 64KB
+    send-buffer-size-limit: 512KB
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.chatflow: DEBUG
+    org.springframework.web.socket: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/chatflow-server.log
+    max-size: 10MB
+    max-history: 10
+
+# Management Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+# RabbitMQ Configuration
+rabbitmq:
+  host: 172.31.27.132           # RabbitMQ EC2 instance IP (update before deployment)
+  port: 5672
+  username: guest
+  password: guest
+  exchange: chat.exchange
+  queue-count: 20           # Number of chat rooms (room.1 to room.20)
+  channel-pool-size: 16     # Formula: availableProcessors * 2, minimum 16 for I/O-bound load testing
+  consumer-thread-count: 10 # Thread pool size for consuming messages, tune in Part 4
+  consumer-prefetch: 50     # Max unacked messages per channel, prevents memory overflow
+
+# Circuit Breaker Configuration
+circuit-breaker:
+  failure-threshold: 5      # Number of consecutive failures before OPEN
+  reset-timeout-ms: 30000   # Time in OPEN state before trying HALF_OPEN (30 seconds)

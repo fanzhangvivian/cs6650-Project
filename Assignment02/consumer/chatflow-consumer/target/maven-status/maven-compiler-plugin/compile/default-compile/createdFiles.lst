@@ -1,0 +1,5 @@
+com/chatflow/consumer/controller/HealthController.class
+com/chatflow/consumer/ConsumerApplication.class
+com/chatflow/consumer/service/ServerHttpClient.class
+com/chatflow/consumer/config/RabbitMQConsumerConfig.class
+com/chatflow/consumer/service/MessageConsumerService.class

@@ -1,0 +1,130 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 500000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 3656 messages = 468000 messages
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 69ms
+
+✅ Warmup Phase Completed:
+   Duration: 103504 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 309.17 msg/sec
+   Active connections: 40
+
+Total connections created so far: 40
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Starting 128 threads to send 468000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 468000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages
+  Generated: 450000 messages
+MessageGenerator completed: 468000 messages in 335662ms
+
+✅ Main Phase Completed:
+   Total messages sent: 468000
+   Duration: 429465 ms
+   Throughput: 1089.73 msg/sec
+   Active connections: 40
+
+Total connections created: 40
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 500000
+Failed messages: 0
+Total runtime: 534010 ms
+Total connections: 40
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    103504 ms (309.17 msg/sec)
+  Main Load: 429465 ms (1089.73 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics (successful messages):
+  Samples: 500000
+  Mean response time: 115 ms
+  Median response time: 114 ms
+  95th percentile: 155 ms
+  99th percentile: 213 ms
+  Min response time: 68 ms
+  Max response time: 1109 ms
+
+--- Throughput per Room ---
+  Room 1: 25014 messages
+  Room 2: 24926 messages
+  Room 3: 24994 messages
+  Room 4: 24777 messages
+  Room 5: 24966 messages
+  Room 6: 24766 messages
+  Room 7: 25110 messages
+  Room 8: 25086 messages
+  Room 9: 24956 messages
+  Room 10: 25089 messages
+  Room 11: 25219 messages
+  Room 12: 25002 messages
+  Room 13: 25247 messages
+  Room 14: 25225 messages
+  Room 15: 25126 messages
+  Room 16: 24737 messages
+  Room 17: 25167 messages
+  Room 18: 25009 messages
+  Room 19: 24792 messages
+  Room 20: 24792 messages
+
+--- Message Type Distribution ---
+  TEXT: 449745 messages (89.95%)
+  JOIN: 25050 messages (5.01%)
+  LEAVE: 25205 messages (5.04%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 500000
+
+┌─────────────────────────────────────┐
+│  Generating Throughput Chart        │
+└─────────────────────────────────────┘
+
+2026-03-11 21:21:23.504 java[41673:42745426] +[IMKClient subclass]: chose IMKClient_Modern
+2026-03-11 21:21:23.504 java[41673:42745426] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+✅ Chart saved: results/throughput-chart.png
+   Size: 800x600 pixels
+   Time buckets: 54
+
+✅ All tests completed successfully!
