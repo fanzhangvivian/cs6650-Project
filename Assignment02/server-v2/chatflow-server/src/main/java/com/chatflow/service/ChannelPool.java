@@ -5,6 +5,7 @@ import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeoutException;
  * Maintains a fixed number of reusable channels to avoid the overhead
  * of creating and destroying channels per message publish.
  */
+@DependsOn("rabbitMQConfig")
 @Service
 public class ChannelPool {
 

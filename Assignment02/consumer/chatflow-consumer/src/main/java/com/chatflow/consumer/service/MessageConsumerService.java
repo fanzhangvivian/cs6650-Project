@@ -5,6 +5,7 @@ import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
@@ -24,6 +25,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * Each worker thread owns its own Channel and handles multiple queues.
  * Channel and thread are fully bound, ensuring thread safety for basicAck/basicNack calls.
  */
+@DependsOn("rabbitMQConsumerConfig")
 @Service
 public class MessageConsumerService {
 
