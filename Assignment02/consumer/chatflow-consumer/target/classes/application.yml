@@ -3,21 +3,21 @@ server:
 
 # RabbitMQ Configuration
 rabbitmq:
-  host: 172.31.27.132   # RabbitMQ EC2 private IP
+  host: 172.31.18.27   # RabbitMQ EC2 private IP
   port: 5672
-  username: guest
-  password: guest
+  username: chatflow
+  password: chatflow123
   queue-count: 20         # Number of queues to consume (room.1 to room.20)
-  consumer-thread-count: 20 
-  consumer-prefetch: 200     
+  consumer-thread-count: 40 
+  consumer-prefetch: 20    
 
 # Server-v2 instances to broadcast to (Method A: hardcoded)
 broadcast:
   servers:
     - http://172.31.12.21:8080    # server-v2 Instance 1 private IP
-    - http://172.31.24.202:8080   # server-v2 Instance 2 private IP
-    - http://172.31.18.197:8080   # server-v2 Instance 3 private IP
-    - http://172.31.28.227:8080   # server-v2 Instance 4 private IP
+    # - http://172.31.24.202:8080   # server-v2 Instance 2 private IP
+    # - http://172.31.18.197:8080   # server-v2 Instance 3 private IP
+    # - http://172.31.28.227:8080   # server-v2 Instance 4 private IP
 
 # Logging Configuration
 logging:
