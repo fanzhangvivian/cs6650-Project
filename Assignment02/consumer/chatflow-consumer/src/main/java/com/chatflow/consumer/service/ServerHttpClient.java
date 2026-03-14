@@ -18,7 +18,10 @@ import java.util.concurrent.atomic.AtomicLong;
  * HTTP client that broadcasts QueueMessages to all configured server-v2 instances.
  * Uses fan-out strategy: each message is POSTed to every server instance
  * so all connected WebSocket sessions receive the broadcast.
- * Broadcast is asynchronous to avoid blocking consumer threads.
+ *
+ * This class now provides:
+ * 1. async broadcast() for optional fire-and-forget usage
+ * 2. synchronous broadcastSync() for consumer ack/nack decisions
  */
 @Service
 @ConfigurationProperties(prefix = "broadcast")
@@ -49,13 +52,12 @@ public class ServerHttpClient {
     }
 
     // -------------------------
-    // Broadcast
+    // Async Broadcast (optional)
     // -------------------------
 
     /**
      * Asynchronously broadcasts a QueueMessage to all configured server-v2 instances.
-     * Uses CompletableFuture to avoid blocking the consumer thread.
-     * Failures are logged but do not block message processing.
+     * Failures are logged but do not affect RabbitMQ ack/nack decisions.
      *
      * @param queueMessage the message to broadcast (as raw JSON bytes)
      */
@@ -70,7 +72,6 @@ public class ServerHttpClient {
                     .POST(HttpRequest.BodyPublishers.ofByteArray(queueMessage))
                     .build();
 
-            // Async send - does not block consumer thread
             HTTP_CLIENT.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                     .thenAccept(response -> {
                         if (response.statusCode() == 200) {
@@ -87,6 +88,79 @@ public class ServerHttpClient {
                         return null;
                     });
         }
+    }
+
+    // -------------------------
+    // Sync Broadcast for consumer ack/nack
+    // -------------------------
+
+    /**
+     * Synchronously broadcasts a QueueMessage to all configured server-v2 instances.
+     * Returns true only if ALL servers eventually respond with HTTP 200.
+     *
+     * Retry policy:
+     * - Up to 3 attempts per server
+     * - Small linear backoff between attempts
+     *
+     * @param queueMessage raw JSON bytes from RabbitMQ
+     * @return true if all servers succeeded, false otherwise
+     */
+    public boolean broadcastSync(byte[] queueMessage) {
+        if (servers == null || servers.isEmpty()) {
+            logger.warn("No servers configured, broadcast skipped");
+            return false;
+        }
+
+        boolean allSuccess = true;
+
+        for (String server : servers) {
+            boolean serverSuccess = false;
+            String url = server + "/internal/broadcast";
+
+            for (int attempt = 0; attempt < 3; attempt++) {
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(url))
+                        .header("Content-Type", "application/json")
+                        .timeout(Duration.ofSeconds(2))
+                        .POST(HttpRequest.BodyPublishers.ofByteArray(queueMessage))
+                        .build();
+
+                try {
+                    HttpResponse<String> response =
+                            HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
+
+                    if (response.statusCode() == 200) {
+                        broadcastSuccess.incrementAndGet();
+                        serverSuccess = true;
+                        logger.debug("Broadcast success to {} on attempt {}", server, attempt + 1);
+                        break;
+                    } else {
+                        broadcastFailed.incrementAndGet();
+                        logger.warn("Broadcast to {} returned {} on attempt {}",
+                                server, response.statusCode(), attempt + 1);
+                    }
+                } catch (Exception e) {
+                    broadcastFailed.incrementAndGet();
+                    logger.warn("Broadcast failed to {} on attempt {}: {}",
+                            server, attempt + 1, e.getMessage());
+                }
+
+                // Small backoff before retry
+                try {
+                    Thread.sleep(100L * (attempt + 1));
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    logger.warn("Broadcast retry interrupted for {}", server);
+                    return false;
+                }
+            }
+
+            if (!serverSuccess) {
+                allSuccess = false;
+            }
+        }
+
+        return allSuccess;
     }
 
     // -------------------------

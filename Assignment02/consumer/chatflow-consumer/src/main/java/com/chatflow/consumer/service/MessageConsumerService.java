@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,8 +22,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * and broadcast them to all server-v2 instances via ServerHttpClient.
  *
  * Each worker thread owns its own Channel and handles multiple queues.
- * Channel and thread are fully bound, ensuring thread safety for basicAck calls.
- * Supports configurable thread count for Part 4 performance tuning.
+ * Channel and thread are fully bound, ensuring thread safety for basicAck/basicNack calls.
  */
 @Service
 public class MessageConsumerService {
@@ -45,37 +44,25 @@ public class MessageConsumerService {
     private final List<Thread> workers = new ArrayList<>();
 
     // Deduplication set - tracks recently processed messageIds
-    // Cleared when size exceeds limit to prevent unbounded memory growth
     private final Set<String> processedIds = ConcurrentHashMap.newKeySet();
     private static final int MAX_PROCESSED_IDS = 10000;
 
-    // -------------------------
     // Metrics
-    // -------------------------
-
     private final AtomicLong messagesConsumed = new AtomicLong();
-    private final AtomicLong messagesFailed   = new AtomicLong();
+    private final AtomicLong messagesFailed = new AtomicLong();
 
     public MessageConsumerService(RabbitMQConsumerConfig config,
                                   ServerHttpClient httpClient) {
-        this.config     = config;
+        this.config = config;
         this.httpClient = httpClient;
     }
 
-    // -------------------------
-    // Initialization
-    // -------------------------
-
-    /**
-     * Starts consumer worker threads on application startup.
-     * Queues are distributed across workers using round-robin assignment.
-     */
     @PostConstruct
-    public void init() throws Exception {
+    public void init() {
         List<List<String>> assignments = assignQueues();
 
         for (int i = 0; i < consumerThreadCount; i++) {
-            List<String> queuesForWorker = assignments.get(i);
+            final List<String> queuesForWorker = assignments.get(i);
             Thread worker = new Thread(() -> runWorker(queuesForWorker));
             worker.setName("consumer-worker-" + i);
             worker.start();
@@ -86,21 +73,15 @@ public class MessageConsumerService {
                 consumerThreadCount, queueCount);
     }
 
-    // -------------------------
-    // Queue Distribution
-    // -------------------------
-
     /**
      * Distributes queues across worker threads using round-robin assignment.
-     * Example: 20 queues, 10 workers -> each worker gets 2 queues
-     *
-     * @return list of queue name lists, one per worker thread
      */
     private List<List<String>> assignQueues() {
         List<List<String>> result = new ArrayList<>();
         for (int i = 0; i < consumerThreadCount; i++) {
             result.add(new ArrayList<>());
         }
+
         for (int i = 1; i <= queueCount; i++) {
             int workerIndex = (i - 1) % consumerThreadCount;
             result.get(workerIndex).add("room." + i);
@@ -108,79 +89,106 @@ public class MessageConsumerService {
         return result;
     }
 
-    // -------------------------
-    // Worker Thread Logic
-    // -------------------------
-
     /**
-     * Each worker creates its own Channel and registers consumers for its assigned queues.
-     * All basicAck calls happen within this thread, ensuring Channel thread safety.
+     * Worker loop with auto-restart on failure.
+     * Each worker creates its own channel and registers consumers for assigned queues.
      *
-     * @param queues list of queue names this worker is responsible for
+     * Processing semantics:
+     * 1. Deduplicate by messageId
+     * 2. Broadcast synchronously to all configured server-v2 instances
+     * 3. Ack only if broadcast succeeds everywhere
+     * 4. Nack + requeue on failure so delivery can be retried
+     * 5. Restart worker if channel/consumer setup crashes
      */
     private void runWorker(List<String> queues) {
-        try {
-            Channel channel = config.getConnection().createChannel();
-            channel.basicQos(prefetch);
+        while (!Thread.currentThread().isInterrupted()) {
+            Channel channel = null;
+            try {
+                channel = config.getConnection().createChannel();
+                channel.basicQos(prefetch);
 
-            for (String queue : queues) {
-                channel.basicConsume(queue, false,
-                    (tag, delivery) -> {
-                        long deliveryTag = delivery.getEnvelope().getDeliveryTag();
-                        try {
-                            // Extract messageId for deduplication
-                            String body = new String(delivery.getBody());
-                            String messageId = extractMessageId(body);
+                for (String queue : queues) {
+                    final String queueName = queue;
 
-                            // Check for duplicate
-                            if (messageId != null && !processedIds.add(messageId)) {
-                                channel.basicAck(deliveryTag, false);
-                                logger.debug("Duplicate message skipped: {}", messageId);
-                                return;
-                            }
-
-                            // Prevent unbounded memory growth
-                            if (processedIds.size() > MAX_PROCESSED_IDS) {
-                                processedIds.clear();
-                            }
-
-                            // ACK FIRST before broadcast (improves consumer throughput)
-                            // Broadcast is async so failures won't affect ack
-                            channel.basicAck(deliveryTag, false);
-                            messagesConsumed.incrementAndGet();
-
-                            // Async broadcast to all server-v2 instances
-                            httpClient.broadcast(delivery.getBody());
-
-                        } catch (Exception e) {
-                            messagesFailed.incrementAndGet();
+                    channel.basicConsume(queueName, false,
+                        (tag, delivery) -> {
+                            long deliveryTag = delivery.getEnvelope().getDeliveryTag();
                             try {
-                                channel.basicNack(deliveryTag, false, false);
-                            } catch (IOException nackEx) {
-                                logger.error("Nack failed for queue {}", queue, nackEx);
-                            }
-                        }
-                    },
-                    tag -> logger.warn("Consumer cancelled for queue: {}", queue)
-                );
-                logger.info("Consumer registered for queue: {}", queue);
-            }
+                                String body = new String(delivery.getBody(), StandardCharsets.UTF_8);
+                                String messageId = extractMessageId(body);
 
-        } catch (Exception e) {
-            logger.error("Worker thread crashed", e);
+                                // Deduplication
+                                if (messageId != null && !processedIds.add(messageId)) {
+                                    channel.basicAck(deliveryTag, false);
+                                    logger.debug("Duplicate message skipped: {}", messageId);
+                                    return;
+                                }
+
+                                // Prevent unbounded memory growth
+                                if (processedIds.size() > MAX_PROCESSED_IDS) {
+                                    processedIds.clear();
+                                }
+
+                                // Broadcast first, ack only on success
+                                boolean success = httpClient.broadcastSync(delivery.getBody());
+
+                                if (success) {
+                                    channel.basicAck(deliveryTag, false);
+                                    messagesConsumed.incrementAndGet();
+                                    logger.debug("Broadcast succeeded for message {}", messageId);
+                                } else {
+                                    messagesFailed.incrementAndGet();
+                                    channel.basicNack(deliveryTag, false, true); // requeue=true
+                                    logger.warn("Broadcast failed for message {}, requeued", messageId);
+                                }
+
+                            } catch (Exception e) {
+                                messagesFailed.incrementAndGet();
+                                logger.error("Error consuming message from queue {}", queueName, e);
+                                try {
+                                    channel.basicNack(deliveryTag, false, true); // requeue=true
+                                } catch (IOException nackEx) {
+                                    logger.error("Nack failed for queue {}", queueName, nackEx);
+                                }
+                            }
+                        },
+                        tag -> logger.warn("Consumer cancelled for queue: {}", queueName)
+                    );
+
+                    logger.info("Consumer registered for queue: {}", queueName);
+                }
+
+                // Keep worker thread alive after registering consumers
+                while (!Thread.currentThread().isInterrupted() && channel.isOpen()) {
+                    Thread.sleep(1000);
+                }
+
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                logger.info("Worker interrupted, exiting");
+                break;
+            } catch (Exception e) {
+                logger.error("Worker crashed, restarting in 3s. Queues={}", queues, e);
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+            } finally {
+                if (channel != null && channel.isOpen()) {
+                    try {
+                        channel.close();
+                    } catch (Exception e) {
+                        logger.warn("Failed to close worker channel cleanly", e);
+                    }
+                }
+            }
         }
     }
 
-    // -------------------------
-    // Deduplication Helper
-    // -------------------------
-
     /**
      * Extracts messageId from raw JSON bytes without full deserialization.
-     * Returns null if messageId cannot be extracted.
-     *
-     * @param json raw JSON string
-     * @return messageId string or null
      */
     private String extractMessageId(String json) {
         try {
@@ -194,13 +202,6 @@ public class MessageConsumerService {
         }
     }
 
-    // -------------------------
-    // Shutdown
-    // -------------------------
-
-    /**
-     * Interrupts all worker threads on application shutdown.
-     */
     @PreDestroy
     public void shutdown() {
         logger.info("Shutting down MessageConsumerService...");
@@ -211,34 +212,15 @@ public class MessageConsumerService {
                 messagesConsumed.get(), messagesFailed.get());
     }
 
-    // -------------------------
-    // Metrics
-    // -------------------------
-
-    /**
-     * Returns the total number of successfully consumed and acknowledged messages.
-     *
-     * @return consumed message count
-     */
     public long getMessagesConsumed() {
         return messagesConsumed.get();
     }
 
-    /**
-     * Returns the total number of messages that failed processing.
-     *
-     * @return failed message count
-     */
     public long getMessagesFailed() {
         return messagesFailed.get();
     }
 
-    /**
-     * Returns the configured number of consumer worker threads.
-     *
-     * @return consumer thread count
-     */
-    public int getActiveConsumerCount() {
+    public long getActiveConsumerCount() {
         return consumerThreadCount;
     }
 }
