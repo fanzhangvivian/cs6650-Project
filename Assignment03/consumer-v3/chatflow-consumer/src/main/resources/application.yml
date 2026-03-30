@@ -1,0 +1,78 @@
+server:
+  port: 8081
+
+# RabbitMQ Configuration
+rabbitmq:
+  host: 172.31.18.27
+  port: 5672
+  username: chatflow
+  password: chatflow123
+  queue-count: 20
+  consumer-thread-count: 40
+  consumer-prefetch: 50
+
+# Server-v2 instances to broadcast to
+broadcast:
+  servers:
+    - http://172.31.12.21:8080
+    # - http://172.31.24.202:8080
+    # - http://172.31.18.197:8080
+    # - http://172.31.28.227:8080
+
+# ── Assignment 3 PostgreSQL ──────────────────────────────────
+spring:
+  datasource:
+    url: jdbc:postgresql://172.31.19.82:5432/chatflow
+    username: chatflow
+    password: chatflow123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      # writer-thread-count(10) × 1.5 = 15
+      # ensures DB writer threads never wait for a connection
+      maximum-pool-size: 30
+      minimum-idle: 5
+      connection-timeout: 3000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      # validate: checks MessageEntity matches schema.sql on startup
+      # schema is managed by schema.sql, never let JPA auto-modify it
+      ddl-auto: validate
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          # Critical: enables true JDBC batch INSERT instead of row-by-row
+          # Without this, saveAll() degrades to N individual INSERTs
+          batch_size: 1000
+        order_inserts: true   # sort inserts by entity type for better batching
+        order_updates: true
+        jdbc.time_zone: UTC   # ensure TIMESTAMPTZ reads correctly
+
+# ── Assignment 3 Database Writer ───────────────────────────────────
+database:
+  batch-size: 1000          # messages per flush (tuned in Part 4 Test 1)
+  flush-interval-ms: 200    # max wait before forced flush (tuned in Part 4)
+  writer-thread-count: 20   # DB writer thread pool size
+  circuit-breaker:
+    failure-threshold: 5    # consecutive failures before OPEN
+    reset-timeout-ms: 30000 # time in OPEN before trying HALF_OPEN
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.chatflow.consumer: DEBUG
+    # show HikariCP connection pool events
+    com.zaxxer.hikari: INFO
+    # show DB writer throughput stats
+    com.chatflow.consumer.service.StatisticsAggregator: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/chatflow-consumer-v3.log
+    max-size: 10MB
+    max-history: 10

@@ -1,0 +1,12 @@
+com/chatflow/consumer/config/RabbitMQConsumerConfig.class
+com/chatflow/consumer/service/MessageConsumerService.class
+com/chatflow/consumer/ConsumerApplication.class
+com/chatflow/consumer/repository/MessageRepository.class
+com/chatflow/consumer/model/QueueMessage.class
+com/chatflow/consumer/service/DatabaseWriterService.class
+com/chatflow/consumer/service/DbCircuitBreaker$State.class
+com/chatflow/consumer/controller/HealthController.class
+com/chatflow/consumer/model/MessageEntity.class
+com/chatflow/consumer/service/StatisticsAggregator.class
+com/chatflow/consumer/service/DbCircuitBreaker.class
+com/chatflow/consumer/service/ServerHttpClient.class

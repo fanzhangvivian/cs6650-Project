@@ -1,0 +1,78 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 500000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 3656 messages = 468000 messages
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 66ms
+  ✅ Thread pool-1-thread-19 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-10 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-20 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-2 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-32 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-11 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-15 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-31 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-33 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-13 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-26 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-4 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-22 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-8 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-25 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-14 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-12 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-9 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-21 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-17 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-6 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-27 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-18 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-29 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-7 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-28 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-16 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-3 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-5 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-23 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=1000, failed=0
+
+✅ Warmup Phase Completed:
+   Duration: 99765 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 320.75 msg/sec
+   Active connections: 40
+
+Total connections created so far: 54
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Starting 128 threads to send 468000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 468000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages

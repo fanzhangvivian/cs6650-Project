@@ -1,0 +1,16 @@
+[Unit]
+Description=ChatFlow Server v2
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user
+ExecStart=/usr/bin/java -jar /home/ec2-user/chatflow-server.jar
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/ec2-user/logs/chatflow-server.log
+StandardError=append:/home/ec2-user/logs/chatflow-server.log
+
+[Install]
+WantedBy=multi-user.target
+EOF

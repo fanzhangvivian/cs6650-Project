@@ -1,0 +1,11 @@
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/model/QueueMessage.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/model/MessageEntity.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/config/RabbitMQConsumerConfig.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/service/StatisticsAggregator.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/controller/HealthController.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/service/DbCircuitBreaker.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/service/ServerHttpClient.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/repository/MessageRepository.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/ConsumerApplication.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/service/MessageConsumerService.java
+/Users/vivianzhang/Documents/vivian_neu/neu/08_NEU课程资料/CS6650/Assignments/Assignment03/consumer-v3/chatflow-consumer/src/main/java/com/chatflow/consumer/service/DatabaseWriterService.java

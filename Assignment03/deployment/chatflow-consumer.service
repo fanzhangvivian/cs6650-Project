@@ -1,0 +1,17 @@
+
+[Unit]
+Description=ChatFlow Consumer
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user
+ExecStart=/usr/bin/java -jar /home/ec2-user/chatflow-consumer.jar
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/ec2-user/logs/chatflow-consumer.log
+StandardError=append:/home/ec2-user/logs/chatflow-consumer.log
+
+[Install]
+WantedBy=multi-user.target
+EOF

@@ -1,0 +1,32 @@
+server:
+  port: 8081  # Different port from server-v2 to avoid conflicts on same machine
+
+# RabbitMQ Configuration
+rabbitmq:
+  host: 172.31.18.27   # RabbitMQ EC2 private IP
+  port: 5672
+  username: chatflow
+  password: chatflow123
+  queue-count: 20         # Number of queues to consume (room.1 to room.20)
+  consumer-thread-count: 40 
+  consumer-prefetch: 20    
+
+# Server-v2 instances to broadcast to (Method A: hardcoded)
+broadcast:
+  servers:
+    - http://172.31.12.21:8080    # server-v2 Instance 1 private IP
+    # - http://172.31.24.202:8080   # server-v2 Instance 2 private IP
+    # - http://172.31.18.197:8080   # server-v2 Instance 3 private IP
+    # - http://172.31.28.227:8080   # server-v2 Instance 4 private IP
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.chatflow.consumer: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/chatflow-consumer.log
+    max-size: 10MB
+    max-history: 10

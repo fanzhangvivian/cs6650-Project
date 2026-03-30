@@ -1,0 +1,290 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 500000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 3656 messages = 468000 messages
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 67ms
+  ✅ Thread pool-1-thread-18 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-22 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-17 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-6 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-29 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-14 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-20 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-15 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-28 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-4 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-5 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-21 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-16 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-3 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-7 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-2 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-27 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-13 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-9 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-11 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-10 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-19 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-31 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-8 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-33 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-23 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-12 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-26 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-25 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-32 completed: sent=1000, failed=0
+
+✅ Warmup Phase Completed:
+   Duration: 98161 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 326.00 msg/sec
+   Active connections: 40
+
+Total connections created so far: 51
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Starting 128 threads to send 468000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 468000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages
+  Generated: 450000 messages
+MessageGenerator completed: 468000 messages in 285652ms
+  ✅ Thread pool-53-thread-2 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-31 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-114 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-95 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-27 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-88 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-112 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-106 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-78 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-41 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-12 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-121 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-62 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-51 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-7 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-57 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-8 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-23 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-110 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-24 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-55 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-32 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-113 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-11 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-13 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-44 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-9 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-56 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-125 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-47 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-28 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-80 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-64 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-38 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-111 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-124 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-36 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-79 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-15 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-25 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-76 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-26 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-45 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-86 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-84 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-82 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-115 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-101 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-103 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-21 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-50 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-30 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-120 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-54 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-67 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-3 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-100 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-35 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-22 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-102 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-68 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-107 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-33 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-14 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-5 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-6 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-118 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-60 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-119 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-85 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-63 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-129 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-90 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-70 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-40 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-128 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-91 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-93 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-104 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-126 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-77 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-94 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-52 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-34 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-39 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-83 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-96 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-116 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-61 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-19 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-87 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-123 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-46 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-48 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-4 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-72 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-98 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-18 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-20 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-53 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-58 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-73 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-99 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-74 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-117 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-69 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-37 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-108 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-66 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-43 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-17 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-16 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-10 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-75 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-109 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-81 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-92 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-97 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-65 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-42 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-29 completed: sent=3657, failed=0
+  ✅ Thread pool-53-thread-127 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-49 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-59 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-122 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-105 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-71 completed: sent=3656, failed=0
+  ✅ Thread pool-53-thread-89 completed: sent=3656, failed=0
+
+✅ Main Phase Completed:
+   Total messages sent: 468000
+   Duration: 383115 ms
+   Throughput: 1221.57 msg/sec
+   Active connections: 40
+
+Total connections created: 399
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 500000
+Failed messages: 0
+Total runtime: 482296 ms
+Total connections: 399
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    98161 ms (326.00 msg/sec)
+  Main Load: 383115 ms (1221.57 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics (successful messages):
+  Samples: 500000
+  Mean response time: 95 ms
+  Median response time: 88 ms
+  95th percentile: 134 ms
+  99th percentile: 176 ms
+  Min response time: 68 ms
+  Max response time: 2373 ms
+
+--- Throughput per Room ---
+  Room 1: 24860 messages
+  Room 2: 24849 messages
+  Room 3: 25165 messages
+  Room 4: 24985 messages
+  Room 5: 24842 messages
+  Room 6: 25021 messages
+  Room 7: 25284 messages
+  Room 8: 24797 messages
+  Room 9: 25052 messages
+  Room 10: 25033 messages
+  Room 11: 24951 messages
+  Room 12: 25105 messages
+  Room 13: 24946 messages
+  Room 14: 24867 messages
+  Room 15: 25031 messages
+  Room 16: 24821 messages
+  Room 17: 25198 messages
+  Room 18: 25147 messages
+  Room 19: 24975 messages
+  Room 20: 25071 messages
+
+--- Message Type Distribution ---
+  TEXT: 450169 messages (90.03%)
+  JOIN: 24750 messages (4.95%)
+  LEAVE: 25081 messages (5.02%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 500000
+
+┌─────────────────────────────────────┐
+│  Generating Throughput Chart        │
+└─────────────────────────────────────┘
+
+2026-03-23 11:50:01.488 java[12531:40376346] +[IMKClient subclass]: chose IMKClient_Modern
+2026-03-23 11:50:01.488 java[12531:40376346] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+✅ Chart saved: results/throughput-chart.png
+   Size: 800x600 pixels
+   Time buckets: 49
+
+✅ All tests completed successfully!
