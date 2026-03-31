@@ -1,0 +1,116 @@
+[ec2-user@ip-172-31-25-161 ~]$ curl --max-time 10 http://localhost:8081/health | python3 -m json.tool
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--   100   576   0   576   0     0  7156     0  --:--:-- --:--:-- --:--:--  7200
+{
+    "messagesConsumed": 500418,
+    "bufferFullNacks": 0,
+    "dbFailed": 0,
+    "dbWritten": 500418,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "uptime": "0h 15m 58s",
+    "malformedMessages": 0,
+    "dbDupes": 0,
+    "writeLatencyMs": {
+        "sampleCount": 2459,
+        "p99": 30,
+        "min": 1,
+        "max": 150,
+        "p50": 10,
+        "p95": 20
+    },
+    "activeConsumers": 20,
+    "dbCircuitBreakerFailures": 0,
+    "service": "ChatFlow Consumer v3",
+    "startTime": "2026-03-30T18:48:18.784678787Z",
+    "broadcastSuccess": 500418,
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 500418,
+    "messagesBuffered": 500418,
+    "dbBufferSize": 0,
+    "status": "UP",
+    "timestamp": "2026-03-30T19:04:16.972722109Z"
+}
+
+
+total_messages 
+----------------
+         500418
+(1 row)
+
+ table_size 
+------------
+ 188 MB
+(1 row)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_pkey           |     3421 |    432898325
+ messages_message_id_key |  2951946 |            0
+ idx_room_event_time     |       13 |       184184
+ idx_user_event_time     |       42 |       852216
+ idx_event_time          |      117 |      1411993
+(5 rows)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+2026-03-30 18:57:08 - [Stats] DB write throughput: 1193/s | Total written: 51337 | Window: 10000ms
+2026-03-30 18:57:18 - [Stats] DB write throughput: 1206/s | Total written: 63393 | Window: 10000ms
+2026-03-30 18:57:28 - [Stats] DB write throughput: 1271/s | Total written: 76100 | Window: 10000ms
+2026-03-30 18:57:38 - [Stats] DB write throughput: 1274/s | Total written: 88842 | Window: 10002ms
+2026-03-30 18:57:48 - [Stats] DB write throughput: 1224/s | Total written: 101084 | Window: 9998ms
+2026-03-30 18:57:58 - [Stats] DB write throughput: 1145/s | Total written: 112534 | Window: 10000ms
+2026-03-30 18:58:08 - [Stats] DB write throughput: 1191/s | Total written: 124446 | Window: 10000ms
+2026-03-30 18:58:18 - [Stats] DB write throughput: 1221/s | Total written: 136653 | Window: 10000ms
+2026-03-30 18:58:28 - [Stats] DB write throughput: 1229/s | Total written: 148941 | Window: 10000ms
+2026-03-30 18:58:38 - [Stats] DB write throughput: 1248/s | Total written: 161418 | Window: 10000ms
+2026-03-30 18:58:48 - [Stats] DB write throughput: 1225/s | Total written: 173666 | Window: 10000ms
+2026-03-30 18:58:58 - [Stats] DB write throughput: 1227/s | Total written: 185940 | Window: 10000ms
+2026-03-30 18:59:08 - [Stats] DB write throughput: 792/s | Total written: 193864 | Window: 10000ms
+2026-03-30 18:59:18 - [Stats] DB write throughput: 1209/s | Total written: 205952 | Window: 10000ms
+2026-03-30 18:59:28 - [Stats] DB write throughput: 1225/s | Total written: 218198 | Window: 10000ms
+2026-03-30 18:59:38 - [Stats] DB write throughput: 1259/s | Total written: 230787 | Window: 10000ms
+2026-03-30 18:59:48 - [Stats] DB write throughput: 1232/s | Total written: 243195 | Window: 10071ms
+2026-03-30 19:00:08 - [Stats] DB write throughput: 1059/s | Total written: 266005 | Window: 10000ms
+2026-03-30 19:00:18 - [Stats] DB write throughput: 1192/s | Total written: 277922 | Window: 10000ms
+2026-03-30 19:00:28 - [Stats] DB write throughput: 1267/s | Total written: 290593 | Window: 10000ms
+2026-03-30 19:00:38 - [Stats] DB write throughput: 1266/s | Total written: 303271 | Window: 10015ms
+2026-03-30 19:00:48 - [Stats] DB write throughput: 1239/s | Total written: 315639 | Window: 9985ms
+2026-03-30 19:00:58 - [Stats] DB write throughput: 1273/s | Total written: 328371 | Window: 10000ms
+2026-03-30 19:01:08 - [Stats] DB write throughput: 1231/s | Total written: 340679 | Window: 10000ms
+2026-03-30 19:01:18 - [Stats] DB write throughput: 1226/s | Total written: 352934 | Window: 10000ms
+2026-03-30 19:01:28 - [Stats] DB write throughput: 1259/s | Total written: 365521 | Window: 10000ms
+2026-03-30 19:01:38 - [Stats] DB write throughput: 1199/s | Total written: 377507 | Window: 10000ms
+2026-03-30 19:01:48 - [Stats] DB write throughput: 932/s | Total written: 386824 | Window: 10000ms
+2026-03-30 19:02:08 - [Stats] DB write throughput: 1198/s | Total written: 411198 | Window: 10000ms
+2026-03-30 19:02:28 - [Stats] DB write throughput: 1233/s | Total written: 435820 | Window: 10000ms
+2026-03-30 19:02:38 - [Stats] DB write throughput: 1229/s | Total written: 448108 | Window: 10000ms
+2026-03-30 19:02:48 - [Stats] DB write throughput: 1213/s | Total written: 460240 | Window: 10001ms
+2026-03-30 19:02:58 - [Stats] DB write throughput: 1204/s | Total written: 472279 | Window: 9999ms
+2026-03-30 19:03:08 - [Stats] DB write throughput: 1198/s | Total written: 484262 | Window: 10000ms
+2026-03-30 19:03:18 - [Stats] DB write throughput: 1201/s | Total written: 496275 | Window: 10000ms
+2026-03-30 19:03:28 - [Stats] DB write throughput: 381/s | Total written: 500089 | Window: 10000ms
+2026-03-30 19:03:38 - [Stats] DB write throughput: 33/s | Total written: 500418 | 
+
+
+
+
+[ec2-user@ip-172-31-25-161 ~]$ cat ~/cpu_stats_test1.txt
+top - 19:02:30 up 16 min,  2 users,  load average: 2.98, 2.43, 1.21
+%Cpu(s): 43.8 us, 43.8 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 12.5 si, 
+top - 19:02:40 up 16 min,  2 users,  load average: 2.83, 2.41, 1.22
+%Cpu(s): 52.5 us, 41.9 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  5.6 si, 
+top - 19:02:50 up 16 min,  2 users,  load average: 2.86, 2.43, 1.24
+%Cpu(s): 55.2 us, 41.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.8 si, 
+top - 19:03:00 up 16 min,  2 users,  load average: 3.02, 2.48, 1.27
+%Cpu(s): 51.2 us, 43.2 sy,  0.0 ni,  0.2 id,  0.0 wa,  0.0 hi,  5.4 si, 
+top - 19:03:10 up 16 min,  2 users,  load average: 3.02, 2.50, 1.29
+%Cpu(s): 53.5 us, 41.0 sy,  0.0 ni,  0.4 id,  0.0 wa,  0.0 hi,  5.1 si, 
+[2]-  Done                    top -bn5 -d10 | grep --color=auto -E "Cpu|load" > ~/cpu_stats_test1.txt
+[3]+  Exit 1                  jstat -gc $CONSUMER_PID 30000 5 > ~/jvm_stats_test1.txt

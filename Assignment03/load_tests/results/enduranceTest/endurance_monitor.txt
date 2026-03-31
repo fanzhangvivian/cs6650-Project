@@ -1,0 +1,2846 @@
+=== Endurance Monitor Started: Tue Mar 31 01:48:41 UTC 2026 ===
+=== Consumer PID: 1005793 ===
+=== Monitoring interval: 60 seconds ===
+=== PostgreSQL host: 172.31.19.82 ===
+
+========================================
+=== Snapshot at: Tue Mar 31 01:48:41 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0         0.0      1165.5      14400.0      13637.8      35428.0      21256.6    62080.0    61534.6    8640.0    8412.5     71     0.209     3     0.196     -         -     0.405
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         367         230           0         362         455
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:49:41 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0         0.0      1165.5      14400.0      14238.0      35428.0      21256.6    62080.0    61534.6    8640.0    8412.5     71     0.209     3     0.196     -         -     0.405
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         381         211           0         367         441
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:50:42 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       1094.8      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         382         211           0         367         441
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:51:42 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       1755.9      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         383         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:52:43 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       2336.6      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         383         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:53:43 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       2968.5      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         384         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:54:44 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       3536.5      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         384         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:55:44 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       4101.8      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         384         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:56:45 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       4670.0      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         384         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:57:45 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       5231.6      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         384         209           0         367         439
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:58:46 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       5776.7      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         385         208           0         367         438
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 01:59:46 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       6347.9      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         385         208           0         367         438
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:00:46 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1179.5         0.0      14400.0       6910.5      35428.0      21842.4    64192.0    63708.0    8896.0    8660.6     72     0.216     3     0.196     -         -     0.412
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         385         208           0         367         438
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 0,
+    "bufferFullNacks": 0,
+    "dbWritten": 0,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 0,
+        "p50": 0,
+        "p95": 0
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 0,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+              0
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 48 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |          0 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:01:47 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0      1078.4         0.0      14400.0      10861.3      35428.0      28603.2    68224.0    67652.3    9216.0    8954.7    104     0.341     3     0.196     -         -     0.537
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         424         164           0         372         398
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 7945,
+    "bufferFullNacks": 0,
+    "dbWritten": 7889,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 65,
+        "p50": 5,
+        "p95": 20
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 7889,
+    "dbBufferSize": 56,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+           7945
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 3032 kB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |       7974 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:02:48 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0       698.0         0.0      14784.0       7262.0      35620.0      26225.9    68416.0    67598.4    9280.0    8903.3    188     0.580     4     0.274     -         -     0.855
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         432         155           0         373         391
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 31006,
+    "bufferFullNacks": 0,
+    "dbWritten": 30975,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 22,
+        "p50": 4,
+        "p95": 7
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 30975,
+    "dbBufferSize": 31,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+          30975
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  30% /
+ table_size 
+------------
+ 11 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |      31404 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:03:48 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1254.6      16384.0      10852.0      39744.0      28754.4    68480.0    67669.7    9280.0    8903.3    363     1.097     6     0.399     -         -     1.497
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441         130           0         389         381
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 83249,
+    "bufferFullNacks": 0,
+    "dbWritten": 83132,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 5,
+        "p95": 12
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 83132,
+    "dbBufferSize": 117,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+          83272
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.4G  5.6G  31% /
+ table_size 
+------------
+ 31 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |      83470 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:04:49 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1531.7         0.0      16384.0       7357.4      39744.0      31341.5    68480.0    67670.3    9280.0    8903.3    564     1.699     8     0.536     -         -     2.235
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         442         120           0         398         380
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 145676,
+    "bufferFullNacks": 0,
+    "dbWritten": 145629,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 26,
+        "p50": 8,
+        "p95": 12
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 145629,
+    "dbBufferSize": 47,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         145711
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.5G  5.6G  31% /
+ table_size 
+------------
+ 53 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     145363 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:05:50 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1194.4      16384.0       4408.2      39744.0      35036.4    68480.0    67683.6    9280.0    8903.3    765     2.292    10     0.660     -         -     2.953
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         443         101           0         416         380
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 208008,
+    "bufferFullNacks": 0,
+    "dbWritten": 207998,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 25,
+        "p50": 8,
+        "p95": 12
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 207998,
+    "dbBufferSize": 10,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         207998
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.5G  5.5G  31% /
+ table_size 
+------------
+ 77 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     207710 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:06:51 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0       508.8      16384.0      13960.3      39744.0      36895.9    68480.0    67723.6    9280.0    8895.7    965     2.881    12     0.794     -         -     3.676
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         442          95           0         423         380
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 270123,
+    "bufferFullNacks": 0,
+    "dbWritten": 270113,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 26,
+        "p50": 8,
+        "p95": 13
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 270113,
+    "dbBufferSize": 10,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         270155
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.5G  5.5G  31% /
+ table_size 
+------------
+ 98 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     269779 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:07:52 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1168.5         0.0      16448.0       4498.4      39964.0      27394.1    68480.0    67728.9    9280.0    8895.7   1168     3.483    15     0.978     -         -     4.462
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         444          84           0         432         379
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 332564,
+    "bufferFullNacks": 0,
+    "dbWritten": 332550,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 28,
+        "p50": 9,
+        "p95": 13
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 332550,
+    "dbBufferSize": 14,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         332550
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.5G  5.5G  31% /
+ table_size 
+------------
+ 122 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     333194 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:08:53 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1595.8         0.0      16448.0       2285.9      39964.0      31182.1    68480.0    67731.2    9280.0    8895.7   1370     4.082    17     1.102     -         -     5.184
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         443          65           0         451         379
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 395290,
+    "bufferFullNacks": 0,
+    "dbWritten": 395157,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 28,
+        "p50": 9,
+        "p95": 14
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 395157,
+    "dbBufferSize": 133,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         395299
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 145 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     395733 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:09:54 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1396.9      16960.0      12459.0      40980.0      36165.5    68480.0    67743.7    9280.0    8896.3   1563     4.665    19     1.233     -         -     5.897
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         440          70           0         450         383
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 455704,
+    "bufferFullNacks": 0,
+    "dbWritten": 455589,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 28,
+        "p50": 9,
+        "p95": 14
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 455589,
+    "dbBufferSize": 115,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         455727
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 167 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     455050 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:10:55 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1245.2         0.0      16960.0         46.9      40980.0      24656.8    68480.0    67748.8    9280.0    8896.3   1768     5.309    22     1.430     -         -     6.739
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         439          70           0         451         383
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 520159,
+    "bufferFullNacks": 0,
+    "dbWritten": 520033,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 28,
+        "p50": 9,
+        "p95": 15
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 520033,
+    "dbBufferSize": 126,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         520167
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 189 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     520365 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:11:56 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1724.5         0.0      16960.0      12330.9      40980.0      24793.6    68480.0    67755.0    9280.0    8896.3   1960     5.888    24     1.560     -         -     7.448
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         439          72           0         449         383
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 581472,
+    "bufferFullNacks": 0,
+    "dbWritten": 581334,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 29,
+        "p50": 9,
+        "p95": 15
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 581334,
+    "dbBufferSize": 138,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         581472
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 212 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     581095 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:12:57 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0       822.9         0.0      16960.0      11570.7      40980.0      26534.4    68480.0    67768.5    9280.0    8896.3   2160     6.488    26     1.687     -         -     8.176
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         439          62           0         459         383
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 644913,
+    "bufferFullNacks": 0,
+    "dbWritten": 644859,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 29,
+        "p50": 9,
+        "p95": 15
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 644859,
+    "dbBufferSize": 54,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         644957
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 236 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     644105 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:13:58 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0      1405.8         0.0      16960.0      14844.8      40980.0      27011.4    68480.0    67778.2    9280.0    8896.3   2358     7.066    28     1.814     -         -     8.880
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         439          70           0         450         383
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 707646,
+    "bufferFullNacks": 0,
+    "dbWritten": 707565,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 29,
+        "p50": 9,
+        "p95": 15
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 707565,
+    "dbBufferSize": 81,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         707681
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.5G  32% /
+ table_size 
+------------
+ 260 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     707443 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:14:59 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1137.2      16960.0      10763.6      40980.0      33268.6    68544.0    67839.4    9280.0    8896.8   2545     7.645    30     1.945     -         -     9.590
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441          68           0         451         382
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 766212,
+    "bufferFullNacks": 0,
+    "dbWritten": 766125,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 766125,
+    "dbBufferSize": 87,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         766225
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.6G  5.4G  32% /
+ table_size 
+------------
+ 282 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     766437 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:16:00 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0       888.1      16960.0       5475.0      40980.0      40032.9    68544.0    67841.3    9280.0    8896.8   2733     8.233    32     2.078     -         -    10.312
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         443          77           0         441         380
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 824932,
+    "bufferFullNacks": 0,
+    "dbWritten": 824797,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 824797,
+    "dbBufferSize": 135,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         824936
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 304 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     824850 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:17:01 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0       740.6      16960.0       1634.9      40980.0      35632.3    68544.0    67842.2    9280.0    8896.8   2869     8.657    34     2.209     -         -    10.866
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         445          61           0         454         377
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 867911,
+    "bufferFullNacks": 0,
+    "dbWritten": 867911,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 867911,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         867911
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 319 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     867964 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:18:02 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1005.3      16960.0       8435.1      40980.0      37746.2    68544.0    67847.8    9280.0    8896.8   3059     9.224    36     2.335     -         -    11.559
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441          67           0         452         382
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 928223,
+    "bufferFullNacks": 0,
+    "dbWritten": 928118,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 928118,
+    "dbBufferSize": 105,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         928239
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 341 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     928243 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:19:03 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0      1415.9      16960.0       5426.3      40980.0      25104.2    68544.0    67848.1    9280.0    8896.8   3241     9.779    39     2.527     -         -    12.306
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441          67           0         451         381
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 985596,
+    "bufferFullNacks": 0,
+    "dbWritten": 985447,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 985590,
+    "dbBufferSize": 6,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+         985590
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 361 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |     985076 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:20:04 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2048.0      2048.0         0.0       906.5      16960.0       2202.3      40980.0      26791.7    68544.0    67850.6    9280.0    8896.8   3421    10.336    41     2.659     -         -    12.995
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         443          69           0         448         379
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1042349,
+    "bufferFullNacks": 0,
+    "dbWritten": 1042270,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1042270,
+    "dbBufferSize": 79,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1042417
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 382 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1042178 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:21:05 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1801.0         0.0      17024.0          0.0      41364.0      28262.1    68544.0    67852.3    9280.0    8896.8   3646    11.043    44     2.854     -         -    13.898
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         444          69           0         446         378
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1113324,
+    "bufferFullNacks": 0,
+    "dbWritten": 1113207,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 16
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1113207,
+    "dbBufferSize": 117,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1113346
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 408 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1113090 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:22:06 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0       766.7         0.0      17024.0       8100.8      41364.0      36002.1    68544.0    67858.3    9280.0    8896.8   3868    11.705    46     2.978     -         -    14.683
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441          70           0         449         381
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1184850,
+    "bufferFullNacks": 0,
+    "dbWritten": 1184840,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 9,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1184840,
+    "dbBufferSize": 10,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1184840
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 435 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1183633 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:23:07 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0      1725.4      17024.0       6570.7      41364.0      26184.3    68544.0    67869.6    9280.0    8896.8   4083    12.355    49     3.167     -         -    15.522
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         444          69           0         447         379
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1253784,
+    "bufferFullNacks": 0,
+    "dbWritten": 1253688,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1253688,
+    "dbBufferSize": 96,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1253836
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 462 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1252517 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:24:08 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1423.9         0.0      17024.0      11740.0      41364.0      34041.5    68544.0    67871.0    9280.0    8896.8   4306    13.016    51     3.292     -         -    16.308
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         421          83           0         456         401
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1325287,
+    "bufferFullNacks": 0,
+    "dbWritten": 1325270,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1325270,
+    "dbBufferSize": 17,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1325270
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 489 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1325455 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:25:09 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0      1657.5      17024.0       6291.1      41364.0      36753.9    68544.0    67872.8    9280.0    8896.8   4507    13.634    53     3.419     -         -    17.053
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         440          75           0         445         382
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1390124,
+    "bufferFullNacks": 0,
+    "dbWritten": 1390022,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1390022,
+    "dbBufferSize": 102,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1390170
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 514 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1390205 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:26:10 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0      1634.6      17024.0      14813.9      41364.0      23166.6    68544.0    67876.0    9280.0    8896.8   4709    14.249    56     3.606     -         -    17.855
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         441          70           0         449         381
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1455388,
+    "bufferFullNacks": 0,
+    "dbWritten": 1455345,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1455345,
+    "dbBufferSize": 43,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1455486
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 539 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1454262 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:27:11 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1398.2         0.0      17024.0          0.0      41364.0      26443.8    68608.0    67906.0    9280.0    8896.8   4904    14.844    58     3.728     -         -    18.571
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         419          71           0         470         404
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1517931,
+    "bufferFullNacks": 0,
+    "dbWritten": 1517870,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1517870,
+    "dbBufferSize": 61,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1518004
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  2.7G  5.3G  34% /
+ table_size 
+------------
+ 562 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1516485 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:28:12 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1216.9         0.0      17024.0       6325.7      41364.0      24590.8    68608.0    67924.4    9280.0    8896.8   5092    15.403    60     3.850     -         -    19.252
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         409          71           0         480         413
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1578722,
+    "bufferFullNacks": 0,
+    "dbWritten": 1578691,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1578691,
+    "dbBufferSize": 31,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1578691
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  37% /
+ table_size 
+------------
+ 585 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1577834 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:29:13 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1575.4         0.0      17024.0      16118.3      41364.0      28109.7    68608.0    67928.7    9280.0    8896.8   5288    15.995    62     3.977     -         -    19.972
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         406          66           0         488         416
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1642128,
+    "bufferFullNacks": 0,
+    "dbWritten": 1641978,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1641978,
+    "dbBufferSize": 150,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1642128
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.1G  37% /
+ table_size 
+------------
+ 607 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1641120 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:30:14 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1585.5         0.0      17024.0       3962.4      41364.0      25164.7    68608.0    67948.7    9280.0    8896.8   5468    16.535    64     4.100     -         -    20.635
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         401          67           0         492         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1700045,
+    "bufferFullNacks": 0,
+    "dbWritten": 1699959,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1699959,
+    "dbBufferSize": 86,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1700075
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 628 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1699074 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:31:16 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1780.1         0.0      17024.0       9536.1      41364.0      27828.5    68608.0    67950.5    9280.0    8896.8   5664    17.113    66     4.224     -         -    21.336
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         402          69           0         489         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1763498,
+    "bufferFullNacks": 0,
+    "dbWritten": 1763450,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1763450,
+    "dbBufferSize": 48,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1763576
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  37% /
+ table_size 
+------------
+ 651 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1762585 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:32:17 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0      1431.0      17024.0        188.0      41364.0      23674.1    68608.0    67951.5    9280.0    8896.8   5839    17.638    68     4.349     -         -    21.987
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         399          66           0         494         423
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1819797,
+    "bufferFullNacks": 0,
+    "dbWritten": 1819695,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1819695,
+    "dbBufferSize": 102,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1819803
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 671 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1819126 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:33:18 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0       885.6      17024.0      10119.2      41364.0      40686.6    68608.0    67953.3    9280.0    8896.8   6021    18.169    69     4.413     -         -    22.581
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         401          70           0         489         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1878762,
+    "bufferFullNacks": 0,
+    "dbWritten": 1878682,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1878682,
+    "dbBufferSize": 80,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1878815
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 692 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1877956 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:34:19 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0      1594.0      17024.0       6361.3      41364.0      38886.6    68608.0    67959.6    9280.0    8896.8   6199    18.681    71     4.537     -         -    23.217
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         400          65           0         495         422
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1936044,
+    "bufferFullNacks": 0,
+    "dbWritten": 1935990,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1935990,
+    "dbBufferSize": 54,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1936127
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 714 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1935709 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:35:20 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0         0.0       872.7      17024.0       7713.7      41364.0      35253.4    68608.0    67976.2    9280.0    8896.8   6379    19.215    73     4.663     -         -    23.877
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         401          69           0         489         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 1994237,
+    "bufferFullNacks": 0,
+    "dbWritten": 1994165,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 1994165,
+    "dbBufferSize": 72,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        1994302
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 734 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    1993884 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:36:21 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1127.5         0.0      17024.0      11398.7      41364.0      39012.4    68608.0    67976.2    9280.0    8896.8   6402    19.287    73     4.663     -         -    23.949
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         401          65           0         494         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 2001642,
+    "bufferFullNacks": 0,
+    "dbWritten": 2001642,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 2001642,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        2001642
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 737 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    2001528 |          0
+(1 row)
+
+
+========================================
+=== Snapshot at: Tue Mar 31 02:37:22 UTC 2026 ===
+========================================
+
+--- JVM Heap Statistics (S0U/S1U=Survivor, EU=Eden, OU=OldGen, FGC=FullGC) ---
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     2112.0      2112.0      1127.5         0.0      17024.0      12407.3      41364.0      39012.4    68608.0    67976.2    9280.0    8896.8   6402    19.287    73     4.663     -         -    23.949
+
+--- System Memory (MB) ---
+               total        used        free      shared  buff/cache   available
+Mem:             961         401          65           0         494         421
+Swap:              0           0           0
+
+--- Consumer Health Metrics ---
+    "messagesConsumed": 2001642,
+    "bufferFullNacks": 0,
+    "dbWritten": 2001642,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "malformedMessages": 0,
+        "p99": 30,
+        "p50": 10,
+        "p95": 17
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 2001642,
+    "dbBufferSize": 0,
+
+--- PostgreSQL Connection Pool (active vs idle) ---
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+
+--- Total Messages in DB ---
+ total_messages 
+----------------
+        2001642
+(1 row)
+
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      8.0G  3.0G  5.0G  38% /
+ table_size 
+------------
+ 737 MB
+(1 row)
+
+
+--- Table Bloat Check ---
+ relname  | n_live_tup | n_dead_tup 
+----------+------------+------------
+ messages |    2001528 |          0
+(1 row)
+

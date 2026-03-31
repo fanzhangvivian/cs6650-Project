@@ -1,0 +1,17 @@
+=== JVM Memory Stats (post Test 1, consumer idle) ===
+Collected: 2026-03-30, after 500K Baseline Test completion
+Note: Collected after test completion, reflects post-test idle state
+
+    S0C         S1C         S0U         S1U          EC           EU           OC           OU          MC         MU       CCSC      CCSU     YGC     YGCT     FGC    FGCT     CGC    CGCT       GCT   
+     1792.0      1792.0         0.0      1167.7      14400.0       3238.0      35424.0      21252.6    62080.0    61553.5    8640.0    8415.6     71     0.201     3     0.140     -         -     0.341
+     1792.0      1792.0      1469.5         0.0      14400.0          0.0      35424.0      25097.0    66496.0    65911.1    9024.0    8756.5     84     0.272     3     0.140     -         -     0.412
+     1792.0      1792.0         0.0       855.4      14400.0       7620.1      35424.0      31521.0    66560.0    66023.0    9024.0    8759.7    129     0.421     3     0.140     -         -     0.561
+     1920.0      1920.0       924.5         0.0      15616.0       2291.7      37740.0      23695.7    66752.0    66154.6    9088.0    8765.9    170     0.539     4     0.223     -         -     0.762
+     1920.0      1920.0      1060.6         0.0      15616.0       8640.0      37740.0      36075.6    66752.0    66194.4    9088.0    8765.9    230     0.727     4     0.223     -         -     0.950
+
+=== Analysis ===
+Old Gen (OU): 21252 KB -> 36075 KB (growth during 5 samples)
+Full GC (FGC): 3 -> 4 (only 1 Full GC during observation, healthy)
+Young GC (YGC): 71 -> 230 (frequent minor GC, normal for high throughput)
+Total GC Time: 0.341s -> 0.950s (< 1 second total, excellent)
+Conclusion: No memory leak detected. GC pressure is minimal.

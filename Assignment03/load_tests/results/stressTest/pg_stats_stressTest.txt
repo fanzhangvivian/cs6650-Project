@@ -1,0 +1,3779 @@
+=== PostgreSQL Stats Collection Started: Tue Mar 31 00:44:02 UTC 2026 ===
+=== Host: localhost | DB: chatflow ===
+
+=== Tue Mar 31 00:44:02 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      521 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:44:12 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      522 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:44:22 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      523 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:44:32 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      524 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:44:42 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      525 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:44:52 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      526 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:02 UTC 2026 ===
+ total_messages 
+----------------
+              0
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2951946 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 48 kB            | 0 bytes
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      527 |  2955540 |          0 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:12 UTC 2026 ===
+ total_messages 
+----------------
+           1056
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2952827 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 496 kB           | 184 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      528 |  2956421 |        881 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:22 UTC 2026 ===
+ total_messages 
+----------------
+           5202
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2956748 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 2000 kB          | 888 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      529 |  2960342 |       4802 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:32 UTC 2026 ===
+ total_messages 
+----------------
+           8658
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2960531 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 3304 kB          | 1480 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      530 |  2964125 |       8585 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:42 UTC 2026 ===
+ total_messages 
+----------------
+          12296
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2964097 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 4784 kB          | 2096 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      531 |  2967691 |      12151 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:45:52 UTC 2026 ===
+ total_messages 
+----------------
+          15933
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2967879 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 5912 kB          | 2720 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      532 |  2971473 |      15933 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:02 UTC 2026 ===
+ total_messages 
+----------------
+          19632
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2971508 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 7208 kB          | 3344 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      533 |  2975102 |      19562 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:12 UTC 2026 ===
+ total_messages 
+----------------
+          23207
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2975153 |            0
+ messages_pkey           |     3422 |    433088009
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 8784 kB          | 3952 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      534 |  2978747 |      23440 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:22 UTC 2026 ===
+ total_messages 
+----------------
+          26796
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2978512 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 10112 kB         | 4568 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      534 |  2982107 |      26799 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:32 UTC 2026 ===
+ total_messages 
+----------------
+          30510
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2982155 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 11 MB            | 5200 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      535 |  2985750 |      30442 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:42 UTC 2026 ===
+ total_messages 
+----------------
+          32020
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     2
+ idle   |     6
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2983953 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 12 MB            | 5496 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      536 |  2987548 |      32240 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:46:52 UTC 2026 ===
+ total_messages 
+----------------
+          43857
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  2995038 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 16 MB            | 7472 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      537 |  2998633 |      43325 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:02 UTC 2026 ===
+ total_messages 
+----------------
+          56146
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3007828 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 21 MB            | 9560 kB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      538 |  3011423 |      56115 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:12 UTC 2026 ===
+ total_messages 
+----------------
+          68068
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3020014 |            0
+ messages_pkey           |     3423 |    433111216
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 25 MB            | 11 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      539 |  3023609 |      68823 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:23 UTC 2026 ===
+ total_messages 
+----------------
+          81150
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3032832 |            0
+ messages_pkey           |     3424 |    433179284
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 30 MB            | 13 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      539 |  3036428 |      81641 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:33 UTC 2026 ===
+ total_messages 
+----------------
+          94291
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3045446 |            0
+ messages_pkey           |     3424 |    433179284
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 35 MB            | 16 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      540 |  3049042 |      94255 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:43 UTC 2026 ===
+ total_messages 
+----------------
+         107597
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3059536 |            0
+ messages_pkey           |     3424 |    433179284
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 40 MB            | 18 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      541 |  3063132 |     108345 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:47:53 UTC 2026 ===
+ total_messages 
+----------------
+         120682
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3072080 |            0
+ messages_pkey           |     3424 |    433179284
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 45 MB            | 20 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      542 |  3075676 |     120889 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:03 UTC 2026 ===
+ total_messages 
+----------------
+         133329
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3084744 |            0
+ messages_pkey           |     3424 |    433179284
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 49 MB            | 22 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      543 |  3088340 |     133553 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:13 UTC 2026 ===
+ total_messages 
+----------------
+         146069
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3098011 |            0
+ messages_pkey           |     3426 |    433241905
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 54 MB            | 24 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      544 |  3101609 |     145810 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:23 UTC 2026 ===
+ total_messages 
+----------------
+         158784
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3110462 |            0
+ messages_pkey           |     3429 |    433448881
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 59 MB            | 26 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      544 |  3114063 |     158261 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:33 UTC 2026 ===
+ total_messages 
+----------------
+         172307
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3122953 |            0
+ messages_pkey           |     3432 |    433574340
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 64 MB            | 29 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      544 |  3126557 |     170752 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:43 UTC 2026 ===
+ total_messages 
+----------------
+         184952
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3136898 |            0
+ messages_pkey           |     3433 |    433656690
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 70 MB            | 31 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      546 |  3140503 |     184697 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:48:53 UTC 2026 ===
+ total_messages 
+----------------
+         194203
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3145253 |            0
+ messages_pkey           |     3433 |    433656690
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 73 MB            | 32 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      549 |  3148858 |     193052 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:03 UTC 2026 ===
+ total_messages 
+----------------
+         206938
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3157854 |            0
+ messages_pkey           |     3433 |    433656690
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 78 MB            | 34 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      552 |  3161459 |     205653 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:13 UTC 2026 ===
+ total_messages 
+----------------
+         219889
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3171835 |            0
+ messages_pkey           |     3435 |    433780398
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 83 MB            | 37 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      553 |  3175442 |     220644 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:23 UTC 2026 ===
+ total_messages 
+----------------
+         232555
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3183963 |            0
+ messages_pkey           |     3438 |    433995529
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 87 MB            | 39 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      553 |  3187573 |     232772 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:33 UTC 2026 ===
+ total_messages 
+----------------
+         245480
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3197678 |            0
+ messages_pkey           |     3441 |    434282252
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 92 MB            | 41 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      553 |  3201291 |     246487 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:43 UTC 2026 ===
+ total_messages 
+----------------
+         258256
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3210084 |            0
+ messages_pkey           |     3444 |    434523875
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 96 MB            | 43 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      553 |  3213700 |     258893 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:49:53 UTC 2026 ===
+ total_messages 
+----------------
+         271036
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3221945 |            0
+ messages_pkey           |     3447 |    434801163
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 101 MB           | 45 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      553 |  3225564 |     270754 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:03 UTC 2026 ===
+ total_messages 
+----------------
+         283374
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3235575 |            0
+ messages_pkey           |     3448 |    434884075
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 105 MB           | 47 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      555 |  3239195 |     284384 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:13 UTC 2026 ===
+ total_messages 
+----------------
+         296698
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3248446 |            0
+ messages_pkey           |     3450 |    435061823
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 110 MB           | 49 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3252068 |     297061 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:23 UTC 2026 ===
+ total_messages 
+----------------
+         309121
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3260275 |            0
+ messages_pkey           |     3453 |    435365603
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 115 MB           | 51 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3263900 |     308890 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:34 UTC 2026 ===
+ total_messages 
+----------------
+         322366
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3274311 |            0
+ messages_pkey           |     3456 |    435682776
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 120 MB           | 54 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3277939 |     322926 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:44 UTC 2026 ===
+ total_messages 
+----------------
+         335156
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3286295 |            0
+ messages_pkey           |     3459 |    435990291
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 125 MB           | 56 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3289926 |     334910 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:50:54 UTC 2026 ===
+ total_messages 
+----------------
+         348010
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3299669 |            0
+ messages_pkey           |     3462 |    436337935
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 130 MB           | 58 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3303303 |     348284 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:04 UTC 2026 ===
+ total_messages 
+----------------
+         360127
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3310911 |            0
+ messages_pkey           |     3465 |    436680511
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 135 MB           | 60 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3314548 |     359526 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:14 UTC 2026 ===
+ total_messages 
+----------------
+         369557
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3321496 |            0
+ messages_pkey           |     3468 |    437077970
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 139 MB           | 61 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3325136 |     370712 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:24 UTC 2026 ===
+ total_messages 
+----------------
+         382620
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3333765 |            0
+ messages_pkey           |     3471 |    437445481
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 144 MB           | 64 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3337408 |     382981 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:34 UTC 2026 ===
+ total_messages 
+----------------
+         396105
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3347241 |            0
+ messages_pkey           |     3474 |    437872330
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 149 MB           | 66 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3350887 |     396457 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:44 UTC 2026 ===
+ total_messages 
+----------------
+         408859
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3360005 |            0
+ messages_pkey           |     3477 |    438213808
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 154 MB           | 68 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3363654 |     409221 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:51:54 UTC 2026 ===
+ total_messages 
+----------------
+         421876
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3373545 |            0
+ messages_pkey           |     3480 |    438594903
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 159 MB           | 70 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3377197 |     422761 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:04 UTC 2026 ===
+ total_messages 
+----------------
+         434817
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3385987 |            0
+ messages_pkey           |     3483 |    439072908
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 164 MB           | 72 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3389642 |     435203 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:14 UTC 2026 ===
+ total_messages 
+----------------
+         447717
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3398834 |            0
+ messages_pkey           |     3486 |    439575159
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 169 MB           | 74 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3402492 |     447165 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:24 UTC 2026 ===
+ total_messages 
+----------------
+         461089
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3412773 |            0
+ messages_pkey           |     3489 |    440002576
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 173 MB           | 77 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3416434 |     461104 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:34 UTC 2026 ===
+ total_messages 
+----------------
+         474054
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3425456 |            0
+ messages_pkey           |     3492 |    440440396
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 178 MB           | 79 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3429120 |     473787 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:45 UTC 2026 ===
+ total_messages 
+----------------
+         486638
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3438580 |            0
+ messages_pkey           |     3495 |    440942548
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 182 MB           | 81 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3442247 |     486911 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:52:55 UTC 2026 ===
+ total_messages 
+----------------
+         499969
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3451089 |            0
+ messages_pkey           |     3498 |    441428351
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 187 MB           | 83 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3454759 |     499420 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:05 UTC 2026 ===
+ total_messages 
+----------------
+         512522
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3464712 |            0
+ messages_pkey           |     3501 |    441960452
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 192 MB           | 85 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3468385 |     513043 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:15 UTC 2026 ===
+ total_messages 
+----------------
+         520217
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3471403 |            0
+ messages_pkey           |     3504 |    442462003
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 194 MB           | 86 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3475079 |     519711 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:25 UTC 2026 ===
+ total_messages 
+----------------
+         530939
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3483140 |            0
+ messages_pkey           |     3507 |    443009191
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 198 MB           | 88 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3486819 |     531448 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:35 UTC 2026 ===
+ total_messages 
+----------------
+         544029
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3495686 |            0
+ messages_pkey           |     3510 |    443567860
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 203 MB           | 90 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3499368 |     543994 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:45 UTC 2026 ===
+ total_messages 
+----------------
+         555746
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3507434 |            0
+ messages_pkey           |     3513 |    444055419
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 207 MB           | 92 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3511119 |     555742 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:53:55 UTC 2026 ===
+ total_messages 
+----------------
+         567985
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3519670 |            0
+ messages_pkey           |     3516 |    444647560
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 212 MB           | 94 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3523358 |     567978 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:05 UTC 2026 ===
+ total_messages 
+----------------
+         579098
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+        |     1
+(3 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3531041 |            0
+ messages_pkey           |     3519 |    445241158
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 216 MB           | 96 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3534732 |     579882 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:15 UTC 2026 ===
+ total_messages 
+----------------
+         590054
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3541830 |            0
+ messages_pkey           |     3522 |    445841460
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 220 MB           | 98 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3545524 |     589662 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:26 UTC 2026 ===
+ total_messages 
+----------------
+         599149
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3550865 |            0
+ messages_pkey           |     3525 |    446399610
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 223 MB           | 100 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3554562 |     598697 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:36 UTC 2026 ===
+ total_messages 
+----------------
+         608570
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3560231 |            0
+ messages_pkey           |     3528 |    447019808
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 227 MB           | 101 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3563931 |     608063 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:46 UTC 2026 ===
+ total_messages 
+----------------
+         619220
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     2
+ idle   |     6
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3570898 |            0
+ messages_pkey           |     3531 |    447646992
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 231 MB           | 103 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3574601 |     618730 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:54:56 UTC 2026 ===
+ total_messages 
+----------------
+         628278
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3579948 |            0
+ messages_pkey           |     3534 |    448238304
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 234 MB           | 104 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3583654 |     627780 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:06 UTC 2026 ===
+ total_messages 
+----------------
+         637603
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     2
+ idle   |     6
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3589549 |            0
+ messages_pkey           |     3537 |    448888358
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 238 MB           | 106 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3593258 |     637381 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:16 UTC 2026 ===
+ total_messages 
+----------------
+         649089
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3600311 |            0
+ messages_pkey           |     3540 |    449548622
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 242 MB           | 108 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3604023 |     648143 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:26 UTC 2026 ===
+ total_messages 
+----------------
+         659737
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     2
+ idle   |     6
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3611172 |            0
+ messages_pkey           |     3543 |    450189680
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 246 MB           | 110 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3614887 |     659004 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:36 UTC 2026 ===
+ total_messages 
+----------------
+         667440
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3618788 |            0
+ messages_pkey           |     3546 |    450898844
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 249 MB           | 111 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3622506 |     666620 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:46 UTC 2026 ===
+ total_messages 
+----------------
+         674210
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3626357 |            0
+ messages_pkey           |     3549 |    451506038
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 252 MB           | 112 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3630078 |     674189 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:55:56 UTC 2026 ===
+ total_messages 
+----------------
+         680571
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3632517 |            0
+ messages_pkey           |     3552 |    452246329
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 254 MB           | 113 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3636241 |     680349 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:07 UTC 2026 ===
+ total_messages 
+----------------
+         686497
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3638529 |            0
+ messages_pkey           |     3555 |    452895757
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 257 MB           | 114 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3642256 |     686285 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:17 UTC 2026 ===
+ total_messages 
+----------------
+         695120
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3646861 |            0
+ messages_pkey           |     3558 |    453539637
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 260 MB           | 116 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3650591 |     694617 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:27 UTC 2026 ===
+ total_messages 
+----------------
+         703729
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3655809 |            0
+ messages_pkey           |     3561 |    454309335
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 263 MB           | 117 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3659542 |     703565 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:37 UTC 2026 ===
+ total_messages 
+----------------
+         711954
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3663900 |            0
+ messages_pkey           |     3564 |    455051762
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 266 MB           | 118 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3667636 |     711656 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:47 UTC 2026 ===
+ total_messages 
+----------------
+         719995
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3671941 |            0
+ messages_pkey           |     3567 |    455652002
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 269 MB           | 120 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3675680 |     719697 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:56:57 UTC 2026 ===
+ total_messages 
+----------------
+         725582
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3677401 |            0
+ messages_pkey           |     3570 |    456406311
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 272 MB           | 121 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3681143 |     725157 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:07 UTC 2026 ===
+ total_messages 
+----------------
+         731199
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3682814 |            0
+ messages_pkey           |     3573 |    457180332
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 274 MB           | 122 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3686559 |     730510 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:17 UTC 2026 ===
+ total_messages 
+----------------
+         737887
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3689339 |            0
+ messages_pkey           |     3576 |    457896409
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 276 MB           | 123 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3693087 |     737035 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:27 UTC 2026 ===
+ total_messages 
+----------------
+         744432
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3695411 |            0
+ messages_pkey           |     3579 |    458625103
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 279 MB           | 124 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3699162 |     743107 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:38 UTC 2026 ===
+ total_messages 
+----------------
+         754389
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3706335 |            0
+ messages_pkey           |     3582 |    459405714
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 283 MB           | 125 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3710089 |     754031 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:48 UTC 2026 ===
+ total_messages 
+----------------
+         765357
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3717303 |            0
+ messages_pkey           |     3585 |    460171071
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 287 MB           | 127 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3721060 |     764999 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:57:58 UTC 2026 ===
+ total_messages 
+----------------
+         776295
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3728471 |            0
+ messages_pkey           |     3588 |    460986392
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 291 MB           | 129 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3732231 |     776167 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:08 UTC 2026 ===
+ total_messages 
+----------------
+         787456
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3738442 |            0
+ messages_pkey           |     3591 |    461753352
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 295 MB           | 131 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3742205 |     785783 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:18 UTC 2026 ===
+ total_messages 
+----------------
+         797905
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3749851 |            0
+ messages_pkey           |     3594 |    462526003
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 299 MB           | 133 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3753617 |     797192 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:28 UTC 2026 ===
+ total_messages 
+----------------
+         808202
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3760141 |            0
+ messages_pkey           |     3597 |    463413859
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 303 MB           | 134 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3763910 |     807482 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:38 UTC 2026 ===
+ total_messages 
+----------------
+         818354
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3770300 |            0
+ messages_pkey           |     3600 |    464168895
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 307 MB           | 136 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3774072 |     817641 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:48 UTC 2026 ===
+ total_messages 
+----------------
+         829177
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3780675 |            0
+ messages_pkey           |     3603 |    464980019
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 311 MB           | 138 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3784450 |     828016 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:58:58 UTC 2026 ===
+ total_messages 
+----------------
+         840180
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3792323 |            0
+ messages_pkey           |     3606 |    465766187
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 315 MB           | 140 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3796101 |     839664 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:09 UTC 2026 ===
+ total_messages 
+----------------
+         850786
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3801578 |            0
+ messages_pkey           |     3609 |    466649222
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 319 MB           | 141 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3805359 |     848919 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:19 UTC 2026 ===
+ total_messages 
+----------------
+         860876
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3812238 |            0
+ messages_pkey           |     3612 |    467522747
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 323 MB           | 143 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3816022 |     859579 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:29 UTC 2026 ===
+ total_messages 
+----------------
+         872499
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3824700 |            0
+ messages_pkey           |     3615 |    468432105
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 327 MB           | 145 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3828487 |     872041 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:39 UTC 2026 ===
+ total_messages 
+----------------
+         883808
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     2
+ idle   |     6
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3836009 |            0
+ messages_pkey           |     3618 |    469309499
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 331 MB           | 147 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3839799 |     883350 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:49 UTC 2026 ===
+ total_messages 
+----------------
+         893973
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3845113 |            0
+ messages_pkey           |     3621 |    470231087
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 334 MB           | 149 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3848906 |     892454 |          0
+(1 row)
+
+
+=== Tue Mar 31 00:59:59 UTC 2026 ===
+ total_messages 
+----------------
+         903721
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3855899 |            0
+ messages_pkey           |     3624 |    470996594
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 338 MB           | 150 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3859695 |     903240 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:00:10 UTC 2026 ===
+ total_messages 
+----------------
+         912575
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3864700 |            0
+ messages_pkey           |     3627 |    471911477
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 341 MB           | 152 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3868499 |     912588 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:00:20 UTC 2026 ===
+ total_messages 
+----------------
+         920164
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3871888 |            0
+ messages_pkey           |     3630 |    472941401
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 344 MB           | 153 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3875690 |     919776 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:00:30 UTC 2026 ===
+ total_messages 
+----------------
+         930403
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3882118 |            0
+ messages_pkey           |     3633 |    473815718
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 347 MB           | 155 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3885923 |     930006 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:00:40 UTC 2026 ===
+ total_messages 
+----------------
+         941194
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3892655 |            0
+ messages_pkey           |     3636 |    474709945
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 351 MB           | 156 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3896463 |     940543 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:00:50 UTC 2026 ===
+ total_messages 
+----------------
+         950899
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3902399 |            0
+ messages_pkey           |     3639 |    475691222
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 355 MB           | 158 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3906210 |     950287 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:00 UTC 2026 ===
+ total_messages 
+----------------
+         961139
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3912849 |            0
+ messages_pkey           |     3642 |    476581855
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 358 MB           | 160 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3916663 |     960737 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:10 UTC 2026 ===
+ total_messages 
+----------------
+         970710
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3922656 |            0
+ messages_pkey           |     3645 |    477598544
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 362 MB           | 161 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3926473 |     970544 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:20 UTC 2026 ===
+ total_messages 
+----------------
+         979243
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3930120 |            0
+ messages_pkey           |     3648 |    478599747
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 364 MB           | 163 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3933940 |     978008 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:31 UTC 2026 ===
+ total_messages 
+----------------
+         988213
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3939997 |            0
+ messages_pkey           |     3651 |    479542576
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 368 MB           | 164 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3943820 |     987885 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:41 UTC 2026 ===
+ total_messages 
+----------------
+         996959
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3948905 |            0
+ messages_pkey           |     3654 |    480496443
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 371 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3952731 |     996793 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:01:51 UTC 2026 ===
+ total_messages 
+----------------
+        1000667
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952631 |            0
+ messages_pkey           |     3657 |    481535924
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3956460 |    1000519 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:01 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952972 |            0
+ messages_pkey           |     3660 |    482576490
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3956804 |    1000860 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:11 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3663 |    483578598
+ idx_event_time          |      117 |      1411993
+ idx_user_event_time     |       42 |       852216
+ idx_room_event_time     |       13 |       184184
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      556 |  3956819 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:21 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3669 |    485596074
+ idx_event_time          |      123 |      1411999
+ idx_user_event_time     |       44 |      1853281
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      559 |  3956834 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:31 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3672 |    486635908
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956843 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:42 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3675 |    487532270
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956846 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:02:52 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3678 |    488613096
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956849 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:03:02 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3681 |    489564358
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956852 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:03:12 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3684 |    490607458
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956855 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:03:22 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3687 |    491583270
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956858 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:03:32 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3690 |    492513304
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956861 |    1001050 |          0
+(1 row)
+
+
+=== Tue Mar 31 01:03:42 UTC 2026 ===
+ total_messages 
+----------------
+        1001038
+(1 row)
+
+ state  | count 
+--------+-------
+ active |     1
+ idle   |     7
+(2 rows)
+
+      indexrelname       | idx_scan | idx_tup_read 
+-------------------------+----------+--------------
+ messages_message_id_key |  3952984 |            0
+ messages_pkey           |     3693 |    493589738
+ idx_event_time          |      126 |      2413039
+ idx_user_event_time     |       47 |      2855386
+ idx_room_event_time     |       14 |       234268
+(5 rows)
+
+ total_table_size | data_size 
+------------------+-----------
+ 372 MB           | 166 MB
+(1 row)
+
+ relname  | seq_scan | idx_scan | n_live_tup | n_dead_tup 
+----------+----------+----------+------------+------------
+ messages |      560 |  3956864 |    1001050 |          0
+(1 row)
+

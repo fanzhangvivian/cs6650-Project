@@ -1,0 +1,10 @@
+top - 06:25:32 up  3:04,  3 users,  load average: 4.95, 3.39, 1.94
+%Cpu(s): 56.2 us, 37.5 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  6.2 si,  0.0 
+top - 06:25:42 up  3:04,  3 users,  load average: 4.63, 3.37, 1.95
+%Cpu(s): 38.5 us, 29.3 sy,  0.0 ni, 29.1 id,  0.0 wa,  0.0 hi,  3.0 si,  0.2 
+top - 06:25:52 up  3:05,  3 users,  load average: 3.92, 3.26, 1.93
+%Cpu(s):  1.5 us,  1.8 sy,  0.0 ni, 96.2 id,  0.0 wa,  0.0 hi,  0.2 si,  0.3 
+top - 06:26:02 up  3:05,  3 users,  load average: 3.32, 3.15, 1.91
+%Cpu(s):  0.3 us,  0.6 sy,  0.0 ni, 99.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.1 
+top - 06:26:12 up  3:05,  3 users,  load average: 2.81, 3.05, 1.89
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.8 id,  0.2 wa,  0.0 hi,  0.0 si,  0.0 

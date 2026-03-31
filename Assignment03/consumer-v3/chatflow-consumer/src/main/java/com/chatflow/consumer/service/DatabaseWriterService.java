@@ -1,15 +1,18 @@
 package com.chatflow.consumer.service;
 
 import com.chatflow.consumer.model.MessageEntity;
-import com.chatflow.consumer.repository.MessageRepository;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -24,17 +27,23 @@ import java.util.concurrent.atomic.AtomicLong;
  *   consumer workers → offer(entity) → LinkedBlockingQueue
  *                                            ↓
  *                                      DB writer threads
- *                                      (batch INSERT PostgreSQL)
+ *                                      (true JDBC batch INSERT via JdbcTemplate)
  *
  * Key design decisions:
- *   1. Decoupled from RabbitMQ consumer: DB write never blocks consumption
- *   2. Bounded buffer (batchSize × 10): prevents OOM under high load
- *   3. Two flush triggers: timer (every flushIntervalMs) OR buffer full
- *   4. Both triggers go through flushing guard: prevents flush storm
- *   5. statisticsAggregator.record() called AFTER successful write only
- *   6. upsert() returns int: accurate totalWritten vs totalDupes tracking
- *   7. Exponential backoff retry + DLQ on persistent failure
- *   8. DB Circuit Breaker: stops writes when DB is unhealthy
+ *   1. JdbcTemplate.batchUpdate() bypasses Hibernate IDENTITY restriction:
+ *      saveAll() with IDENTITY degrades to N single INSERTs (Hibernate must
+ *      read back each generated id). JdbcTemplate sends all N rows in one
+ *      JDBC batch — one network round-trip regardless of batch size.
+ *   2. ON CONFLICT (message_id) DO NOTHING in the INSERT SQL:
+ *      duplicates (rare nack-requeue) are silently skipped at DB level,
+ *      no DataIntegrityViolationException, no per-row upsert fallback needed.
+ *   3. Decoupled from RabbitMQ consumer: DB write never blocks consumption.
+ *   4. Bounded buffer (batchSize × 10): prevents OOM under high load.
+ *   5. Two flush triggers: timer (every flushIntervalMs) OR buffer full.
+ *   6. Both triggers go through flushing guard: prevents flush storm.
+ *   7. statisticsAggregator.record() called AFTER successful write only.
+ *   8. Exponential backoff retry + DLQ on persistent failure.
+ *   9. DB Circuit Breaker: stops writes when DB is unhealthy.
  */
 @Service
 public class DatabaseWriterService {
@@ -42,17 +51,28 @@ public class DatabaseWriterService {
     private static final Logger logger =
             LoggerFactory.getLogger(DatabaseWriterService.class);
 
-    private final MessageRepository messageRepository;
+    // True JDBC batch INSERT — ON CONFLICT skips duplicates silently.
+    // No Hibernate involvement: bypasses IDENTITY-disables-batching restriction.
+    private static final String INSERT_SQL = """
+            INSERT INTO messages (
+                message_id, room_id, user_id, username, message,
+                event_time, message_type, server_id, client_ip,
+                published_at, received_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT (message_id) DO NOTHING
+            """;
+
+    private final JdbcTemplate jdbcTemplate;
     private final StatisticsAggregator statisticsAggregator;
     private final DbCircuitBreaker dbCircuitBreaker;
 
     @Value("${database.batch-size:1000}")
     private int batchSize;
 
-    @Value("${database.flush-interval-ms:500}")
+    @Value("${database.flush-interval-ms:200}")
     private long flushIntervalMs;
 
-    @Value("${database.writer-thread-count:10}")
+    @Value("${database.writer-thread-count:20}")
     private int writerThreadCount;
 
     // Bounded in-memory buffer between consumer workers and DB writers
@@ -73,15 +93,15 @@ public class DatabaseWriterService {
     private final AtomicLong totalFailed  = new AtomicLong(0);
     private final AtomicLong totalDupes   = new AtomicLong(0);
 
-    // Write latency samples for p50/p95/p99 in Part 4 Performance Report
+    // Write latency samples for p50/p95/p99
     private final ConcurrentLinkedQueue<Long> writeLatencies =
             new ConcurrentLinkedQueue<>();
     private static final int MAX_LATENCY_SAMPLES = 10000;
 
-    public DatabaseWriterService(MessageRepository messageRepository,
+    public DatabaseWriterService(JdbcTemplate jdbcTemplate,
                                  StatisticsAggregator statisticsAggregator,
                                  DbCircuitBreaker dbCircuitBreaker) {
-        this.messageRepository    = messageRepository;
+        this.jdbcTemplate         = jdbcTemplate;
         this.statisticsAggregator = statisticsAggregator;
         this.dbCircuitBreaker     = dbCircuitBreaker;
     }
@@ -97,8 +117,6 @@ public class DatabaseWriterService {
             return t;
         });
 
-        // Timer-triggered flush also goes through flushing guard.
-        // Prevents overlap between timer flush and size-triggered flush.
         flushScheduler.scheduleAtFixedRate(
                 this::triggerFlush,
                 flushIntervalMs,
@@ -117,16 +135,11 @@ public class DatabaseWriterService {
      *
      * Non-blocking: returns false immediately if buffer is full.
      * Caller nacks the RabbitMQ message on false → requeue, no data loss.
-     *
-     * NOTE: statisticsAggregator.record() is NOT called here.
-     * It is called only after confirmed successful DB write,
-     * so aggregator stats reflect actual persistence, not buffer entry.
      */
     public boolean offer(MessageEntity entity) {
         boolean accepted = buffer.offer(entity);
 
         if (accepted) {
-            // Size-based flush trigger — goes through same flushing guard
             if (buffer.size() >= batchSize) {
                 triggerFlush();
             }
@@ -140,8 +153,7 @@ public class DatabaseWriterService {
 
     /**
      * Central flush trigger used by BOTH size-triggered and timer-triggered paths.
-     * CAS on flushing ensures only one flush task is submitted at a time,
-     * preventing flush storm regardless of which trigger fires.
+     * CAS on flushing ensures only one flush task is submitted at a time.
      */
     private void triggerFlush() {
         if (flushing.compareAndSet(false, true)) {
@@ -150,8 +162,8 @@ public class DatabaseWriterService {
     }
 
     /**
-     * Drains up to batchSize messages from buffer and writes to PostgreSQL.
-     * drainTo() is atomic: concurrent calls each get a distinct batch.
+     * Drains up to batchSize messages from buffer and writes to PostgreSQL
+     * via true JDBC batch INSERT (JdbcTemplate.batchUpdate).
      */
     private void flushBuffer() {
         try {
@@ -171,89 +183,78 @@ public class DatabaseWriterService {
             }
 
         } finally {
-            // Always release flag so next trigger can submit a new flush
             flushing.set(false);
         }
     }
 
     /**
-     * Attempts to write a batch to PostgreSQL.
+     * Writes a batch to PostgreSQL using JdbcTemplate.batchUpdate().
      *
-     * Happy path (>>99% of cases):
-     *   saveAll(batch) → JDBC batch INSERT → record stats → done
-     *
-     * Duplicate path (rare: consumer restart or nack-requeue):
-     *   DataIntegrityViolationException → per-row upsert
-     *   upsert() returns 1 (inserted) or 0 (duplicate skipped)
+     * Happy path:
+     *   jdbcTemplate.batchUpdate() → JDBC batch INSERT (one round-trip)
+     *   ON CONFLICT DO NOTHING handles duplicates silently at DB level
+     *   → record stats → done
      *
      * Failure path (DB unavailable):
      *   Exponential backoff retry (1s → 2s → 4s) → DLQ
      */
     private void flushWithRetry(List<MessageEntity> batch) {
         if (!dbCircuitBreaker.isAllowed()) {
-            logger.warn("DB CircuitBreaker OPEN, sending batch of {} to DLQ",
-                    batch.size());
+            logger.warn("DB CircuitBreaker OPEN, sending batch of {} to DLQ", batch.size());
             sendToDlq(batch);
             return;
         }
 
         try {
-            messageRepository.saveAll(batch);
+            int[] results = jdbcTemplate.batchUpdate(INSERT_SQL, new BatchPreparedStatementSetter() {
+                @Override
+                public void setValues(PreparedStatement ps, int i) throws SQLException {
+                    MessageEntity e = batch.get(i);
+                    ps.setString(   1, e.getMessageId());
+                    ps.setString(   2, e.getRoomId());
+                    ps.setString(   3, e.getUserId());
+                    ps.setString(   4, e.getUsername());
+                    ps.setString(   5, e.getMessage());
+                    ps.setTimestamp(6, e.getEventTime()   != null ? Timestamp.from(e.getEventTime())   : null);
+                    ps.setString(   7, e.getMessageType());
+                    ps.setString(   8, e.getServerId());
+                    ps.setString(   9, e.getClientIp());
+                    ps.setTimestamp(10, e.getPublishedAt() != null ? Timestamp.from(e.getPublishedAt()) : null);
+                    ps.setTimestamp(11, Timestamp.from(e.getReceivedAt()));
+                }
+
+                @Override
+                public int getBatchSize() { return batch.size(); }
+            });
+
             dbCircuitBreaker.recordSuccess();
 
-            // Record stats AFTER confirmed write — not at buffer entry
-            totalWritten.addAndGet(batch.size());
-            batch.forEach(statisticsAggregator::record);
+            // ON CONFLICT DO NOTHING: result[i] == 0 means duplicate skipped
+            int written = 0;
+            int dupes   = 0;
+            for (int i = 0; i < results.length; i++) {
+                if (results[i] > 0) {
+                    written++;
+                    statisticsAggregator.record(batch.get(i));
+                } else {
+                    dupes++;
+                }
+            }
+            totalWritten.addAndGet(written);
+            totalDupes.addAndGet(dupes);
 
-            logger.debug("Batch written: {} messages", batch.size());
-
-        } catch (DataIntegrityViolationException e) {
-            logger.warn("Duplicate message_id in batch of {}, falling back to upsert",
-                    batch.size());
-            handleDuplicates(batch);
+            if (dupes > 0) {
+                logger.info("Batch written: {} inserted, {} duplicates skipped (ON CONFLICT)",
+                        written, dupes);
+            } else {
+                logger.debug("Batch written: {} messages", written);
+            }
 
         } catch (Exception e) {
-            logger.error("Batch write failed (size={}), starting retry",
-                    batch.size(), e);
+            logger.error("Batch write failed (size={}), starting retry", batch.size(), e);
             dbCircuitBreaker.recordFailure();
             retryWithBackoff(batch);
         }
-    }
-
-    /**
-     * Per-row upsert fallback for batches containing duplicate message_ids.
-     *
-     * upsert() returns:
-     *   1 → row actually inserted → count as written, record in aggregator
-     *   0 → duplicate skipped    → count as dupe, do NOT record in aggregator
-     *
-     * This gives accurate totalWritten and totalDupes without guessing.
-     */
-    private void handleDuplicates(List<MessageEntity> batch) {
-        int written = 0;
-        int dupes   = 0;
-
-        for (MessageEntity entity : batch) {
-            try {
-                int result = messageRepository.upsert(entity);
-                if (result == 1) {
-                    written++;
-                    statisticsAggregator.record(entity); // only on actual insert
-                } else {
-                    dupes++;
-                    logger.debug("Duplicate skipped: messageId={}", entity.getMessageId());
-                }
-            } catch (Exception ex) {
-                logger.error("Upsert failed for messageId={}",
-                        entity.getMessageId(), ex);
-                totalFailed.incrementAndGet();
-            }
-        }
-
-        totalWritten.addAndGet(written);
-        totalDupes.addAndGet(dupes);
-        logger.info("Upsert complete: {} inserted, {} duplicates skipped",
-                written, dupes);
     }
 
     /**
@@ -265,8 +266,7 @@ public class DatabaseWriterService {
 
         for (int attempt = 1; attempt <= maxRetries; attempt++) {
             if (!dbCircuitBreaker.isAllowed()) {
-                logger.warn("CircuitBreaker OPEN during retry attempt {}, sending to DLQ",
-                        attempt);
+                logger.warn("CircuitBreaker OPEN during retry attempt {}, sending to DLQ", attempt);
                 sendToDlq(batch);
                 return;
             }
@@ -280,12 +280,33 @@ public class DatabaseWriterService {
             }
 
             try {
-                messageRepository.saveAll(batch);
+                jdbcTemplate.batchUpdate(INSERT_SQL, new BatchPreparedStatementSetter() {
+                    @Override
+                    public void setValues(PreparedStatement ps, int i) throws SQLException {
+                        MessageEntity e = batch.get(i);
+                        ps.setString(   1, e.getMessageId());
+                        ps.setString(   2, e.getRoomId());
+                        ps.setString(   3, e.getUserId());
+                        ps.setString(   4, e.getUsername());
+                        ps.setString(   5, e.getMessage());
+                        ps.setTimestamp(6, e.getEventTime()   != null ? Timestamp.from(e.getEventTime())   : null);
+                        ps.setString(   7, e.getMessageType());
+                        ps.setString(   8, e.getServerId());
+                        ps.setString(   9, e.getClientIp());
+                        ps.setTimestamp(10, e.getPublishedAt() != null ? Timestamp.from(e.getPublishedAt()) : null);
+                        ps.setTimestamp(11, Timestamp.from(e.getReceivedAt()));
+                    }
+
+                    @Override
+                    public int getBatchSize() { return batch.size(); }
+                });
+
                 dbCircuitBreaker.recordSuccess();
                 totalWritten.addAndGet(batch.size());
                 batch.forEach(statisticsAggregator::record);
                 logger.info("Batch write succeeded on retry {}/{}", attempt, maxRetries);
                 return;
+
             } catch (Exception e) {
                 dbCircuitBreaker.recordFailure();
                 logger.warn("Retry {}/{} failed, next backoff={}ms",
@@ -299,17 +320,9 @@ public class DatabaseWriterService {
         sendToDlq(batch);
     }
 
-    /**
-     * Dead Letter Queue handler for messages that could not be persisted.
-     *
-     * Current implementation: logs messageIds for auditability.
-     * TODO: publish to RabbitMQ chat.dlq queue (to be completed in Step 2.5
-     * when RabbitMQ channel is available via MessageConsumerService).
-     */
     private void sendToDlq(List<MessageEntity> batch) {
         totalFailed.addAndGet(batch.size());
-        logger.error("DLQ: {} messages could not be persisted after all retries",
-                batch.size());
+        logger.error("DLQ: {} messages could not be persisted after all retries", batch.size());
         batch.stream()
                 .limit(5)
                 .forEach(e -> logger.error("DLQ messageId: {}", e.getMessageId()));

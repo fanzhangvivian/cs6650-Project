@@ -1,0 +1,30 @@
+{
+    "messagesConsumed": 500474,
+    "bufferFullNacks": 0,
+    "dbFailed": 0,
+    "dbWritten": 500474,
+    "messagesFailed": 0,
+    "dbCircuitBreakerState": "CLOSED",
+    "uptime": "0h 12m 57s",
+    "malformedMessages": 0,
+    "dbDupes": 0,
+    "writeLatencyMs": {
+        "sampleCount": 2414,
+        "p99": 44,
+        "min": 1,
+        "max": 143,
+        "p50": 11,
+        "p95": 24
+    },
+    "activeConsumers": 20,
+    "dbCircuitBreakerFailures": 0,
+    "service": "ChatFlow Consumer v3",
+    "startTime": "2026-03-30T06:13:42.783154011Z",
+    "broadcastSuccess": 500474,
+    "broadcastFailed": 0,
+    "statsAggregatorTotal": 500474,
+    "messagesBuffered": 500474,
+    "dbBufferSize": 0,
+    "status": "UP",
+    "timestamp": "2026-03-30T06:26:39.786666632Z"
+}

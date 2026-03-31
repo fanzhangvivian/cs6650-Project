@@ -1,0 +1,3209 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 1000000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 7562 messages = 968000 messages
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 96ms
+  ✅ Thread pool-1-thread-13 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-7 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-16 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-32 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-19 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-4 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-8 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-12 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-26 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-11 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-5 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-29 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-28 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-9 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-22 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-14 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-6 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-17 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-21 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-25 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-23 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-15 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-10 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-20 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-27 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-2 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-3 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-31 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-33 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-18 completed: sent=1000, failed=0
+
+✅ Warmup Phase Completed:
+   Duration: 94915 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 337.14 msg/sec
+   Active connections: 40
+
+Total connections created so far: 47
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Starting 128 threads to send 968000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 968000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages
+  Generated: 450000 messages
+  Generated: 500000 messages
+  Generated: 550000 messages
+  Generated: 600000 messages
+  Generated: 650000 messages
+  Generated: 700000 messages
+  Generated: 750000 messages
+  Generated: 800000 messages
+  Generated: 850000 messages
+  Generated: 900000 messages
+  Generated: 950000 messages
+MessageGenerator completed: 968000 messages in 794228ms
+  ✅ Thread pool-49-thread-93 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-81 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-12 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-110 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-105 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-56 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-10 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-28 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-125 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-22 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-64 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-102 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-43 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-17 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-66 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-97 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-85 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-23 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-15 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-44 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-89 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-96 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-119 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-98 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-13 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-24 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-87 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-6 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-49 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-95 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-126 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-67 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-19 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-91 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-58 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-92 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-69 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-99 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-48 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-36 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-128 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-103 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-65 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-118 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-127 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-25 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-109 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-75 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-47 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-38 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-4 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-31 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-86 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-106 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-7 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-111 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-40 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-80 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-51 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-78 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-108 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-61 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-34 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-114 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-76 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-83 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-55 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-63 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-90 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-113 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-9 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-21 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-68 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-59 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-16 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-29 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-79 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-70 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-116 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-73 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-104 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-20 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-11 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-94 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-46 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-2 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-74 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-32 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-115 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-27 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-129 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-57 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-62 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-41 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-30 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-14 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-52 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-39 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-84 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-100 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-124 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-71 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-42 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-50 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-3 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-101 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-8 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-120 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-107 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-82 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-117 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-45 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-112 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-35 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-88 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-26 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-123 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-54 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-77 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-72 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-33 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-53 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-60 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-18 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-37 completed: sent=7563, failed=0
+  ✅ Thread pool-49-thread-122 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-121 completed: sent=7562, failed=0
+  ✅ Thread pool-49-thread-5 completed: sent=7563, failed=0
+
+✅ Main Phase Completed:
+   Total messages sent: 968000
+   Duration: 917704 ms
+   Throughput: 1054.81 msg/sec
+   Active connections: 40
+
+Total connections created: 748
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 1000000
+Failed messages: 0
+Total runtime: 1013671 ms
+Total connections: 748
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    94915 ms (337.14 msg/sec)
+  Main Load: 917704 ms (1054.81 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics (successful messages):
+  Samples: 1000000
+  Mean response time: 110 ms
+  Median response time: 95 ms
+  95th percentile: 201 ms
+  99th percentile: 318 ms
+  Min response time: 64 ms
+  Max response time: 4087 ms
+
+--- Throughput per Room ---
+  Room 1: 50034 messages
+  Room 2: 49644 messages
+  Room 3: 49635 messages
+  Room 4: 50248 messages
+  Room 5: 50154 messages
+  Room 6: 50009 messages
+  Room 7: 50219 messages
+  Room 8: 49837 messages
+  Room 9: 49823 messages
+  Room 10: 50326 messages
+  Room 11: 49620 messages
+  Room 12: 49962 messages
+  Room 13: 50341 messages
+  Room 14: 50121 messages
+  Room 15: 49909 messages
+  Room 16: 49842 messages
+  Room 17: 50198 messages
+  Room 18: 50221 messages
+  Room 19: 50176 messages
+  Room 20: 49681 messages
+
+--- Message Type Distribution ---
+  TEXT: 900056 messages (90.01%)
+  JOIN: 49931 messages (4.99%)
+  LEAVE: 50013 messages (5.00%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 1000000
+
+┌─────────────────────────────────────┐
+│  Generating Throughput Chart        │
+└─────────────────────────────────────┘
+
+2026-03-30 18:02:04.014 java[42943:57617458] +[IMKClient subclass]: chose IMKClient_Modern
+2026-03-30 18:02:04.014 java[42943:57617458] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+✅ Chart saved: results/throughput-chart.png
+   Size: 800x600 pixels
+   Time buckets: 102
+
+✅ All tests completed successfully!
+
+Waiting 10s for consumer to flush final batch to DB...
+
+┌─────────────────────────────────────┐
+│  Assignment 3: Metrics API Results  │
+└─────────────────────────────────────┘
+Calling Metrics API: http://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/metrics?roomId=1
+
+===== METRICS API RESULT =====
+{
+  "generatedAt" : "2026-03-31T01:02:16.701746749Z",
+  "queryWindow" : {
+    "end" : "2026-03-31T01:02:16.258881590Z",
+    "start" : "2026-03-30T01:02:16.258848708Z"
+  },
+  "autoSelectedUserId" : "86987",
+  "totalMessages" : 1001038,
+  "coreQueries" : {
+    "roomMessagesInRange" : {
+      "targetMet" : true,
+      "targetMs" : 100,
+      "executionMs" : 1604,
+      "count" : 50084,
+      "roomId" : "1"
+    },
+    "userMessageHistory" : {
+      "targetMet" : true,
+      "targetMs" : 200,
+      "executionMs" : 11,
+      "userId" : "86987",
+      "count" : 27
+    },
+    "activeUsersInWindow" : {
+      "uniqueUsers" : 99998,
+      "executionMs" : 1174,
+      "targetMet" : true,
+      "targetMs" : 500
+    },
+    "roomsForUser" : {
+      "targetMet" : true,
+      "targetMs" : 50,
+      "executionMs" : 8,
+      "userId" : "86987",
+      "rooms" : [ {
+        "roomId" : "9",
+        "lastActivity" : "2026-03-31T00:58:57.707878Z"
+      }, {
+        "roomId" : "1",
+        "lastActivity" : "2026-03-31T00:58:46.756290Z"
+      }, {
+        "roomId" : "19",
+        "lastActivity" : "2026-03-31T00:58:39.785593Z"
+      }, {
+        "roomId" : "3",
+        "lastActivity" : "2026-03-31T00:58:05.523768Z"
+      }, {
+        "roomId" : "13",
+        "lastActivity" : "2026-03-31T00:57:43.648670Z"
+      }, {
+        "roomId" : "2",
+        "lastActivity" : "2026-03-31T00:56:31.024970Z"
+      }, {
+        "roomId" : "18",
+        "lastActivity" : "2026-03-31T00:55:45.531561Z"
+      }, {
+        "roomId" : "12",
+        "lastActivity" : "2026-03-31T00:55:26.339699Z"
+      }, {
+        "roomId" : "17",
+        "lastActivity" : "2026-03-31T00:53:40.328206Z"
+      }, {
+        "roomId" : "8",
+        "lastActivity" : "2026-03-31T00:53:36.336778Z"
+      }, {
+        "roomId" : "4",
+        "lastActivity" : "2026-03-31T00:52:11.683620Z"
+      }, {
+        "roomId" : "14",
+        "lastActivity" : "2026-03-31T00:51:51.028682Z"
+      }, {
+        "roomId" : "5",
+        "lastActivity" : "2026-03-31T00:50:28.715326Z"
+      }, {
+        "roomId" : "11",
+        "lastActivity" : "2026-03-31T00:49:07.813536Z"
+      }, {
+        "roomId" : "10",
+        "lastActivity" : "2026-03-31T00:47:56.551234Z"
+      }, {
+        "roomId" : "15",
+        "lastActivity" : "2026-03-31T00:47:04.144606Z"
+      } ]
+    }
+  },
+  "analyticsQueries" : {
+    "messagesPerSecond" : [ {
+      "count" : 32007,
+      "second" : "2026-03-31T00:45:06Z"
+    }, {
+      "count" : 100634,
+      "second" : "2026-03-31T00:46:42Z"
+    }, {
+      "count" : 1513,
+      "second" : "2026-03-31T00:46:43Z"
+    }, {
+      "count" : 1506,
+      "second" : "2026-03-31T00:46:44Z"
+    }, {
+      "count" : 1580,
+      "second" : "2026-03-31T00:46:45Z"
+    }, {
+      "count" : 1543,
+      "second" : "2026-03-31T00:46:46Z"
+    }, {
+      "count" : 1550,
+      "second" : "2026-03-31T00:46:47Z"
+    }, {
+      "count" : 1506,
+      "second" : "2026-03-31T00:46:48Z"
+    }, {
+      "count" : 1501,
+      "second" : "2026-03-31T00:46:49Z"
+    }, {
+      "count" : 1445,
+      "second" : "2026-03-31T00:46:50Z"
+    }, {
+      "count" : 1518,
+      "second" : "2026-03-31T00:46:51Z"
+    }, {
+      "count" : 1480,
+      "second" : "2026-03-31T00:46:52Z"
+    }, {
+      "count" : 1518,
+      "second" : "2026-03-31T00:46:53Z"
+    }, {
+      "count" : 1564,
+      "second" : "2026-03-31T00:46:54Z"
+    }, {
+      "count" : 1525,
+      "second" : "2026-03-31T00:46:55Z"
+    }, {
+      "count" : 1551,
+      "second" : "2026-03-31T00:46:56Z"
+    }, {
+      "count" : 1524,
+      "second" : "2026-03-31T00:46:57Z"
+    }, {
+      "count" : 1497,
+      "second" : "2026-03-31T00:46:58Z"
+    }, {
+      "count" : 1503,
+      "second" : "2026-03-31T00:46:59Z"
+    }, {
+      "count" : 1385,
+      "second" : "2026-03-31T00:47:00Z"
+    }, {
+      "count" : 1280,
+      "second" : "2026-03-31T00:47:01Z"
+    }, {
+      "count" : 1536,
+      "second" : "2026-03-31T00:47:02Z"
+    }, {
+      "count" : 1515,
+      "second" : "2026-03-31T00:47:03Z"
+    }, {
+      "count" : 1347,
+      "second" : "2026-03-31T00:47:04Z"
+    }, {
+      "count" : 1537,
+      "second" : "2026-03-31T00:47:05Z"
+    }, {
+      "count" : 1362,
+      "second" : "2026-03-31T00:47:06Z"
+    }, {
+      "count" : 1528,
+      "second" : "2026-03-31T00:47:07Z"
+    }, {
+      "count" : 1545,
+      "second" : "2026-03-31T00:47:08Z"
+    }, {
+      "count" : 1511,
+      "second" : "2026-03-31T00:47:09Z"
+    }, {
+      "count" : 1525,
+      "second" : "2026-03-31T00:47:10Z"
+    }, {
+      "count" : 1438,
+      "second" : "2026-03-31T00:47:11Z"
+    }, {
+      "count" : 1504,
+      "second" : "2026-03-31T00:47:12Z"
+    }, {
+      "count" : 1535,
+      "second" : "2026-03-31T00:47:13Z"
+    }, {
+      "count" : 1510,
+      "second" : "2026-03-31T00:47:14Z"
+    }, {
+      "count" : 1529,
+      "second" : "2026-03-31T00:47:15Z"
+    }, {
+      "count" : 1581,
+      "second" : "2026-03-31T00:47:16Z"
+    }, {
+      "count" : 1484,
+      "second" : "2026-03-31T00:47:17Z"
+    }, {
+      "count" : 1239,
+      "second" : "2026-03-31T00:47:18Z"
+    }, {
+      "count" : 1457,
+      "second" : "2026-03-31T00:47:19Z"
+    }, {
+      "count" : 1559,
+      "second" : "2026-03-31T00:47:20Z"
+    }, {
+      "count" : 1539,
+      "second" : "2026-03-31T00:47:21Z"
+    }, {
+      "count" : 1501,
+      "second" : "2026-03-31T00:47:22Z"
+    }, {
+      "count" : 1464,
+      "second" : "2026-03-31T00:47:23Z"
+    }, {
+      "count" : 1498,
+      "second" : "2026-03-31T00:47:24Z"
+    }, {
+      "count" : 1504,
+      "second" : "2026-03-31T00:47:25Z"
+    }, {
+      "count" : 1565,
+      "second" : "2026-03-31T00:47:26Z"
+    }, {
+      "count" : 1422,
+      "second" : "2026-03-31T00:47:27Z"
+    }, {
+      "count" : 1562,
+      "second" : "2026-03-31T00:47:28Z"
+    }, {
+      "count" : 1523,
+      "second" : "2026-03-31T00:47:29Z"
+    }, {
+      "count" : 1555,
+      "second" : "2026-03-31T00:47:30Z"
+    }, {
+      "count" : 1513,
+      "second" : "2026-03-31T00:47:31Z"
+    }, {
+      "count" : 1347,
+      "second" : "2026-03-31T00:47:32Z"
+    }, {
+      "count" : 1583,
+      "second" : "2026-03-31T00:47:33Z"
+    }, {
+      "count" : 1530,
+      "second" : "2026-03-31T00:47:34Z"
+    }, {
+      "count" : 1571,
+      "second" : "2026-03-31T00:47:35Z"
+    }, {
+      "count" : 1509,
+      "second" : "2026-03-31T00:47:36Z"
+    }, {
+      "count" : 1506,
+      "second" : "2026-03-31T00:47:37Z"
+    }, {
+      "count" : 1583,
+      "second" : "2026-03-31T00:47:38Z"
+    }, {
+      "count" : 1549,
+      "second" : "2026-03-31T00:47:39Z"
+    }, {
+      "count" : 1545,
+      "second" : "2026-03-31T00:47:40Z"
+    }, {
+      "count" : 1565,
+      "second" : "2026-03-31T00:47:41Z"
+    }, {
+      "count" : 1541,
+      "second" : "2026-03-31T00:47:42Z"
+    }, {
+      "count" : 1509,
+      "second" : "2026-03-31T00:47:43Z"
+    }, {
+      "count" : 1578,
+      "second" : "2026-03-31T00:47:44Z"
+    }, {
+      "count" : 1549,
+      "second" : "2026-03-31T00:47:45Z"
+    }, {
+      "count" : 1247,
+      "second" : "2026-03-31T00:47:46Z"
+    }, {
+      "count" : 1579,
+      "second" : "2026-03-31T00:47:47Z"
+    }, {
+      "count" : 1542,
+      "second" : "2026-03-31T00:47:48Z"
+    }, {
+      "count" : 1521,
+      "second" : "2026-03-31T00:47:49Z"
+    }, {
+      "count" : 1554,
+      "second" : "2026-03-31T00:47:50Z"
+    }, {
+      "count" : 1526,
+      "second" : "2026-03-31T00:47:51Z"
+    }, {
+      "count" : 1557,
+      "second" : "2026-03-31T00:47:52Z"
+    }, {
+      "count" : 1544,
+      "second" : "2026-03-31T00:47:53Z"
+    }, {
+      "count" : 1505,
+      "second" : "2026-03-31T00:47:54Z"
+    }, {
+      "count" : 1556,
+      "second" : "2026-03-31T00:47:55Z"
+    }, {
+      "count" : 1421,
+      "second" : "2026-03-31T00:47:56Z"
+    }, {
+      "count" : 1437,
+      "second" : "2026-03-31T00:47:57Z"
+    }, {
+      "count" : 1575,
+      "second" : "2026-03-31T00:47:58Z"
+    }, {
+      "count" : 1546,
+      "second" : "2026-03-31T00:47:59Z"
+    }, {
+      "count" : 1117,
+      "second" : "2026-03-31T00:48:00Z"
+    }, {
+      "count" : 1264,
+      "second" : "2026-03-31T00:48:01Z"
+    }, {
+      "count" : 810,
+      "second" : "2026-03-31T00:48:02Z"
+    }, {
+      "count" : 1534,
+      "second" : "2026-03-31T00:48:03Z"
+    }, {
+      "count" : 1519,
+      "second" : "2026-03-31T00:48:04Z"
+    }, {
+      "count" : 1554,
+      "second" : "2026-03-31T00:48:05Z"
+    }, {
+      "count" : 1531,
+      "second" : "2026-03-31T00:48:06Z"
+    }, {
+      "count" : 1513,
+      "second" : "2026-03-31T00:48:07Z"
+    }, {
+      "count" : 1513,
+      "second" : "2026-03-31T00:48:08Z"
+    }, {
+      "count" : 1040,
+      "second" : "2026-03-31T00:48:09Z"
+    }, {
+      "count" : 1559,
+      "second" : "2026-03-31T00:48:10Z"
+    }, {
+      "count" : 1512,
+      "second" : "2026-03-31T00:48:11Z"
+    }, {
+      "count" : 1540,
+      "second" : "2026-03-31T00:48:12Z"
+    }, {
+      "count" : 1503,
+      "second" : "2026-03-31T00:48:13Z"
+    }, {
+      "count" : 1430,
+      "second" : "2026-03-31T00:48:14Z"
+    }, {
+      "count" : 1523,
+      "second" : "2026-03-31T00:48:15Z"
+    }, {
+      "count" : 1530,
+      "second" : "2026-03-31T00:48:16Z"
+    }, {
+      "count" : 1538,
+      "second" : "2026-03-31T00:48:17Z"
+    }, {
+      "count" : 1508,
+      "second" : "2026-03-31T00:48:18Z"
+    }, {
+      "count" : 1162,
+      "second" : "2026-03-31T00:48:19Z"
+    }, {
+      "count" : 1379,
+      "second" : "2026-03-31T00:48:20Z"
+    }, {
+      "count" : 1514,
+      "second" : "2026-03-31T00:48:21Z"
+    }, {
+      "count" : 1566,
+      "second" : "2026-03-31T00:48:22Z"
+    }, {
+      "count" : 1440,
+      "second" : "2026-03-31T00:48:23Z"
+    }, {
+      "count" : 1402,
+      "second" : "2026-03-31T00:48:24Z"
+    }, {
+      "count" : 1561,
+      "second" : "2026-03-31T00:48:25Z"
+    }, {
+      "count" : 1561,
+      "second" : "2026-03-31T00:48:26Z"
+    }, {
+      "count" : 1274,
+      "second" : "2026-03-31T00:48:27Z"
+    }, {
+      "count" : 1287,
+      "second" : "2026-03-31T00:48:28Z"
+    }, {
+      "count" : 1553,
+      "second" : "2026-03-31T00:48:29Z"
+    }, {
+      "count" : 1338,
+      "second" : "2026-03-31T00:48:30Z"
+    }, {
+      "count" : 1519,
+      "second" : "2026-03-31T00:48:31Z"
+    }, {
+      "count" : 1561,
+      "second" : "2026-03-31T00:48:32Z"
+    }, {
+      "count" : 1570,
+      "second" : "2026-03-31T00:48:33Z"
+    }, {
+      "count" : 1529,
+      "second" : "2026-03-31T00:48:34Z"
+    }, {
+      "count" : 1587,
+      "second" : "2026-03-31T00:48:35Z"
+    }, {
+      "count" : 1539,
+      "second" : "2026-03-31T00:48:36Z"
+    }, {
+      "count" : 1411,
+      "second" : "2026-03-31T00:48:37Z"
+    }, {
+      "count" : 1580,
+      "second" : "2026-03-31T00:48:38Z"
+    }, {
+      "count" : 1536,
+      "second" : "2026-03-31T00:48:39Z"
+    }, {
+      "count" : 1569,
+      "second" : "2026-03-31T00:48:40Z"
+    }, {
+      "count" : 976,
+      "second" : "2026-03-31T00:48:41Z"
+    }, {
+      "count" : 9,
+      "second" : "2026-03-31T00:48:52Z"
+    }, {
+      "count" : 58,
+      "second" : "2026-03-31T00:48:53Z"
+    }, {
+      "count" : 80,
+      "second" : "2026-03-31T00:48:54Z"
+    }, {
+      "count" : 68,
+      "second" : "2026-03-31T00:48:55Z"
+    }, {
+      "count" : 37,
+      "second" : "2026-03-31T00:48:56Z"
+    }, {
+      "count" : 189,
+      "second" : "2026-03-31T00:48:57Z"
+    }, {
+      "count" : 959,
+      "second" : "2026-03-31T00:48:58Z"
+    }, {
+      "count" : 896,
+      "second" : "2026-03-31T00:48:59Z"
+    }, {
+      "count" : 968,
+      "second" : "2026-03-31T00:49:00Z"
+    }, {
+      "count" : 757,
+      "second" : "2026-03-31T00:49:01Z"
+    }, {
+      "count" : 790,
+      "second" : "2026-03-31T00:49:02Z"
+    }, {
+      "count" : 1366,
+      "second" : "2026-03-31T00:49:03Z"
+    }, {
+      "count" : 1221,
+      "second" : "2026-03-31T00:49:04Z"
+    }, {
+      "count" : 1351,
+      "second" : "2026-03-31T00:49:05Z"
+    }, {
+      "count" : 1481,
+      "second" : "2026-03-31T00:49:06Z"
+    }, {
+      "count" : 1435,
+      "second" : "2026-03-31T00:49:07Z"
+    }, {
+      "count" : 1486,
+      "second" : "2026-03-31T00:49:08Z"
+    }, {
+      "count" : 1491,
+      "second" : "2026-03-31T00:49:09Z"
+    }, {
+      "count" : 1312,
+      "second" : "2026-03-31T00:49:10Z"
+    }, {
+      "count" : 815,
+      "second" : "2026-03-31T00:49:11Z"
+    }, {
+      "count" : 1147,
+      "second" : "2026-03-31T00:49:12Z"
+    }, {
+      "count" : 1425,
+      "second" : "2026-03-31T00:49:13Z"
+    }, {
+      "count" : 1447,
+      "second" : "2026-03-31T00:49:14Z"
+    }, {
+      "count" : 1490,
+      "second" : "2026-03-31T00:49:15Z"
+    }, {
+      "count" : 1386,
+      "second" : "2026-03-31T00:49:16Z"
+    }, {
+      "count" : 1482,
+      "second" : "2026-03-31T00:49:17Z"
+    }, {
+      "count" : 1369,
+      "second" : "2026-03-31T00:49:18Z"
+    }, {
+      "count" : 1464,
+      "second" : "2026-03-31T00:49:19Z"
+    }, {
+      "count" : 1378,
+      "second" : "2026-03-31T00:49:20Z"
+    }, {
+      "count" : 1510,
+      "second" : "2026-03-31T00:49:21Z"
+    }, {
+      "count" : 1484,
+      "second" : "2026-03-31T00:49:22Z"
+    }, {
+      "count" : 1319,
+      "second" : "2026-03-31T00:49:23Z"
+    }, {
+      "count" : 1452,
+      "second" : "2026-03-31T00:49:24Z"
+    }, {
+      "count" : 638,
+      "second" : "2026-03-31T00:49:25Z"
+    }, {
+      "count" : 916,
+      "second" : "2026-03-31T00:49:26Z"
+    }, {
+      "count" : 1447,
+      "second" : "2026-03-31T00:49:27Z"
+    }, {
+      "count" : 1279,
+      "second" : "2026-03-31T00:49:28Z"
+    }, {
+      "count" : 1466,
+      "second" : "2026-03-31T00:49:29Z"
+    }, {
+      "count" : 1263,
+      "second" : "2026-03-31T00:49:30Z"
+    }, {
+      "count" : 1051,
+      "second" : "2026-03-31T00:49:31Z"
+    }, {
+      "count" : 1456,
+      "second" : "2026-03-31T00:49:32Z"
+    }, {
+      "count" : 1498,
+      "second" : "2026-03-31T00:49:33Z"
+    }, {
+      "count" : 1347,
+      "second" : "2026-03-31T00:49:34Z"
+    }, {
+      "count" : 1377,
+      "second" : "2026-03-31T00:49:35Z"
+    }, {
+      "count" : 1331,
+      "second" : "2026-03-31T00:49:36Z"
+    }, {
+      "count" : 1515,
+      "second" : "2026-03-31T00:49:37Z"
+    }, {
+      "count" : 1404,
+      "second" : "2026-03-31T00:49:38Z"
+    }, {
+      "count" : 1128,
+      "second" : "2026-03-31T00:49:39Z"
+    }, {
+      "count" : 631,
+      "second" : "2026-03-31T00:49:40Z"
+    }, {
+      "count" : 1486,
+      "second" : "2026-03-31T00:49:41Z"
+    }, {
+      "count" : 1491,
+      "second" : "2026-03-31T00:49:42Z"
+    }, {
+      "count" : 1473,
+      "second" : "2026-03-31T00:49:43Z"
+    }, {
+      "count" : 1508,
+      "second" : "2026-03-31T00:49:44Z"
+    }, {
+      "count" : 1523,
+      "second" : "2026-03-31T00:49:45Z"
+    }, {
+      "count" : 1341,
+      "second" : "2026-03-31T00:49:46Z"
+    }, {
+      "count" : 1135,
+      "second" : "2026-03-31T00:49:47Z"
+    }, {
+      "count" : 1521,
+      "second" : "2026-03-31T00:49:48Z"
+    }, {
+      "count" : 1515,
+      "second" : "2026-03-31T00:49:49Z"
+    }, {
+      "count" : 1648,
+      "second" : "2026-03-31T00:49:50Z"
+    }, {
+      "count" : 1513,
+      "second" : "2026-03-31T00:49:51Z"
+    }, {
+      "count" : 1525,
+      "second" : "2026-03-31T00:49:52Z"
+    }, {
+      "count" : 1269,
+      "second" : "2026-03-31T00:49:53Z"
+    }, {
+      "count" : 1437,
+      "second" : "2026-03-31T00:49:54Z"
+    }, {
+      "count" : 1474,
+      "second" : "2026-03-31T00:49:55Z"
+    }, {
+      "count" : 1467,
+      "second" : "2026-03-31T00:49:56Z"
+    }, {
+      "count" : 1479,
+      "second" : "2026-03-31T00:49:57Z"
+    }, {
+      "count" : 1329,
+      "second" : "2026-03-31T00:49:58Z"
+    }, {
+      "count" : 1502,
+      "second" : "2026-03-31T00:49:59Z"
+    }, {
+      "count" : 1276,
+      "second" : "2026-03-31T00:50:00Z"
+    }, {
+      "count" : 925,
+      "second" : "2026-03-31T00:50:01Z"
+    }, {
+      "count" : 929,
+      "second" : "2026-03-31T00:50:02Z"
+    }, {
+      "count" : 1375,
+      "second" : "2026-03-31T00:50:03Z"
+    }, {
+      "count" : 1453,
+      "second" : "2026-03-31T00:50:04Z"
+    }, {
+      "count" : 1422,
+      "second" : "2026-03-31T00:50:05Z"
+    }, {
+      "count" : 1406,
+      "second" : "2026-03-31T00:50:06Z"
+    }, {
+      "count" : 1140,
+      "second" : "2026-03-31T00:50:07Z"
+    }, {
+      "count" : 1448,
+      "second" : "2026-03-31T00:50:08Z"
+    }, {
+      "count" : 1499,
+      "second" : "2026-03-31T00:50:09Z"
+    }, {
+      "count" : 1552,
+      "second" : "2026-03-31T00:50:10Z"
+    }, {
+      "count" : 1323,
+      "second" : "2026-03-31T00:50:11Z"
+    }, {
+      "count" : 1429,
+      "second" : "2026-03-31T00:50:12Z"
+    }, {
+      "count" : 1398,
+      "second" : "2026-03-31T00:50:13Z"
+    }, {
+      "count" : 910,
+      "second" : "2026-03-31T00:50:14Z"
+    }, {
+      "count" : 1437,
+      "second" : "2026-03-31T00:50:15Z"
+    }, {
+      "count" : 1494,
+      "second" : "2026-03-31T00:50:16Z"
+    }, {
+      "count" : 1480,
+      "second" : "2026-03-31T00:50:17Z"
+    }, {
+      "count" : 1478,
+      "second" : "2026-03-31T00:50:18Z"
+    }, {
+      "count" : 1543,
+      "second" : "2026-03-31T00:50:19Z"
+    }, {
+      "count" : 1501,
+      "second" : "2026-03-31T00:50:20Z"
+    }, {
+      "count" : 1028,
+      "second" : "2026-03-31T00:50:21Z"
+    }, {
+      "count" : 1414,
+      "second" : "2026-03-31T00:50:22Z"
+    }, {
+      "count" : 1066,
+      "second" : "2026-03-31T00:50:23Z"
+    }, {
+      "count" : 1441,
+      "second" : "2026-03-31T00:50:24Z"
+    }, {
+      "count" : 1335,
+      "second" : "2026-03-31T00:50:25Z"
+    }, {
+      "count" : 1227,
+      "second" : "2026-03-31T00:50:26Z"
+    }, {
+      "count" : 1472,
+      "second" : "2026-03-31T00:50:27Z"
+    }, {
+      "count" : 1527,
+      "second" : "2026-03-31T00:50:28Z"
+    }, {
+      "count" : 1507,
+      "second" : "2026-03-31T00:50:29Z"
+    }, {
+      "count" : 1509,
+      "second" : "2026-03-31T00:50:30Z"
+    }, {
+      "count" : 1497,
+      "second" : "2026-03-31T00:50:31Z"
+    }, {
+      "count" : 1463,
+      "second" : "2026-03-31T00:50:32Z"
+    }, {
+      "count" : 1505,
+      "second" : "2026-03-31T00:50:33Z"
+    }, {
+      "count" : 1485,
+      "second" : "2026-03-31T00:50:34Z"
+    }, {
+      "count" : 1247,
+      "second" : "2026-03-31T00:50:35Z"
+    }, {
+      "count" : 1406,
+      "second" : "2026-03-31T00:50:36Z"
+    }, {
+      "count" : 1474,
+      "second" : "2026-03-31T00:50:37Z"
+    }, {
+      "count" : 1476,
+      "second" : "2026-03-31T00:50:38Z"
+    }, {
+      "count" : 1510,
+      "second" : "2026-03-31T00:50:39Z"
+    }, {
+      "count" : 1439,
+      "second" : "2026-03-31T00:50:40Z"
+    }, {
+      "count" : 1402,
+      "second" : "2026-03-31T00:50:41Z"
+    }, {
+      "count" : 1562,
+      "second" : "2026-03-31T00:50:42Z"
+    }, {
+      "count" : 1545,
+      "second" : "2026-03-31T00:50:43Z"
+    }, {
+      "count" : 1439,
+      "second" : "2026-03-31T00:50:44Z"
+    }, {
+      "count" : 1296,
+      "second" : "2026-03-31T00:50:45Z"
+    }, {
+      "count" : 1527,
+      "second" : "2026-03-31T00:50:46Z"
+    }, {
+      "count" : 1458,
+      "second" : "2026-03-31T00:50:47Z"
+    }, {
+      "count" : 1260,
+      "second" : "2026-03-31T00:50:48Z"
+    }, {
+      "count" : 1303,
+      "second" : "2026-03-31T00:50:49Z"
+    }, {
+      "count" : 1555,
+      "second" : "2026-03-31T00:50:50Z"
+    }, {
+      "count" : 1413,
+      "second" : "2026-03-31T00:50:51Z"
+    }, {
+      "count" : 1508,
+      "second" : "2026-03-31T00:50:52Z"
+    }, {
+      "count" : 1510,
+      "second" : "2026-03-31T00:50:53Z"
+    }, {
+      "count" : 1550,
+      "second" : "2026-03-31T00:50:54Z"
+    }, {
+      "count" : 1466,
+      "second" : "2026-03-31T00:50:55Z"
+    }, {
+      "count" : 1598,
+      "second" : "2026-03-31T00:50:56Z"
+    }, {
+      "count" : 1515,
+      "second" : "2026-03-31T00:50:57Z"
+    }, {
+      "count" : 1486,
+      "second" : "2026-03-31T00:50:58Z"
+    }, {
+      "count" : 1297,
+      "second" : "2026-03-31T00:50:59Z"
+    }, {
+      "count" : 1418,
+      "second" : "2026-03-31T00:51:00Z"
+    }, {
+      "count" : 602,
+      "second" : "2026-03-31T00:51:01Z"
+    }, {
+      "count" : 51,
+      "second" : "2026-03-31T00:51:06Z"
+    }, {
+      "count" : 424,
+      "second" : "2026-03-31T00:51:07Z"
+    }, {
+      "count" : 695,
+      "second" : "2026-03-31T00:51:08Z"
+    }, {
+      "count" : 698,
+      "second" : "2026-03-31T00:51:09Z"
+    }, {
+      "count" : 769,
+      "second" : "2026-03-31T00:51:10Z"
+    }, {
+      "count" : 528,
+      "second" : "2026-03-31T00:51:11Z"
+    }, {
+      "count" : 1252,
+      "second" : "2026-03-31T00:51:12Z"
+    }, {
+      "count" : 1420,
+      "second" : "2026-03-31T00:51:13Z"
+    }, {
+      "count" : 1339,
+      "second" : "2026-03-31T00:51:14Z"
+    }, {
+      "count" : 1363,
+      "second" : "2026-03-31T00:51:15Z"
+    }, {
+      "count" : 1390,
+      "second" : "2026-03-31T00:51:16Z"
+    }, {
+      "count" : 765,
+      "second" : "2026-03-31T00:51:17Z"
+    }, {
+      "count" : 1275,
+      "second" : "2026-03-31T00:51:18Z"
+    }, {
+      "count" : 1305,
+      "second" : "2026-03-31T00:51:19Z"
+    }, {
+      "count" : 1036,
+      "second" : "2026-03-31T00:51:20Z"
+    }, {
+      "count" : 1352,
+      "second" : "2026-03-31T00:51:21Z"
+    }, {
+      "count" : 1428,
+      "second" : "2026-03-31T00:51:22Z"
+    }, {
+      "count" : 953,
+      "second" : "2026-03-31T00:51:23Z"
+    }, {
+      "count" : 536,
+      "second" : "2026-03-31T00:51:24Z"
+    }, {
+      "count" : 1151,
+      "second" : "2026-03-31T00:51:25Z"
+    }, {
+      "count" : 1420,
+      "second" : "2026-03-31T00:51:26Z"
+    }, {
+      "count" : 1423,
+      "second" : "2026-03-31T00:51:27Z"
+    }, {
+      "count" : 1308,
+      "second" : "2026-03-31T00:51:28Z"
+    }, {
+      "count" : 859,
+      "second" : "2026-03-31T00:51:29Z"
+    }, {
+      "count" : 1009,
+      "second" : "2026-03-31T00:51:30Z"
+    }, {
+      "count" : 631,
+      "second" : "2026-03-31T00:51:31Z"
+    }, {
+      "count" : 656,
+      "second" : "2026-03-31T00:51:32Z"
+    }, {
+      "count" : 459,
+      "second" : "2026-03-31T00:51:33Z"
+    }, {
+      "count" : 900,
+      "second" : "2026-03-31T00:51:34Z"
+    }, {
+      "count" : 627,
+      "second" : "2026-03-31T00:51:35Z"
+    }, {
+      "count" : 557,
+      "second" : "2026-03-31T00:51:36Z"
+    }, {
+      "count" : 999,
+      "second" : "2026-03-31T00:51:37Z"
+    }, {
+      "count" : 1156,
+      "second" : "2026-03-31T00:51:38Z"
+    }, {
+      "count" : 1265,
+      "second" : "2026-03-31T00:51:39Z"
+    }, {
+      "count" : 1205,
+      "second" : "2026-03-31T00:51:40Z"
+    }, {
+      "count" : 1114,
+      "second" : "2026-03-31T00:51:41Z"
+    }, {
+      "count" : 1017,
+      "second" : "2026-03-31T00:51:42Z"
+    }, {
+      "count" : 788,
+      "second" : "2026-03-31T00:51:43Z"
+    }, {
+      "count" : 1271,
+      "second" : "2026-03-31T00:51:44Z"
+    }, {
+      "count" : 1105,
+      "second" : "2026-03-31T00:51:45Z"
+    }, {
+      "count" : 32,
+      "second" : "2026-03-31T00:51:46Z"
+    }, {
+      "count" : 1070,
+      "second" : "2026-03-31T00:51:47Z"
+    }, {
+      "count" : 1319,
+      "second" : "2026-03-31T00:51:48Z"
+    }, {
+      "count" : 1303,
+      "second" : "2026-03-31T00:51:49Z"
+    }, {
+      "count" : 1241,
+      "second" : "2026-03-31T00:51:50Z"
+    }, {
+      "count" : 1183,
+      "second" : "2026-03-31T00:51:51Z"
+    }, {
+      "count" : 1271,
+      "second" : "2026-03-31T00:51:52Z"
+    }, {
+      "count" : 1133,
+      "second" : "2026-03-31T00:51:53Z"
+    }, {
+      "count" : 814,
+      "second" : "2026-03-31T00:51:54Z"
+    }, {
+      "count" : 1304,
+      "second" : "2026-03-31T00:51:55Z"
+    }, {
+      "count" : 1417,
+      "second" : "2026-03-31T00:51:56Z"
+    }, {
+      "count" : 1389,
+      "second" : "2026-03-31T00:51:57Z"
+    }, {
+      "count" : 1329,
+      "second" : "2026-03-31T00:51:58Z"
+    }, {
+      "count" : 946,
+      "second" : "2026-03-31T00:51:59Z"
+    }, {
+      "count" : 968,
+      "second" : "2026-03-31T00:52:00Z"
+    }, {
+      "count" : 606,
+      "second" : "2026-03-31T00:52:01Z"
+    }, {
+      "count" : 1289,
+      "second" : "2026-03-31T00:52:02Z"
+    }, {
+      "count" : 1424,
+      "second" : "2026-03-31T00:52:03Z"
+    }, {
+      "count" : 1411,
+      "second" : "2026-03-31T00:52:04Z"
+    }, {
+      "count" : 1175,
+      "second" : "2026-03-31T00:52:05Z"
+    }, {
+      "count" : 671,
+      "second" : "2026-03-31T00:52:06Z"
+    }, {
+      "count" : 1045,
+      "second" : "2026-03-31T00:52:07Z"
+    }, {
+      "count" : 1055,
+      "second" : "2026-03-31T00:52:08Z"
+    }, {
+      "count" : 1375,
+      "second" : "2026-03-31T00:52:09Z"
+    }, {
+      "count" : 1389,
+      "second" : "2026-03-31T00:52:10Z"
+    }, {
+      "count" : 1289,
+      "second" : "2026-03-31T00:52:11Z"
+    }, {
+      "count" : 1274,
+      "second" : "2026-03-31T00:52:12Z"
+    }, {
+      "count" : 1419,
+      "second" : "2026-03-31T00:52:13Z"
+    }, {
+      "count" : 1306,
+      "second" : "2026-03-31T00:52:14Z"
+    }, {
+      "count" : 1204,
+      "second" : "2026-03-31T00:52:15Z"
+    }, {
+      "count" : 1383,
+      "second" : "2026-03-31T00:52:16Z"
+    }, {
+      "count" : 1293,
+      "second" : "2026-03-31T00:52:17Z"
+    }, {
+      "count" : 1315,
+      "second" : "2026-03-31T00:52:18Z"
+    }, {
+      "count" : 1374,
+      "second" : "2026-03-31T00:52:19Z"
+    }, {
+      "count" : 1461,
+      "second" : "2026-03-31T00:52:20Z"
+    }, {
+      "count" : 1398,
+      "second" : "2026-03-31T00:52:21Z"
+    }, {
+      "count" : 1490,
+      "second" : "2026-03-31T00:52:22Z"
+    }, {
+      "count" : 1253,
+      "second" : "2026-03-31T00:52:23Z"
+    }, {
+      "count" : 1043,
+      "second" : "2026-03-31T00:52:24Z"
+    }, {
+      "count" : 1241,
+      "second" : "2026-03-31T00:52:25Z"
+    }, {
+      "count" : 1239,
+      "second" : "2026-03-31T00:52:26Z"
+    }, {
+      "count" : 1359,
+      "second" : "2026-03-31T00:52:27Z"
+    }, {
+      "count" : 1223,
+      "second" : "2026-03-31T00:52:28Z"
+    }, {
+      "count" : 1061,
+      "second" : "2026-03-31T00:52:29Z"
+    }, {
+      "count" : 1395,
+      "second" : "2026-03-31T00:52:30Z"
+    }, {
+      "count" : 1383,
+      "second" : "2026-03-31T00:52:31Z"
+    }, {
+      "count" : 1382,
+      "second" : "2026-03-31T00:52:32Z"
+    }, {
+      "count" : 1437,
+      "second" : "2026-03-31T00:52:33Z"
+    }, {
+      "count" : 1426,
+      "second" : "2026-03-31T00:52:34Z"
+    }, {
+      "count" : 1352,
+      "second" : "2026-03-31T00:52:35Z"
+    }, {
+      "count" : 1389,
+      "second" : "2026-03-31T00:52:36Z"
+    }, {
+      "count" : 1426,
+      "second" : "2026-03-31T00:52:37Z"
+    }, {
+      "count" : 1444,
+      "second" : "2026-03-31T00:52:38Z"
+    }, {
+      "count" : 1476,
+      "second" : "2026-03-31T00:52:39Z"
+    }, {
+      "count" : 1407,
+      "second" : "2026-03-31T00:52:40Z"
+    }, {
+      "count" : 1456,
+      "second" : "2026-03-31T00:52:41Z"
+    }, {
+      "count" : 1259,
+      "second" : "2026-03-31T00:52:42Z"
+    }, {
+      "count" : 1002,
+      "second" : "2026-03-31T00:52:43Z"
+    }, {
+      "count" : 1068,
+      "second" : "2026-03-31T00:52:44Z"
+    }, {
+      "count" : 1085,
+      "second" : "2026-03-31T00:52:45Z"
+    }, {
+      "count" : 1134,
+      "second" : "2026-03-31T00:52:46Z"
+    }, {
+      "count" : 835,
+      "second" : "2026-03-31T00:52:47Z"
+    }, {
+      "count" : 867,
+      "second" : "2026-03-31T00:52:48Z"
+    }, {
+      "count" : 1286,
+      "second" : "2026-03-31T00:52:49Z"
+    }, {
+      "count" : 1213,
+      "second" : "2026-03-31T00:52:50Z"
+    }, {
+      "count" : 1313,
+      "second" : "2026-03-31T00:52:51Z"
+    }, {
+      "count" : 1490,
+      "second" : "2026-03-31T00:52:52Z"
+    }, {
+      "count" : 1273,
+      "second" : "2026-03-31T00:52:53Z"
+    }, {
+      "count" : 1261,
+      "second" : "2026-03-31T00:52:54Z"
+    }, {
+      "count" : 752,
+      "second" : "2026-03-31T00:52:55Z"
+    }, {
+      "count" : 801,
+      "second" : "2026-03-31T00:52:56Z"
+    }, {
+      "count" : 1017,
+      "second" : "2026-03-31T00:52:57Z"
+    }, {
+      "count" : 1382,
+      "second" : "2026-03-31T00:52:58Z"
+    }, {
+      "count" : 907,
+      "second" : "2026-03-31T00:52:59Z"
+    }, {
+      "count" : 1030,
+      "second" : "2026-03-31T00:53:00Z"
+    }, {
+      "count" : 1070,
+      "second" : "2026-03-31T00:53:01Z"
+    }, {
+      "count" : 1216,
+      "second" : "2026-03-31T00:53:02Z"
+    }, {
+      "count" : 1284,
+      "second" : "2026-03-31T00:53:03Z"
+    }, {
+      "count" : 1106,
+      "second" : "2026-03-31T00:53:04Z"
+    }, {
+      "count" : 1214,
+      "second" : "2026-03-31T00:53:05Z"
+    }, {
+      "count" : 1291,
+      "second" : "2026-03-31T00:53:06Z"
+    }, {
+      "count" : 1250,
+      "second" : "2026-03-31T00:53:07Z"
+    }, {
+      "count" : 1341,
+      "second" : "2026-03-31T00:53:08Z"
+    }, {
+      "count" : 1400,
+      "second" : "2026-03-31T00:53:09Z"
+    }, {
+      "count" : 1258,
+      "second" : "2026-03-31T00:53:10Z"
+    }, {
+      "count" : 15,
+      "second" : "2026-03-31T00:53:11Z"
+    }, {
+      "count" : 388,
+      "second" : "2026-03-31T00:53:12Z"
+    }, {
+      "count" : 1130,
+      "second" : "2026-03-31T00:53:13Z"
+    }, {
+      "count" : 1190,
+      "second" : "2026-03-31T00:53:14Z"
+    }, {
+      "count" : 1199,
+      "second" : "2026-03-31T00:53:15Z"
+    }, {
+      "count" : 1266,
+      "second" : "2026-03-31T00:53:16Z"
+    }, {
+      "count" : 1159,
+      "second" : "2026-03-31T00:53:17Z"
+    }, {
+      "count" : 832,
+      "second" : "2026-03-31T00:53:18Z"
+    }, {
+      "count" : 1177,
+      "second" : "2026-03-31T00:53:19Z"
+    }, {
+      "count" : 1277,
+      "second" : "2026-03-31T00:53:20Z"
+    }, {
+      "count" : 1423,
+      "second" : "2026-03-31T00:53:21Z"
+    }, {
+      "count" : 1349,
+      "second" : "2026-03-31T00:53:22Z"
+    }, {
+      "count" : 984,
+      "second" : "2026-03-31T00:53:23Z"
+    }, {
+      "count" : 207,
+      "second" : "2026-03-31T00:53:24Z"
+    }, {
+      "count" : 837,
+      "second" : "2026-03-31T00:53:25Z"
+    }, {
+      "count" : 894,
+      "second" : "2026-03-31T00:53:26Z"
+    }, {
+      "count" : 1283,
+      "second" : "2026-03-31T00:53:27Z"
+    }, {
+      "count" : 1352,
+      "second" : "2026-03-31T00:53:28Z"
+    }, {
+      "count" : 837,
+      "second" : "2026-03-31T00:53:29Z"
+    }, {
+      "count" : 1010,
+      "second" : "2026-03-31T00:53:30Z"
+    }, {
+      "count" : 470,
+      "second" : "2026-03-31T00:53:31Z"
+    }, {
+      "count" : 1249,
+      "second" : "2026-03-31T00:53:32Z"
+    }, {
+      "count" : 1274,
+      "second" : "2026-03-31T00:53:33Z"
+    }, {
+      "count" : 963,
+      "second" : "2026-03-31T00:53:34Z"
+    }, {
+      "count" : 584,
+      "second" : "2026-03-31T00:53:35Z"
+    }, {
+      "count" : 1285,
+      "second" : "2026-03-31T00:53:36Z"
+    }, {
+      "count" : 1171,
+      "second" : "2026-03-31T00:53:37Z"
+    }, {
+      "count" : 1008,
+      "second" : "2026-03-31T00:53:38Z"
+    }, {
+      "count" : 1167,
+      "second" : "2026-03-31T00:53:39Z"
+    }, {
+      "count" : 1225,
+      "second" : "2026-03-31T00:53:40Z"
+    }, {
+      "count" : 1174,
+      "second" : "2026-03-31T00:53:41Z"
+    }, {
+      "count" : 1236,
+      "second" : "2026-03-31T00:53:42Z"
+    }, {
+      "count" : 1231,
+      "second" : "2026-03-31T00:53:43Z"
+    }, {
+      "count" : 1135,
+      "second" : "2026-03-31T00:53:44Z"
+    }, {
+      "count" : 1291,
+      "second" : "2026-03-31T00:53:45Z"
+    }, {
+      "count" : 1232,
+      "second" : "2026-03-31T00:53:46Z"
+    }, {
+      "count" : 1074,
+      "second" : "2026-03-31T00:53:47Z"
+    }, {
+      "count" : 1201,
+      "second" : "2026-03-31T00:53:48Z"
+    }, {
+      "count" : 1238,
+      "second" : "2026-03-31T00:53:49Z"
+    }, {
+      "count" : 1239,
+      "second" : "2026-03-31T00:53:50Z"
+    }, {
+      "count" : 1213,
+      "second" : "2026-03-31T00:53:51Z"
+    }, {
+      "count" : 1129,
+      "second" : "2026-03-31T00:53:52Z"
+    }, {
+      "count" : 1236,
+      "second" : "2026-03-31T00:53:53Z"
+    }, {
+      "count" : 1164,
+      "second" : "2026-03-31T00:53:54Z"
+    }, {
+      "count" : 1218,
+      "second" : "2026-03-31T00:53:55Z"
+    }, {
+      "count" : 1268,
+      "second" : "2026-03-31T00:53:56Z"
+    }, {
+      "count" : 1222,
+      "second" : "2026-03-31T00:53:57Z"
+    }, {
+      "count" : 1196,
+      "second" : "2026-03-31T00:53:58Z"
+    }, {
+      "count" : 1123,
+      "second" : "2026-03-31T00:53:59Z"
+    }, {
+      "count" : 1160,
+      "second" : "2026-03-31T00:54:00Z"
+    }, {
+      "count" : 812,
+      "second" : "2026-03-31T00:54:01Z"
+    }, {
+      "count" : 795,
+      "second" : "2026-03-31T00:54:02Z"
+    }, {
+      "count" : 1236,
+      "second" : "2026-03-31T00:54:03Z"
+    }, {
+      "count" : 1144,
+      "second" : "2026-03-31T00:54:04Z"
+    }, {
+      "count" : 1147,
+      "second" : "2026-03-31T00:54:05Z"
+    }, {
+      "count" : 1134,
+      "second" : "2026-03-31T00:54:06Z"
+    }, {
+      "count" : 1104,
+      "second" : "2026-03-31T00:54:07Z"
+    }, {
+      "count" : 1176,
+      "second" : "2026-03-31T00:54:08Z"
+    }, {
+      "count" : 1140,
+      "second" : "2026-03-31T00:54:09Z"
+    }, {
+      "count" : 878,
+      "second" : "2026-03-31T00:54:10Z"
+    }, {
+      "count" : 1010,
+      "second" : "2026-03-31T00:54:11Z"
+    }, {
+      "count" : 1049,
+      "second" : "2026-03-31T00:54:12Z"
+    }, {
+      "count" : 1073,
+      "second" : "2026-03-31T00:54:13Z"
+    }, {
+      "count" : 1111,
+      "second" : "2026-03-31T00:54:14Z"
+    }, {
+      "count" : 841,
+      "second" : "2026-03-31T00:54:15Z"
+    }, {
+      "count" : 755,
+      "second" : "2026-03-31T00:54:16Z"
+    }, {
+      "count" : 1071,
+      "second" : "2026-03-31T00:54:17Z"
+    }, {
+      "count" : 1203,
+      "second" : "2026-03-31T00:54:18Z"
+    }, {
+      "count" : 935,
+      "second" : "2026-03-31T00:54:19Z"
+    }, {
+      "count" : 868,
+      "second" : "2026-03-31T00:54:20Z"
+    }, {
+      "count" : 777,
+      "second" : "2026-03-31T00:54:21Z"
+    }, {
+      "count" : 762,
+      "second" : "2026-03-31T00:54:22Z"
+    }, {
+      "count" : 1061,
+      "second" : "2026-03-31T00:54:23Z"
+    }, {
+      "count" : 972,
+      "second" : "2026-03-31T00:54:24Z"
+    }, {
+      "count" : 889,
+      "second" : "2026-03-31T00:54:25Z"
+    }, {
+      "count" : 1214,
+      "second" : "2026-03-31T00:54:26Z"
+    }, {
+      "count" : 1058,
+      "second" : "2026-03-31T00:54:27Z"
+    }, {
+      "count" : 1056,
+      "second" : "2026-03-31T00:54:28Z"
+    }, {
+      "count" : 1146,
+      "second" : "2026-03-31T00:54:29Z"
+    }, {
+      "count" : 815,
+      "second" : "2026-03-31T00:54:30Z"
+    }, {
+      "count" : 607,
+      "second" : "2026-03-31T00:54:31Z"
+    }, {
+      "count" : 886,
+      "second" : "2026-03-31T00:54:32Z"
+    }, {
+      "count" : 961,
+      "second" : "2026-03-31T00:54:33Z"
+    }, {
+      "count" : 742,
+      "second" : "2026-03-31T00:54:34Z"
+    }, {
+      "count" : 714,
+      "second" : "2026-03-31T00:54:35Z"
+    }, {
+      "count" : 668,
+      "second" : "2026-03-31T00:54:36Z"
+    }, {
+      "count" : 972,
+      "second" : "2026-03-31T00:54:37Z"
+    }, {
+      "count" : 1058,
+      "second" : "2026-03-31T00:54:38Z"
+    }, {
+      "count" : 955,
+      "second" : "2026-03-31T00:54:39Z"
+    }, {
+      "count" : 1179,
+      "second" : "2026-03-31T00:54:40Z"
+    }, {
+      "count" : 1120,
+      "second" : "2026-03-31T00:54:41Z"
+    }, {
+      "count" : 1185,
+      "second" : "2026-03-31T00:54:42Z"
+    }, {
+      "count" : 1096,
+      "second" : "2026-03-31T00:54:43Z"
+    }, {
+      "count" : 1106,
+      "second" : "2026-03-31T00:54:44Z"
+    }, {
+      "count" : 1288,
+      "second" : "2026-03-31T00:54:45Z"
+    }, {
+      "count" : 966,
+      "second" : "2026-03-31T00:54:46Z"
+    }, {
+      "count" : 703,
+      "second" : "2026-03-31T00:54:47Z"
+    }, {
+      "count" : 922,
+      "second" : "2026-03-31T00:54:48Z"
+    }, {
+      "count" : 709,
+      "second" : "2026-03-31T00:54:49Z"
+    }, {
+      "count" : 662,
+      "second" : "2026-03-31T00:54:50Z"
+    }, {
+      "count" : 883,
+      "second" : "2026-03-31T00:54:51Z"
+    }, {
+      "count" : 993,
+      "second" : "2026-03-31T00:54:52Z"
+    }, {
+      "count" : 986,
+      "second" : "2026-03-31T00:54:53Z"
+    }, {
+      "count" : 761,
+      "second" : "2026-03-31T00:54:54Z"
+    }, {
+      "count" : 1193,
+      "second" : "2026-03-31T00:54:55Z"
+    }, {
+      "count" : 996,
+      "second" : "2026-03-31T00:54:56Z"
+    }, {
+      "count" : 1071,
+      "second" : "2026-03-31T00:54:57Z"
+    }, {
+      "count" : 1178,
+      "second" : "2026-03-31T00:54:58Z"
+    }, {
+      "count" : 896,
+      "second" : "2026-03-31T00:54:59Z"
+    }, {
+      "count" : 602,
+      "second" : "2026-03-31T00:55:00Z"
+    }, {
+      "count" : 665,
+      "second" : "2026-03-31T00:55:01Z"
+    }, {
+      "count" : 987,
+      "second" : "2026-03-31T00:55:02Z"
+    }, {
+      "count" : 921,
+      "second" : "2026-03-31T00:55:03Z"
+    }, {
+      "count" : 974,
+      "second" : "2026-03-31T00:55:04Z"
+    }, {
+      "count" : 1043,
+      "second" : "2026-03-31T00:55:05Z"
+    }, {
+      "count" : 1168,
+      "second" : "2026-03-31T00:55:06Z"
+    }, {
+      "count" : 982,
+      "second" : "2026-03-31T00:55:07Z"
+    }, {
+      "count" : 1082,
+      "second" : "2026-03-31T00:55:08Z"
+    }, {
+      "count" : 1274,
+      "second" : "2026-03-31T00:55:09Z"
+    }, {
+      "count" : 1175,
+      "second" : "2026-03-31T00:55:10Z"
+    }, {
+      "count" : 843,
+      "second" : "2026-03-31T00:55:11Z"
+    }, {
+      "count" : 1084,
+      "second" : "2026-03-31T00:55:12Z"
+    }, {
+      "count" : 1179,
+      "second" : "2026-03-31T00:55:13Z"
+    }, {
+      "count" : 1270,
+      "second" : "2026-03-31T00:55:14Z"
+    }, {
+      "count" : 1215,
+      "second" : "2026-03-31T00:55:15Z"
+    }, {
+      "count" : 1047,
+      "second" : "2026-03-31T00:55:16Z"
+    }, {
+      "count" : 1108,
+      "second" : "2026-03-31T00:55:17Z"
+    }, {
+      "count" : 949,
+      "second" : "2026-03-31T00:55:18Z"
+    }, {
+      "count" : 1147,
+      "second" : "2026-03-31T00:55:19Z"
+    }, {
+      "count" : 1189,
+      "second" : "2026-03-31T00:55:20Z"
+    }, {
+      "count" : 1061,
+      "second" : "2026-03-31T00:55:21Z"
+    }, {
+      "count" : 937,
+      "second" : "2026-03-31T00:55:22Z"
+    }, {
+      "count" : 1202,
+      "second" : "2026-03-31T00:55:23Z"
+    }, {
+      "count" : 897,
+      "second" : "2026-03-31T00:55:24Z"
+    }, {
+      "count" : 1071,
+      "second" : "2026-03-31T00:55:25Z"
+    }, {
+      "count" : 1258,
+      "second" : "2026-03-31T00:55:26Z"
+    }, {
+      "count" : 998,
+      "second" : "2026-03-31T00:55:27Z"
+    }, {
+      "count" : 938,
+      "second" : "2026-03-31T00:55:28Z"
+    }, {
+      "count" : 811,
+      "second" : "2026-03-31T00:55:29Z"
+    }, {
+      "count" : 516,
+      "second" : "2026-03-31T00:55:30Z"
+    }, {
+      "count" : 413,
+      "second" : "2026-03-31T00:55:31Z"
+    }, {
+      "count" : 932,
+      "second" : "2026-03-31T00:55:32Z"
+    }, {
+      "count" : 783,
+      "second" : "2026-03-31T00:55:33Z"
+    }, {
+      "count" : 412,
+      "second" : "2026-03-31T00:55:34Z"
+    }, {
+      "count" : 579,
+      "second" : "2026-03-31T00:55:35Z"
+    }, {
+      "count" : 912,
+      "second" : "2026-03-31T00:55:36Z"
+    }, {
+      "count" : 615,
+      "second" : "2026-03-31T00:55:37Z"
+    }, {
+      "count" : 616,
+      "second" : "2026-03-31T00:55:38Z"
+    }, {
+      "count" : 559,
+      "second" : "2026-03-31T00:55:39Z"
+    }, {
+      "count" : 689,
+      "second" : "2026-03-31T00:55:40Z"
+    }, {
+      "count" : 643,
+      "second" : "2026-03-31T00:55:41Z"
+    }, {
+      "count" : 481,
+      "second" : "2026-03-31T00:55:42Z"
+    }, {
+      "count" : 683,
+      "second" : "2026-03-31T00:55:43Z"
+    }, {
+      "count" : 982,
+      "second" : "2026-03-31T00:55:44Z"
+    }, {
+      "count" : 821,
+      "second" : "2026-03-31T00:55:45Z"
+    }, {
+      "count" : 674,
+      "second" : "2026-03-31T00:55:46Z"
+    }, {
+      "count" : 643,
+      "second" : "2026-03-31T00:55:47Z"
+    }, {
+      "count" : 630,
+      "second" : "2026-03-31T00:55:48Z"
+    }, {
+      "count" : 479,
+      "second" : "2026-03-31T00:55:49Z"
+    }, {
+      "count" : 676,
+      "second" : "2026-03-31T00:55:50Z"
+    }, {
+      "count" : 984,
+      "second" : "2026-03-31T00:55:51Z"
+    }, {
+      "count" : 709,
+      "second" : "2026-03-31T00:55:52Z"
+    }, {
+      "count" : 469,
+      "second" : "2026-03-31T00:55:53Z"
+    }, {
+      "count" : 318,
+      "second" : "2026-03-31T00:55:54Z"
+    }, {
+      "count" : 438,
+      "second" : "2026-03-31T00:55:55Z"
+    }, {
+      "count" : 897,
+      "second" : "2026-03-31T00:55:56Z"
+    }, {
+      "count" : 753,
+      "second" : "2026-03-31T00:55:57Z"
+    }, {
+      "count" : 617,
+      "second" : "2026-03-31T00:55:58Z"
+    }, {
+      "count" : 500,
+      "second" : "2026-03-31T00:55:59Z"
+    }, {
+      "count" : 428,
+      "second" : "2026-03-31T00:56:00Z"
+    }, {
+      "count" : 426,
+      "second" : "2026-03-31T00:56:01Z"
+    }, {
+      "count" : 653,
+      "second" : "2026-03-31T00:56:02Z"
+    }, {
+      "count" : 642,
+      "second" : "2026-03-31T00:56:03Z"
+    }, {
+      "count" : 531,
+      "second" : "2026-03-31T00:56:04Z"
+    }, {
+      "count" : 603,
+      "second" : "2026-03-31T00:56:05Z"
+    }, {
+      "count" : 667,
+      "second" : "2026-03-31T00:56:06Z"
+    }, {
+      "count" : 896,
+      "second" : "2026-03-31T00:56:07Z"
+    }, {
+      "count" : 997,
+      "second" : "2026-03-31T00:56:08Z"
+    }, {
+      "count" : 889,
+      "second" : "2026-03-31T00:56:09Z"
+    }, {
+      "count" : 681,
+      "second" : "2026-03-31T00:56:10Z"
+    }, {
+      "count" : 724,
+      "second" : "2026-03-31T00:56:11Z"
+    }, {
+      "count" : 807,
+      "second" : "2026-03-31T00:56:12Z"
+    }, {
+      "count" : 670,
+      "second" : "2026-03-31T00:56:13Z"
+    }, {
+      "count" : 664,
+      "second" : "2026-03-31T00:56:14Z"
+    }, {
+      "count" : 1067,
+      "second" : "2026-03-31T00:56:15Z"
+    }, {
+      "count" : 1124,
+      "second" : "2026-03-31T00:56:16Z"
+    }, {
+      "count" : 830,
+      "second" : "2026-03-31T00:56:17Z"
+    }, {
+      "count" : 743,
+      "second" : "2026-03-31T00:56:18Z"
+    }, {
+      "count" : 1022,
+      "second" : "2026-03-31T00:56:19Z"
+    }, {
+      "count" : 1102,
+      "second" : "2026-03-31T00:56:20Z"
+    }, {
+      "count" : 881,
+      "second" : "2026-03-31T00:56:21Z"
+    }, {
+      "count" : 983,
+      "second" : "2026-03-31T00:56:22Z"
+    }, {
+      "count" : 835,
+      "second" : "2026-03-31T00:56:23Z"
+    }, {
+      "count" : 942,
+      "second" : "2026-03-31T00:56:24Z"
+    }, {
+      "count" : 689,
+      "second" : "2026-03-31T00:56:25Z"
+    }, {
+      "count" : 643,
+      "second" : "2026-03-31T00:56:26Z"
+    }, {
+      "count" : 910,
+      "second" : "2026-03-31T00:56:27Z"
+    }, {
+      "count" : 680,
+      "second" : "2026-03-31T00:56:28Z"
+    }, {
+      "count" : 1020,
+      "second" : "2026-03-31T00:56:29Z"
+    }, {
+      "count" : 666,
+      "second" : "2026-03-31T00:56:30Z"
+    }, {
+      "count" : 776,
+      "second" : "2026-03-31T00:56:31Z"
+    }, {
+      "count" : 982,
+      "second" : "2026-03-31T00:56:32Z"
+    }, {
+      "count" : 840,
+      "second" : "2026-03-31T00:56:33Z"
+    }, {
+      "count" : 851,
+      "second" : "2026-03-31T00:56:34Z"
+    }, {
+      "count" : 659,
+      "second" : "2026-03-31T00:56:35Z"
+    }, {
+      "count" : 656,
+      "second" : "2026-03-31T00:56:36Z"
+    }, {
+      "count" : 886,
+      "second" : "2026-03-31T00:56:37Z"
+    }, {
+      "count" : 825,
+      "second" : "2026-03-31T00:56:38Z"
+    }, {
+      "count" : 934,
+      "second" : "2026-03-31T00:56:39Z"
+    }, {
+      "count" : 732,
+      "second" : "2026-03-31T00:56:40Z"
+    }, {
+      "count" : 762,
+      "second" : "2026-03-31T00:56:41Z"
+    }, {
+      "count" : 523,
+      "second" : "2026-03-31T00:56:42Z"
+    }, {
+      "count" : 842,
+      "second" : "2026-03-31T00:56:43Z"
+    }, {
+      "count" : 934,
+      "second" : "2026-03-31T00:56:44Z"
+    }, {
+      "count" : 771,
+      "second" : "2026-03-31T00:56:45Z"
+    }, {
+      "count" : 842,
+      "second" : "2026-03-31T00:56:46Z"
+    }, {
+      "count" : 411,
+      "second" : "2026-03-31T00:56:47Z"
+    }, {
+      "count" : 464,
+      "second" : "2026-03-31T00:56:48Z"
+    }, {
+      "count" : 487,
+      "second" : "2026-03-31T00:56:49Z"
+    }, {
+      "count" : 748,
+      "second" : "2026-03-31T00:56:50Z"
+    }, {
+      "count" : 548,
+      "second" : "2026-03-31T00:56:51Z"
+    }, {
+      "count" : 523,
+      "second" : "2026-03-31T00:56:52Z"
+    }, {
+      "count" : 590,
+      "second" : "2026-03-31T00:56:53Z"
+    }, {
+      "count" : 514,
+      "second" : "2026-03-31T00:56:54Z"
+    }, {
+      "count" : 627,
+      "second" : "2026-03-31T00:56:55Z"
+    }, {
+      "count" : 579,
+      "second" : "2026-03-31T00:56:56Z"
+    }, {
+      "count" : 581,
+      "second" : "2026-03-31T00:56:57Z"
+    }, {
+      "count" : 571,
+      "second" : "2026-03-31T00:56:58Z"
+    }, {
+      "count" : 293,
+      "second" : "2026-03-31T00:56:59Z"
+    }, {
+      "count" : 475,
+      "second" : "2026-03-31T00:57:00Z"
+    }, {
+      "count" : 584,
+      "second" : "2026-03-31T00:57:01Z"
+    }, {
+      "count" : 799,
+      "second" : "2026-03-31T00:57:02Z"
+    }, {
+      "count" : 500,
+      "second" : "2026-03-31T00:57:03Z"
+    }, {
+      "count" : 515,
+      "second" : "2026-03-31T00:57:04Z"
+    }, {
+      "count" : 588,
+      "second" : "2026-03-31T00:57:05Z"
+    }, {
+      "count" : 470,
+      "second" : "2026-03-31T00:57:06Z"
+    }, {
+      "count" : 825,
+      "second" : "2026-03-31T00:57:07Z"
+    }, {
+      "count" : 689,
+      "second" : "2026-03-31T00:57:08Z"
+    }, {
+      "count" : 612,
+      "second" : "2026-03-31T00:57:09Z"
+    }, {
+      "count" : 724,
+      "second" : "2026-03-31T00:57:10Z"
+    }, {
+      "count" : 478,
+      "second" : "2026-03-31T00:57:11Z"
+    }, {
+      "count" : 607,
+      "second" : "2026-03-31T00:57:12Z"
+    }, {
+      "count" : 732,
+      "second" : "2026-03-31T00:57:13Z"
+    }, {
+      "count" : 480,
+      "second" : "2026-03-31T00:57:14Z"
+    }, {
+      "count" : 710,
+      "second" : "2026-03-31T00:57:15Z"
+    }, {
+      "count" : 789,
+      "second" : "2026-03-31T00:57:16Z"
+    }, {
+      "count" : 703,
+      "second" : "2026-03-31T00:57:17Z"
+    }, {
+      "count" : 340,
+      "second" : "2026-03-31T00:57:18Z"
+    }, {
+      "count" : 527,
+      "second" : "2026-03-31T00:57:19Z"
+    }, {
+      "count" : 601,
+      "second" : "2026-03-31T00:57:20Z"
+    }, {
+      "count" : 711,
+      "second" : "2026-03-31T00:57:21Z"
+    }, {
+      "count" : 741,
+      "second" : "2026-03-31T00:57:22Z"
+    }, {
+      "count" : 642,
+      "second" : "2026-03-31T00:57:23Z"
+    }, {
+      "count" : 792,
+      "second" : "2026-03-31T00:57:24Z"
+    }, {
+      "count" : 560,
+      "second" : "2026-03-31T00:57:25Z"
+    }, {
+      "count" : 702,
+      "second" : "2026-03-31T00:57:26Z"
+    }, {
+      "count" : 884,
+      "second" : "2026-03-31T00:57:27Z"
+    }, {
+      "count" : 854,
+      "second" : "2026-03-31T00:57:28Z"
+    }, {
+      "count" : 738,
+      "second" : "2026-03-31T00:57:29Z"
+    }, {
+      "count" : 1060,
+      "second" : "2026-03-31T00:57:30Z"
+    }, {
+      "count" : 957,
+      "second" : "2026-03-31T00:57:31Z"
+    }, {
+      "count" : 1035,
+      "second" : "2026-03-31T00:57:32Z"
+    }, {
+      "count" : 893,
+      "second" : "2026-03-31T00:57:33Z"
+    }, {
+      "count" : 1183,
+      "second" : "2026-03-31T00:57:34Z"
+    }, {
+      "count" : 1170,
+      "second" : "2026-03-31T00:57:35Z"
+    }, {
+      "count" : 1088,
+      "second" : "2026-03-31T00:57:36Z"
+    }, {
+      "count" : 1097,
+      "second" : "2026-03-31T00:57:37Z"
+    }, {
+      "count" : 1258,
+      "second" : "2026-03-31T00:57:38Z"
+    }, {
+      "count" : 1041,
+      "second" : "2026-03-31T00:57:39Z"
+    }, {
+      "count" : 1086,
+      "second" : "2026-03-31T00:57:40Z"
+    }, {
+      "count" : 1040,
+      "second" : "2026-03-31T00:57:41Z"
+    }, {
+      "count" : 1082,
+      "second" : "2026-03-31T00:57:42Z"
+    }, {
+      "count" : 1061,
+      "second" : "2026-03-31T00:57:43Z"
+    }, {
+      "count" : 1139,
+      "second" : "2026-03-31T00:57:44Z"
+    }, {
+      "count" : 1090,
+      "second" : "2026-03-31T00:57:45Z"
+    }, {
+      "count" : 937,
+      "second" : "2026-03-31T00:57:46Z"
+    }, {
+      "count" : 985,
+      "second" : "2026-03-31T00:57:47Z"
+    }, {
+      "count" : 1028,
+      "second" : "2026-03-31T00:57:48Z"
+    }, {
+      "count" : 946,
+      "second" : "2026-03-31T00:57:49Z"
+    }, {
+      "count" : 1290,
+      "second" : "2026-03-31T00:57:50Z"
+    }, {
+      "count" : 1228,
+      "second" : "2026-03-31T00:57:51Z"
+    }, {
+      "count" : 1278,
+      "second" : "2026-03-31T00:57:52Z"
+    }, {
+      "count" : 955,
+      "second" : "2026-03-31T00:57:53Z"
+    }, {
+      "count" : 903,
+      "second" : "2026-03-31T00:57:54Z"
+    }, {
+      "count" : 1050,
+      "second" : "2026-03-31T00:57:55Z"
+    }, {
+      "count" : 1153,
+      "second" : "2026-03-31T00:57:56Z"
+    }, {
+      "count" : 1092,
+      "second" : "2026-03-31T00:57:57Z"
+    }, {
+      "count" : 1179,
+      "second" : "2026-03-31T00:57:58Z"
+    }, {
+      "count" : 1014,
+      "second" : "2026-03-31T00:57:59Z"
+    }, {
+      "count" : 1017,
+      "second" : "2026-03-31T00:58:00Z"
+    }, {
+      "count" : 1070,
+      "second" : "2026-03-31T00:58:01Z"
+    }, {
+      "count" : 1107,
+      "second" : "2026-03-31T00:58:02Z"
+    }, {
+      "count" : 1239,
+      "second" : "2026-03-31T00:58:03Z"
+    }, {
+      "count" : 1260,
+      "second" : "2026-03-31T00:58:04Z"
+    }, {
+      "count" : 1135,
+      "second" : "2026-03-31T00:58:05Z"
+    }, {
+      "count" : 964,
+      "second" : "2026-03-31T00:58:06Z"
+    }, {
+      "count" : 1016,
+      "second" : "2026-03-31T00:58:07Z"
+    }, {
+      "count" : 1059,
+      "second" : "2026-03-31T00:58:08Z"
+    }, {
+      "count" : 1222,
+      "second" : "2026-03-31T00:58:09Z"
+    }, {
+      "count" : 1092,
+      "second" : "2026-03-31T00:58:10Z"
+    }, {
+      "count" : 1080,
+      "second" : "2026-03-31T00:58:11Z"
+    }, {
+      "count" : 1094,
+      "second" : "2026-03-31T00:58:12Z"
+    }, {
+      "count" : 1098,
+      "second" : "2026-03-31T00:58:13Z"
+    }, {
+      "count" : 642,
+      "second" : "2026-03-31T00:58:14Z"
+    }, {
+      "count" : 841,
+      "second" : "2026-03-31T00:58:15Z"
+    }, {
+      "count" : 1130,
+      "second" : "2026-03-31T00:58:16Z"
+    }, {
+      "count" : 981,
+      "second" : "2026-03-31T00:58:17Z"
+    }, {
+      "count" : 997,
+      "second" : "2026-03-31T00:58:18Z"
+    }, {
+      "count" : 935,
+      "second" : "2026-03-31T00:58:19Z"
+    }, {
+      "count" : 672,
+      "second" : "2026-03-31T00:58:20Z"
+    }, {
+      "count" : 934,
+      "second" : "2026-03-31T00:58:21Z"
+    }, {
+      "count" : 1058,
+      "second" : "2026-03-31T00:58:22Z"
+    }, {
+      "count" : 1011,
+      "second" : "2026-03-31T00:58:23Z"
+    }, {
+      "count" : 1022,
+      "second" : "2026-03-31T00:58:24Z"
+    }, {
+      "count" : 1133,
+      "second" : "2026-03-31T00:58:25Z"
+    }, {
+      "count" : 1269,
+      "second" : "2026-03-31T00:58:26Z"
+    }, {
+      "count" : 1204,
+      "second" : "2026-03-31T00:58:27Z"
+    }, {
+      "count" : 1129,
+      "second" : "2026-03-31T00:58:28Z"
+    }, {
+      "count" : 869,
+      "second" : "2026-03-31T00:58:29Z"
+    }, {
+      "count" : 818,
+      "second" : "2026-03-31T00:58:30Z"
+    }, {
+      "count" : 968,
+      "second" : "2026-03-31T00:58:31Z"
+    }, {
+      "count" : 934,
+      "second" : "2026-03-31T00:58:32Z"
+    }, {
+      "count" : 1176,
+      "second" : "2026-03-31T00:58:33Z"
+    }, {
+      "count" : 1028,
+      "second" : "2026-03-31T00:58:34Z"
+    }, {
+      "count" : 767,
+      "second" : "2026-03-31T00:58:35Z"
+    }, {
+      "count" : 1190,
+      "second" : "2026-03-31T00:58:36Z"
+    }, {
+      "count" : 1051,
+      "second" : "2026-03-31T00:58:37Z"
+    }, {
+      "count" : 1116,
+      "second" : "2026-03-31T00:58:38Z"
+    }, {
+      "count" : 1076,
+      "second" : "2026-03-31T00:58:39Z"
+    }, {
+      "count" : 1190,
+      "second" : "2026-03-31T00:58:40Z"
+    }, {
+      "count" : 914,
+      "second" : "2026-03-31T00:58:41Z"
+    }, {
+      "count" : 1069,
+      "second" : "2026-03-31T00:58:42Z"
+    }, {
+      "count" : 1174,
+      "second" : "2026-03-31T00:58:43Z"
+    }, {
+      "count" : 1219,
+      "second" : "2026-03-31T00:58:44Z"
+    }, {
+      "count" : 1132,
+      "second" : "2026-03-31T00:58:45Z"
+    }, {
+      "count" : 1145,
+      "second" : "2026-03-31T00:58:46Z"
+    }, {
+      "count" : 829,
+      "second" : "2026-03-31T00:58:47Z"
+    }, {
+      "count" : 1079,
+      "second" : "2026-03-31T00:58:48Z"
+    }, {
+      "count" : 1043,
+      "second" : "2026-03-31T00:58:49Z"
+    }, {
+      "count" : 1033,
+      "second" : "2026-03-31T00:58:50Z"
+    }, {
+      "count" : 1208,
+      "second" : "2026-03-31T00:58:51Z"
+    }, {
+      "count" : 1014,
+      "second" : "2026-03-31T00:58:52Z"
+    }, {
+      "count" : 762,
+      "second" : "2026-03-31T00:58:53Z"
+    }, {
+      "count" : 893,
+      "second" : "2026-03-31T00:58:54Z"
+    }, {
+      "count" : 1142,
+      "second" : "2026-03-31T00:58:55Z"
+    }, {
+      "count" : 1229,
+      "second" : "2026-03-31T00:58:56Z"
+    }, {
+      "count" : 1261,
+      "second" : "2026-03-31T00:58:57Z"
+    }, {
+      "count" : 1194,
+      "second" : "2026-03-31T00:58:58Z"
+    }, {
+      "count" : 1067,
+      "second" : "2026-03-31T00:58:59Z"
+    }, {
+      "count" : 927,
+      "second" : "2026-03-31T00:59:00Z"
+    }, {
+      "count" : 821,
+      "second" : "2026-03-31T00:59:01Z"
+    }, {
+      "count" : 1007,
+      "second" : "2026-03-31T00:59:02Z"
+    }, {
+      "count" : 982,
+      "second" : "2026-03-31T00:59:03Z"
+    }, {
+      "count" : 1021,
+      "second" : "2026-03-31T00:59:04Z"
+    }, {
+      "count" : 1140,
+      "second" : "2026-03-31T00:59:05Z"
+    }, {
+      "count" : 1189,
+      "second" : "2026-03-31T00:59:06Z"
+    }, {
+      "count" : 1092,
+      "second" : "2026-03-31T00:59:07Z"
+    }, {
+      "count" : 1165,
+      "second" : "2026-03-31T00:59:08Z"
+    }, {
+      "count" : 1176,
+      "second" : "2026-03-31T00:59:09Z"
+    }, {
+      "count" : 1037,
+      "second" : "2026-03-31T00:59:10Z"
+    }, {
+      "count" : 784,
+      "second" : "2026-03-31T00:59:11Z"
+    }, {
+      "count" : 1028,
+      "second" : "2026-03-31T00:59:12Z"
+    }, {
+      "count" : 894,
+      "second" : "2026-03-31T00:59:13Z"
+    }, {
+      "count" : 1063,
+      "second" : "2026-03-31T00:59:14Z"
+    }, {
+      "count" : 1185,
+      "second" : "2026-03-31T00:59:15Z"
+    }, {
+      "count" : 1197,
+      "second" : "2026-03-31T00:59:16Z"
+    }, {
+      "count" : 811,
+      "second" : "2026-03-31T00:59:17Z"
+    }, {
+      "count" : 905,
+      "second" : "2026-03-31T00:59:18Z"
+    }, {
+      "count" : 989,
+      "second" : "2026-03-31T00:59:19Z"
+    }, {
+      "count" : 974,
+      "second" : "2026-03-31T00:59:20Z"
+    }, {
+      "count" : 1236,
+      "second" : "2026-03-31T00:59:21Z"
+    }, {
+      "count" : 1228,
+      "second" : "2026-03-31T00:59:22Z"
+    }, {
+      "count" : 1190,
+      "second" : "2026-03-31T00:59:23Z"
+    }, {
+      "count" : 1228,
+      "second" : "2026-03-31T00:59:24Z"
+    }, {
+      "count" : 1180,
+      "second" : "2026-03-31T00:59:25Z"
+    }, {
+      "count" : 1054,
+      "second" : "2026-03-31T00:59:26Z"
+    }, {
+      "count" : 1130,
+      "second" : "2026-03-31T00:59:27Z"
+    }, {
+      "count" : 1174,
+      "second" : "2026-03-31T00:59:28Z"
+    }, {
+      "count" : 1196,
+      "second" : "2026-03-31T00:59:29Z"
+    }, {
+      "count" : 1118,
+      "second" : "2026-03-31T00:59:30Z"
+    }, {
+      "count" : 966,
+      "second" : "2026-03-31T00:59:31Z"
+    }, {
+      "count" : 1138,
+      "second" : "2026-03-31T00:59:32Z"
+    }, {
+      "count" : 1215,
+      "second" : "2026-03-31T00:59:33Z"
+    }, {
+      "count" : 1277,
+      "second" : "2026-03-31T00:59:34Z"
+    }, {
+      "count" : 1073,
+      "second" : "2026-03-31T00:59:35Z"
+    }, {
+      "count" : 905,
+      "second" : "2026-03-31T00:59:36Z"
+    }, {
+      "count" : 1019,
+      "second" : "2026-03-31T00:59:37Z"
+    }, {
+      "count" : 1140,
+      "second" : "2026-03-31T00:59:38Z"
+    }, {
+      "count" : 1225,
+      "second" : "2026-03-31T00:59:39Z"
+    }, {
+      "count" : 1125,
+      "second" : "2026-03-31T00:59:40Z"
+    }, {
+      "count" : 1025,
+      "second" : "2026-03-31T00:59:41Z"
+    }, {
+      "count" : 1108,
+      "second" : "2026-03-31T00:59:42Z"
+    }, {
+      "count" : 1177,
+      "second" : "2026-03-31T00:59:43Z"
+    }, {
+      "count" : 1044,
+      "second" : "2026-03-31T00:59:44Z"
+    }, {
+      "count" : 1019,
+      "second" : "2026-03-31T00:59:45Z"
+    }, {
+      "count" : 1072,
+      "second" : "2026-03-31T00:59:46Z"
+    }, {
+      "count" : 474,
+      "second" : "2026-03-31T00:59:47Z"
+    }, {
+      "count" : 983,
+      "second" : "2026-03-31T00:59:48Z"
+    }, {
+      "count" : 840,
+      "second" : "2026-03-31T00:59:49Z"
+    }, {
+      "count" : 638,
+      "second" : "2026-03-31T00:59:50Z"
+    }, {
+      "count" : 1241,
+      "second" : "2026-03-31T00:59:51Z"
+    }, {
+      "count" : 1151,
+      "second" : "2026-03-31T00:59:52Z"
+    }, {
+      "count" : 1036,
+      "second" : "2026-03-31T00:59:53Z"
+    }, {
+      "count" : 571,
+      "second" : "2026-03-31T00:59:54Z"
+    }, {
+      "count" : 879,
+      "second" : "2026-03-31T00:59:55Z"
+    }, {
+      "count" : 979,
+      "second" : "2026-03-31T00:59:56Z"
+    } ],
+    "topActiveUsers" : [ {
+      "userId" : "86987",
+      "messageCount" : 27
+    }, {
+      "userId" : "40412",
+      "messageCount" : 26
+    }, {
+      "userId" : "91655",
+      "messageCount" : 25
+    }, {
+      "userId" : "70398",
+      "messageCount" : 24
+    }, {
+      "userId" : "23951",
+      "messageCount" : 24
+    }, {
+      "userId" : "68611",
+      "messageCount" : 24
+    }, {
+      "userId" : "43681",
+      "messageCount" : 24
+    }, {
+      "userId" : "16415",
+      "messageCount" : 24
+    }, {
+      "userId" : "23554",
+      "messageCount" : 24
+    }, {
+      "userId" : "50686",
+      "messageCount" : 24
+    } ],
+    "topActiveRooms" : [ {
+      "roomId" : "13",
+      "messageCount" : 50398
+    }, {
+      "roomId" : "10",
+      "messageCount" : 50368
+    }, {
+      "roomId" : "4",
+      "messageCount" : 50302
+    }, {
+      "roomId" : "17",
+      "messageCount" : 50291
+    }, {
+      "roomId" : "7",
+      "messageCount" : 50282
+    }, {
+      "roomId" : "18",
+      "messageCount" : 50260
+    }, {
+      "roomId" : "19",
+      "messageCount" : 50217
+    }, {
+      "roomId" : "5",
+      "messageCount" : 50214
+    }, {
+      "roomId" : "14",
+      "messageCount" : 50164
+    }, {
+      "roomId" : "1",
+      "messageCount" : 50084
+    } ],
+    "userParticipationPatterns" : [ {
+      "userId" : "1",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "100",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "1000",
+      "hour" : "0",
+      "messageCount" : 5
+    }, {
+      "userId" : "10000",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "100000",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10001",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10002",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10003",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "10004",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10005",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10006",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10007",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10008",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10009",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "1001",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10010",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10011",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10012",
+      "hour" : "0",
+      "messageCount" : 14
+    }, {
+      "userId" : "10013",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10014",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10015",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10016",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10017",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10018",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "10019",
+      "hour" : "0",
+      "messageCount" : 14
+    }, {
+      "userId" : "1002",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10020",
+      "hour" : "0",
+      "messageCount" : 14
+    }, {
+      "userId" : "10021",
+      "hour" : "0",
+      "messageCount" : 7
+    }, {
+      "userId" : "10022",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10023",
+      "hour" : "0",
+      "messageCount" : 7
+    }, {
+      "userId" : "10024",
+      "hour" : "0",
+      "messageCount" : 7
+    }, {
+      "userId" : "10025",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10026",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10027",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10028",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10029",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "1003",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10030",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10031",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10032",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10033",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10034",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10035",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10036",
+      "hour" : "0",
+      "messageCount" : 4
+    }, {
+      "userId" : "10037",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10038",
+      "hour" : "0",
+      "messageCount" : 4
+    }, {
+      "userId" : "10039",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "1004",
+      "hour" : "0",
+      "messageCount" : 14
+    }, {
+      "userId" : "10040",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10041",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10042",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10043",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10044",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10045",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10046",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10047",
+      "hour" : "0",
+      "messageCount" : 7
+    }, {
+      "userId" : "10048",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10049",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "1005",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10050",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "10051",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10052",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10053",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10054",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10055",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10056",
+      "hour" : "0",
+      "messageCount" : 6
+    }, {
+      "userId" : "10057",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10058",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10059",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "1006",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10060",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10061",
+      "hour" : "0",
+      "messageCount" : 4
+    }, {
+      "userId" : "10062",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10063",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10064",
+      "hour" : "0",
+      "messageCount" : 14
+    }, {
+      "userId" : "10065",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10066",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "10067",
+      "hour" : "0",
+      "messageCount" : 9
+    }, {
+      "userId" : "10068",
+      "hour" : "0",
+      "messageCount" : 13
+    }, {
+      "userId" : "10069",
+      "hour" : "0",
+      "messageCount" : 3
+    }, {
+      "userId" : "1007",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10070",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10071",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10072",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10073",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10074",
+      "hour" : "0",
+      "messageCount" : 11
+    }, {
+      "userId" : "10075",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10076",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10077",
+      "hour" : "0",
+      "messageCount" : 4
+    }, {
+      "userId" : "10078",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10079",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "1008",
+      "hour" : "0",
+      "messageCount" : 12
+    }, {
+      "userId" : "10080",
+      "hour" : "0",
+      "messageCount" : 15
+    }, {
+      "userId" : "10081",
+      "hour" : "0",
+      "messageCount" : 17
+    }, {
+      "userId" : "10082",
+      "hour" : "0",
+      "messageCount" : 8
+    }, {
+      "userId" : "10083",
+      "hour" : "0",
+      "messageCount" : 16
+    }, {
+      "userId" : "10084",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10085",
+      "hour" : "0",
+      "messageCount" : 10
+    }, {
+      "userId" : "10086",
+      "hour" : "0",
+      "messageCount" : 12
+    } ]
+  }
+}
+==============================
+✅ Metrics API call successful (HTTP 200)

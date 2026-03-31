@@ -8,7 +8,7 @@ rabbitmq:
   username: chatflow
   password: chatflow123
   queue-count: 20
-  consumer-thread-count: 40
+  consumer-thread-count: 20
   consumer-prefetch: 50
 
 # Server-v2 instances to broadcast to
@@ -45,12 +45,10 @@ spring:
     properties:
       hibernate:
         jdbc:
-          # Critical: enables true JDBC batch INSERT instead of row-by-row
-          # Without this, saveAll() degrades to N individual INSERTs
-          batch_size: 1000
-        order_inserts: true   # sort inserts by entity type for better batching
-        order_updates: true
-        jdbc.time_zone: UTC   # ensure TIMESTAMPTZ reads correctly
+          time_zone: UTC   # ensure TIMESTAMPTZ reads correctly
+        # NOTE: batch_size / order_inserts removed — DB writes now use
+        # JdbcTemplate.batchUpdate() which bypasses Hibernate entirely.
+        # IDENTITY generator would have disabled Hibernate batching anyway.
 
 # ── Assignment 3 Database Writer ───────────────────────────────────
 database:
@@ -66,9 +64,7 @@ logging:
   level:
     root: INFO
     com.chatflow.consumer: DEBUG
-    # show HikariCP connection pool events
     com.zaxxer.hikari: INFO
-    # show DB writer throughput stats
     com.chatflow.consumer.service.StatisticsAggregator: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
