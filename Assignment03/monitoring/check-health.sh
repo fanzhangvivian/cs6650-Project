@@ -1,16 +1,11 @@
 #!/bin/bash
 # Check health of all ChatFlow instances
 
-SERVER1="54.237.57.73"
-SERVER2="3.88.175.211"
-CONSUMER="34.227.65.119"
+SERVER1="44.200.156.189"
+CONSUMER="34.207.113.149"
 
-echo "=== Server Instance 1 ==="
+echo "=== Server ==="
 curl -s http://$SERVER1:8080/health | python3 -m json.tool
-
-echo ""
-echo "=== Server Instance 2 ==="
-curl -s http://$SERVER2:8080/health | python3 -m json.tool
 
 echo ""
 echo "=== Consumer ==="

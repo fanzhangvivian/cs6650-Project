@@ -6,7 +6,7 @@ public class ClientConfig {
     public static final String SERVER_URL = "ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat";
 
     // ============ Test Configuration ============
-    public static final int TOTAL_MESSAGES = 2_000_000;
+    public static final int TOTAL_MESSAGES = 500_000;
     public static final int TARGET_PUBLISH_RATE_PER_SEC = 1040;
 
     // Warmup (Assignment Required: 32 × 1000 = 32000 normally)
