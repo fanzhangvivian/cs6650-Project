@@ -1,0 +1,1921 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 500000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 3656 messages = 468000 messages
+Rate limit: 1040 msg/s (per-thread: 8 msg/s)
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 92ms
+  ✅ Thread pool-1-thread-4 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-33 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-7 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-12 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-25 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-3 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-14 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-5 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-32 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-26 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-28 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-23 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-6 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-11 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-21 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-16 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-17 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-29 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-19 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-13 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-22 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-9 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-18 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-20 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-8 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-27 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-10 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-31 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-2 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-15 completed: sent=1000, failed=0
+
+✅ Warmup Phase Completed:
+   Duration: 97549 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 328.04 msg/sec
+   Active connections: 40
+
+Total connections created so far: 52
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Rate limiting enabled: 1040 msg/s
+
+Starting 128 threads to send 468000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 468000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages
+  Generated: 450000 messages
+MessageGenerator completed: 468000 messages in 359416ms
+  ✅ Thread pool-54-thread-46 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-48 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-41 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-54 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-64 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-40 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-36 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-60 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-76 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-66 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-49 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-45 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-73 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-39 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-97 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-112 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-119 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-121 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-53 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-89 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-34 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-37 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-85 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-68 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-126 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-118 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-90 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-50 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-81 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-114 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-96 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-110 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-92 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-51 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-116 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-99 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-78 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-86 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-55 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-44 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-56 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-62 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-129 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-71 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-108 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-93 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-117 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-82 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-88 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-105 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-103 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-87 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-100 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-63 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-101 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-107 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-35 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-95 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-79 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-72 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-42 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-61 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-83 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-67 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-94 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-109 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-98 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-104 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-69 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-43 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-102 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-106 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-65 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-58 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-111 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-74 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-75 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-123 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-59 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-77 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-128 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-125 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-80 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-91 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-127 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-6 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-9 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-8 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-13 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-11 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-12 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-15 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-3 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-22 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-19 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-27 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-32 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-24 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-23 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-26 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-30 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-2 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-33 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-5 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-29 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-21 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-17 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-16 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-14 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-7 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-28 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-4 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-10 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-20 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-31 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-18 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-38 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-124 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-52 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-120 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-115 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-25 completed: sent=3657, failed=0
+  ✅ Thread pool-54-thread-84 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-70 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-57 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-47 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-113 completed: sent=3656, failed=0
+  ✅ Thread pool-54-thread-122 completed: sent=3656, failed=0
+
+✅ Main Phase Completed:
+   Total messages sent: 468000
+   Duration: 462200 ms
+   Throughput: 1012.55 msg/sec
+   Active connections: 40
+
+Total connections created: 324
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 500000
+Failed messages: 0
+Total runtime: 560763 ms
+Total connections: 324
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    97549 ms (328.04 msg/sec)
+  Main Load: 462200 ms (1012.55 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics (successful messages):
+  Samples: 500000
+  Mean response time: 93 ms
+  Median response time: 85 ms
+  95th percentile: 132 ms
+  99th percentile: 146 ms
+  Min response time: 63 ms
+  Max response time: 1401 ms
+
+--- Throughput per Room ---
+  Room 1: 25263 messages
+  Room 2: 25041 messages
+  Room 3: 25149 messages
+  Room 4: 24996 messages
+  Room 5: 24908 messages
+  Room 6: 25076 messages
+  Room 7: 24871 messages
+  Room 8: 25030 messages
+  Room 9: 24680 messages
+  Room 10: 24755 messages
+  Room 11: 24835 messages
+  Room 12: 24926 messages
+  Room 13: 24935 messages
+  Room 14: 25029 messages
+  Room 15: 24964 messages
+  Room 16: 25322 messages
+  Room 17: 25101 messages
+  Room 18: 24983 messages
+  Room 19: 25256 messages
+  Room 20: 24880 messages
+
+--- Message Type Distribution ---
+  TEXT: 450189 messages (90.04%)
+  JOIN: 25138 messages (5.03%)
+  LEAVE: 24673 messages (4.93%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 500000
+
+┌─────────────────────────────────────┐
+│  Generating Throughput Chart        │
+└─────────────────────────────────────┘
+
+2026-04-06 19:06:41.876 java[42771:76182021] +[IMKClient subclass]: chose IMKClient_Modern
+2026-04-06 19:06:41.876 java[42771:76182021] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+✅ Chart saved: results/throughput-chart.png
+   Size: 800x600 pixels
+   Time buckets: 57
+
+✅ All tests completed successfully!
+
+Waiting 10s for consumer to flush final batch to DB...
+
+┌─────────────────────────────────────┐
+│  Assignment 3: Metrics API Results  │
+└─────────────────────────────────────┘
+Calling Metrics API: http://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/metrics?roomId=1
+
+===== METRICS API RESULT =====
+{
+  "generatedAt" : "2026-04-07T02:06:53.626889115Z",
+  "queryWindow" : {
+    "end" : "2026-04-07T02:06:53.359281531Z",
+    "start" : "2026-04-06T02:06:53.359255691Z"
+  },
+  "autoSelectedUserId" : "94549",
+  "totalMessages" : 500456,
+  "coreQueries" : {
+    "roomMessagesInRange" : {
+      "executionMs" : 1014,
+      "count" : 25279,
+      "roomId" : "1",
+      "targetMet" : false,
+      "targetMs" : 100
+    },
+    "userMessageHistory" : {
+      "userId" : "94549",
+      "count" : 17,
+      "targetMet" : true,
+      "targetMs" : 200,
+      "executionMs" : 10
+    },
+    "activeUsersInWindow" : {
+      "targetMet" : false,
+      "targetMs" : 500,
+      "uniqueUsers" : 99364,
+      "executionMs" : 629
+    },
+    "roomsForUser" : {
+      "userId" : "94549",
+      "rooms" : [ {
+        "lastActivity" : "2026-04-07T02:04:55.431539Z",
+        "roomId" : "12"
+      }, {
+        "lastActivity" : "2026-04-07T02:04:02.935678Z",
+        "roomId" : "3"
+      }, {
+        "lastActivity" : "2026-04-07T02:03:39.551812Z",
+        "roomId" : "10"
+      }, {
+        "lastActivity" : "2026-04-07T02:02:41.914049Z",
+        "roomId" : "18"
+      }, {
+        "lastActivity" : "2026-04-07T02:02:33.813738Z",
+        "roomId" : "17"
+      }, {
+        "lastActivity" : "2026-04-07T02:02:31.054773Z",
+        "roomId" : "14"
+      }, {
+        "lastActivity" : "2026-04-07T02:02:14.935914Z",
+        "roomId" : "20"
+      }, {
+        "lastActivity" : "2026-04-07T01:59:39.811276Z",
+        "roomId" : "2"
+      }, {
+        "lastActivity" : "2026-04-07T01:58:58.352041Z",
+        "roomId" : "9"
+      }, {
+        "lastActivity" : "2026-04-07T01:58:58.322358Z",
+        "roomId" : "6"
+      }, {
+        "lastActivity" : "2026-04-07T01:58:58.317550Z",
+        "roomId" : "4"
+      } ],
+      "targetMet" : true,
+      "targetMs" : 50,
+      "executionMs" : 7
+    }
+  },
+  "analyticsQueries" : {
+    "messagesPerSecond" : [ {
+      "second" : "2026-04-07T01:57:19Z",
+      "count" : 32012
+    }, {
+      "second" : "2026-04-07T01:58:58Z",
+      "count" : 100865
+    }, {
+      "second" : "2026-04-07T01:58:59Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:59:00Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:59:01Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:59:02Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:59:03Z",
+      "count" : 992
+    }, {
+      "second" : "2026-04-07T01:59:04Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:59:05Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:59:06Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:59:07Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:59:08Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:59:09Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:59:10Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:59:11Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:59:12Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:59:13Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:59:14Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:59:15Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:59:16Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:59:17Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:59:18Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:59:19Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:59:20Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:59:21Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:59:22Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:59:23Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:59:24Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:59:25Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:59:26Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:59:27Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:59:28Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:59:29Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:59:30Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:59:31Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:59:32Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:59:33Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:59:34Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:59:35Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:59:36Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:59:37Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:59:38Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:59:39Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:59:40Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:59:41Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:59:42Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:59:43Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:59:44Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:59:45Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:59:46Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:59:47Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:59:48Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:59:49Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:59:50Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:59:51Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:59:52Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:59:53Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:59:54Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:59:55Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:59:56Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:59:57Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:59:58Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:59:59Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:00:00Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:00:01Z",
+      "count" : 893
+    }, {
+      "second" : "2026-04-07T02:00:02Z",
+      "count" : 694
+    }, {
+      "second" : "2026-04-07T02:00:03Z",
+      "count" : 1244
+    }, {
+      "second" : "2026-04-07T02:00:04Z",
+      "count" : 1128
+    }, {
+      "second" : "2026-04-07T02:00:05Z",
+      "count" : 1100
+    }, {
+      "second" : "2026-04-07T02:00:06Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T02:00:07Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T02:00:08Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T02:00:09Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T02:00:10Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:00:11Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T02:00:12Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T02:00:13Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T02:00:14Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T02:00:15Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:00:16Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:00:17Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:00:18Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:00:19Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T02:00:20Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T02:00:21Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:00:22Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:00:23Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T02:00:24Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:00:25Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:00:26Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:00:27Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:00:28Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:00:29Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:00:30Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:00:31Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T02:00:32Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:00:33Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:00:34Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:00:35Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T02:00:36Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T02:00:37Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T02:00:38Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:00:39Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T02:00:40Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:00:41Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:00:42Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T02:00:43Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:00:44Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:00:45Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:00:46Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T02:00:47Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:00:48Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:00:49Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T02:00:50Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:00:51Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:00:52Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T02:00:53Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T02:00:54Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T02:00:55Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T02:00:56Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:00:57Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:00:58Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:00:59Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T02:01:00Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:01:01Z",
+      "count" : 929
+    }, {
+      "second" : "2026-04-07T02:01:02Z",
+      "count" : 1088
+    }, {
+      "second" : "2026-04-07T02:01:03Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:01:04Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:01:05Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:01:06Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T02:01:07Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:01:08Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:01:09Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T02:01:10Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T02:01:11Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:01:12Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T02:01:13Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:01:14Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T02:01:15Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:01:16Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T02:01:17Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:01:18Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T02:01:19Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:01:20Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:01:21Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T02:01:22Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T02:01:23Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:01:24Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:01:25Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:01:26Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:01:27Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:01:28Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:01:29Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:01:30Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:01:31Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:01:32Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:01:33Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:01:34Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:01:35Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:01:36Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:01:37Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:01:38Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:01:39Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:01:40Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:01:41Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:01:42Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:01:43Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:01:44Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T02:01:45Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:01:46Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:01:47Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:01:48Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:01:49Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:01:50Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:01:51Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:01:52Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:01:53Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:01:54Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T02:01:55Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T02:01:56Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T02:01:57Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T02:01:58Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:01:59Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:02:00Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:02:01Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T02:02:02Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:02:03Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T02:02:04Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:02:05Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T02:02:06Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:02:07Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:02:08Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:02:09Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T02:02:10Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:02:11Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:02:12Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:02:13Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:02:14Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T02:02:15Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T02:02:16Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T02:02:17Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T02:02:18Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:02:19Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:02:20Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:02:21Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T02:02:22Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T02:02:23Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:02:24Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:02:25Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T02:02:26Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:02:27Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:02:28Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T02:02:29Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:02:30Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:02:31Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:02:32Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:02:33Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T02:02:34Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T02:02:35Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:02:36Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:02:37Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:02:38Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:02:39Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:02:40Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:02:41Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T02:02:42Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T02:02:43Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T02:02:44Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:02:45Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:02:46Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:02:47Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:02:48Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:02:49Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:02:50Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T02:02:51Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:02:52Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:02:53Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:02:54Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:02:55Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:02:56Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:02:57Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T02:02:58Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T02:02:59Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T02:03:00Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:03:01Z",
+      "count" : 867
+    }, {
+      "second" : "2026-04-07T02:03:02Z",
+      "count" : 1145
+    }, {
+      "second" : "2026-04-07T02:03:03Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T02:03:04Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:03:05Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:03:06Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:03:07Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:03:08Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T02:03:09Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T02:03:10Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T02:03:11Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T02:03:12Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T02:03:13Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:03:14Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:03:15Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:03:16Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T02:03:17Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:03:18Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:03:19Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T02:03:20Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:03:21Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T02:03:22Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:03:23Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:03:24Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:03:25Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T02:03:26Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:03:27Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:03:28Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:03:29Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:03:30Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:03:31Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:03:32Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:03:33Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:03:34Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:03:35Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:03:36Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T02:03:37Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T02:03:38Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:03:39Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T02:03:40Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T02:03:41Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:03:42Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T02:03:43Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:03:44Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:03:45Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T02:03:46Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T02:03:47Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:03:48Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T02:03:49Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:03:50Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:03:51Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:03:52Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:03:53Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:03:54Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T02:03:55Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:03:56Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:03:57Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T02:03:58Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T02:03:59Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T02:04:00Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T02:04:01Z",
+      "count" : 971
+    }, {
+      "second" : "2026-04-07T02:04:02Z",
+      "count" : 1095
+    }, {
+      "second" : "2026-04-07T02:04:03Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T02:04:04Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T02:04:05Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T02:04:06Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:04:07Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T02:04:08Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T02:04:09Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:04:10Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:04:11Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:04:12Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:04:13Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T02:04:14Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T02:04:15Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T02:04:16Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T02:04:17Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T02:04:18Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T02:04:19Z",
+      "count" : 870
+    }, {
+      "second" : "2026-04-07T02:04:21Z",
+      "count" : 1284
+    }, {
+      "second" : "2026-04-07T02:04:22Z",
+      "count" : 1440
+    }, {
+      "second" : "2026-04-07T02:04:23Z",
+      "count" : 1414
+    }, {
+      "second" : "2026-04-07T02:04:24Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T02:04:25Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T02:04:26Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T02:04:27Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T02:04:28Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T02:04:29Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T02:04:30Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T02:04:31Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:04:32Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T02:04:33Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T02:04:34Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T02:04:35Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T02:04:36Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T02:04:37Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T02:04:38Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T02:04:39Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T02:04:40Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:04:41Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T02:04:42Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:04:43Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T02:04:44Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T02:04:45Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:04:46Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T02:04:47Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:04:48Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T02:04:49Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T02:04:50Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T02:04:51Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T02:04:52Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T02:04:53Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T02:04:54Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:04:55Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T02:04:56Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T02:04:57Z",
+      "count" : 751
+    } ],
+    "topActiveUsers" : [ {
+      "messageCount" : 17,
+      "userId" : "94549"
+    }, {
+      "messageCount" : 16,
+      "userId" : "45754"
+    }, {
+      "messageCount" : 16,
+      "userId" : "40004"
+    }, {
+      "messageCount" : 16,
+      "userId" : "82407"
+    }, {
+      "messageCount" : 15,
+      "userId" : "40662"
+    }, {
+      "messageCount" : 15,
+      "userId" : "47679"
+    }, {
+      "messageCount" : 15,
+      "userId" : "38359"
+    }, {
+      "messageCount" : 15,
+      "userId" : "31210"
+    }, {
+      "messageCount" : 15,
+      "userId" : "12640"
+    }, {
+      "messageCount" : 15,
+      "userId" : "26957"
+    } ],
+    "topActiveRooms" : [ {
+      "messageCount" : 25346,
+      "roomId" : "16"
+    }, {
+      "messageCount" : 25287,
+      "roomId" : "19"
+    }, {
+      "messageCount" : 25279,
+      "roomId" : "1"
+    }, {
+      "messageCount" : 25186,
+      "roomId" : "3"
+    }, {
+      "messageCount" : 25124,
+      "roomId" : "17"
+    }, {
+      "messageCount" : 25088,
+      "roomId" : "6"
+    }, {
+      "messageCount" : 25057,
+      "roomId" : "2"
+    }, {
+      "messageCount" : 25044,
+      "roomId" : "8"
+    }, {
+      "messageCount" : 25042,
+      "roomId" : "14"
+    }, {
+      "messageCount" : 25015,
+      "roomId" : "18"
+    } ],
+    "userParticipationPatterns" : [ {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "1"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "1"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "100"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "100"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "1000"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "1000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 5,
+      "userId" : "10000"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "10000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "100000"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "100000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10001"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10001"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10002"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "10002"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "10003"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10004"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10004"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10005"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10005"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10006"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10006"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10007"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10007"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10008"
+    }, {
+      "hour" : "2",
+      "messageCount" : 10,
+      "userId" : "10009"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "1001"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "1001"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10010"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10010"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10011"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10012"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10012"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10013"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10013"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10014"
+    }, {
+      "hour" : "2",
+      "messageCount" : 7,
+      "userId" : "10014"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10015"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10015"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10016"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10016"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10017"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10017"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10018"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10018"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10019"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10019"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "1002"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "1002"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10020"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "10020"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10021"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10021"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10022"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10022"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10023"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10023"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10024"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10024"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10025"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10025"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10026"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10026"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10027"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10027"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10028"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10028"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10029"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10029"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "1003"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "1003"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10030"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10030"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10031"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10031"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10032"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10033"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10033"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10034"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10034"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10035"
+    }, {
+      "hour" : "2",
+      "messageCount" : 5,
+      "userId" : "10035"
+    }, {
+      "hour" : "2",
+      "messageCount" : 6,
+      "userId" : "10036"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10037"
+    }, {
+      "hour" : "2",
+      "messageCount" : 3,
+      "userId" : "10037"
+    }, {
+      "hour" : "1",
+      "messageCount" : 3,
+      "userId" : "10038"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10038"
+    }, {
+      "hour" : "1",
+      "messageCount" : 7,
+      "userId" : "10039"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10039"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "1004"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "1004"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10040"
+    }, {
+      "hour" : "2",
+      "messageCount" : 2,
+      "userId" : "10040"
+    }, {
+      "hour" : "1",
+      "messageCount" : 1,
+      "userId" : "10041"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10041"
+    }, {
+      "hour" : "1",
+      "messageCount" : 2,
+      "userId" : "10042"
+    }, {
+      "hour" : "2",
+      "messageCount" : 1,
+      "userId" : "10042"
+    }, {
+      "hour" : "1",
+      "messageCount" : 4,
+      "userId" : "10043"
+    }, {
+      "hour" : "2",
+      "messageCount" : 4,
+      "userId" : "10043"
+    } ]
+  }
+}
+==============================
+✅ Metrics API call successful (HTTP 200)

@@ -1,0 +1,6484 @@
+╔════════════════════════════════════════════════════════╗
+║  ChatFlow Load Test Client - Part 2                  ║
+║  CS6650 Assignment 1 - Detailed Metrics              ║
+╚════════════════════════════════════════════════════════╝
+
+Server URL: ws://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/chat
+Total messages: 2000000
+Warmup: 32 threads × 1000 messages = 32000 messages
+Main phase: 128 threads × 15375 messages = 1968000 messages
+Rate limit: 1040 msg/s (per-thread: 8 msg/s)
+Detailed metrics: ENABLED
+CSV output: results/performance-metrics.csv
+
+┌─────────────────────────────────────┐
+│  Phase 1: Warmup                    │
+└─────────────────────────────────────┘
+Starting 32 threads to send 32000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 32000 messages...
+MessageGenerator completed: 32000 messages in 67ms
+  ✅ Thread pool-1-thread-2 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-6 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-18 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-12 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-4 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-23 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-21 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-25 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-19 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-33 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-32 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-27 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-11 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-14 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-24 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-22 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-3 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-28 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-9 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-8 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-13 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-29 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-26 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-30 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-10 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-16 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-17 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-7 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-15 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-20 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-5 completed: sent=1000, failed=0
+  ✅ Thread pool-1-thread-31 completed: sent=1000, failed=0
+
+✅ Warmup Phase Completed:
+   Duration: 91808 ms
+   Total messages sent: 32000
+   Successful messages: 32000
+   Failed messages: 0
+   Throughput: 348.55 msg/sec
+   Active connections: 40
+
+Total connections created so far: 48
+
+┌─────────────────────────────────────┐
+│  Phase 2: Main Load                 │
+└─────────────────────────────────────┘
+Rate limiting enabled: 1040 msg/s
+
+Starting 128 threads to send 1968000 messages...
+
+MessageGenerator initialized with 50 predefined messages
+🔄 MessageGenerator started - generating 1968000 messages...
+  Generated: 50000 messages
+  Generated: 100000 messages
+  Generated: 150000 messages
+  Generated: 200000 messages
+  Generated: 250000 messages
+  Generated: 300000 messages
+  Generated: 350000 messages
+  Generated: 400000 messages
+  Generated: 450000 messages
+  Generated: 500000 messages
+  Generated: 550000 messages
+  Generated: 600000 messages
+  Generated: 650000 messages
+  Generated: 700000 messages
+  Generated: 750000 messages
+  Generated: 800000 messages
+  Generated: 850000 messages
+  Generated: 900000 messages
+  Generated: 950000 messages
+  Generated: 1000000 messages
+  Generated: 1050000 messages
+  Generated: 1100000 messages
+  Generated: 1150000 messages
+  Generated: 1200000 messages
+  Generated: 1250000 messages
+  Generated: 1300000 messages
+  Generated: 1350000 messages
+  Generated: 1400000 messages
+  Generated: 1450000 messages
+  Generated: 1500000 messages
+  Generated: 1550000 messages
+  Generated: 1600000 messages
+  Generated: 1650000 messages
+  Generated: 1700000 messages
+  Generated: 1750000 messages
+  Generated: 1800000 messages
+  Generated: 1850000 messages
+  Generated: 1900000 messages
+  Generated: 1950000 messages
+MessageGenerator completed: 1968000 messages in 1862387ms
+  ✅ Thread pool-50-thread-77 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-78 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-82 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-110 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-38 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-50 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-97 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-107 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-46 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-2 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-13 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-30 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-96 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-112 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-3 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-113 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-62 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-126 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-11 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-86 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-70 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-19 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-117 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-67 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-42 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-93 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-90 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-116 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-95 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-43 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-20 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-48 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-71 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-49 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-33 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-81 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-25 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-60 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-27 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-118 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-32 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-87 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-69 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-41 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-45 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-6 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-44 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-127 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-36 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-9 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-51 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-35 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-16 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-108 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-53 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-121 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-120 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-76 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-125 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-23 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-124 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-18 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-37 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-72 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-102 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-15 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-66 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-10 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-26 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-5 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-74 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-109 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-89 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-52 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-21 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-39 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-40 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-123 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-94 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-7 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-31 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-65 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-128 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-57 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-8 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-91 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-54 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-73 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-80 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-24 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-105 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-129 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-14 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-122 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-55 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-83 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-79 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-85 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-56 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-104 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-75 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-103 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-111 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-84 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-34 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-63 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-114 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-98 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-59 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-99 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-92 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-64 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-101 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-29 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-119 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-61 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-100 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-115 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-58 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-12 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-88 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-4 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-47 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-17 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-22 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-28 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-68 completed: sent=15375, failed=0
+  ✅ Thread pool-50-thread-106 completed: sent=15375, failed=0
+
+✅ Main Phase Completed:
+   Total messages sent: 1968000
+   Duration: 1991678 ms
+   Throughput: 988.11 msg/sec
+   Active connections: 40
+
+Total connections created: 1096
+
+┌─────────────────────────────────────┐
+│  Overall Test Results               │
+└─────────────────────────────────────┘
+
+========== Test Summary ==========
+Successful messages: 2000000
+Failed messages: 0
+Total runtime: 2084507 ms
+Total connections: 1096
+Reconnections: 0
+==================================
+
+Phase Breakdown:
+  Warmup:    91808 ms (348.55 msg/sec)
+  Main Load: 1991678 ms (988.11 msg/sec)
+
+┌─────────────────────────────────────┐
+│  Detailed Performance Analysis      │
+└─────────────────────────────────────┘
+
+========== Performance Statistics ==========
+Response Time Statistics (successful messages):
+  Samples: 2000000
+  Mean response time: 109 ms
+  Median response time: 104 ms
+  95th percentile: 171 ms
+  99th percentile: 229 ms
+  Min response time: 63 ms
+  Max response time: 2339 ms
+
+--- Throughput per Room ---
+  Room 1: 99840 messages
+  Room 2: 100224 messages
+  Room 3: 100451 messages
+  Room 4: 99853 messages
+  Room 5: 99875 messages
+  Room 6: 99900 messages
+  Room 7: 100142 messages
+  Room 8: 99947 messages
+  Room 9: 99459 messages
+  Room 10: 100527 messages
+  Room 11: 100330 messages
+  Room 12: 100038 messages
+  Room 13: 99700 messages
+  Room 14: 99962 messages
+  Room 15: 99906 messages
+  Room 16: 100116 messages
+  Room 17: 99934 messages
+  Room 18: 99826 messages
+  Room 19: 100085 messages
+  Room 20: 99885 messages
+
+--- Message Type Distribution ---
+  TEXT: 1800914 messages (90.05%)
+  JOIN: 99601 messages (4.98%)
+  LEAVE: 99485 messages (4.97%)
+===========================================
+
+Saving detailed metrics to CSV...
+✅ CSV file saved: results/performance-metrics.csv
+   Total records: 2000000
+
+┌─────────────────────────────────────┐
+│  Generating Throughput Chart        │
+└─────────────────────────────────────┘
+
+2026-04-06 18:43:11.266 java[38646:76117222] +[IMKClient subclass]: chose IMKClient_Modern
+2026-04-06 18:43:11.266 java[38646:76117222] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+✅ Chart saved: results/throughput-chart.png
+   Size: 800x600 pixels
+   Time buckets: 209
+
+✅ All tests completed successfully!
+
+Waiting 10s for consumer to flush final batch to DB...
+
+┌─────────────────────────────────────┐
+│  Assignment 3: Metrics API Results  │
+└─────────────────────────────────────┘
+Calling Metrics API: http://chatflow-alb-1683935178.us-east-1.elb.amazonaws.com/metrics?roomId=1
+
+===== METRICS API RESULT =====
+{
+  "generatedAt" : "2026-04-07T01:43:24.118291157Z",
+  "queryWindow" : {
+    "end" : "2026-04-07T01:43:23.392861653Z",
+    "start" : "2026-04-06T01:43:23.392845708Z"
+  },
+  "autoSelectedUserId" : "75141",
+  "totalMessages" : 2001781,
+  "coreQueries" : {
+    "roomMessagesInRange" : {
+      "targetMs" : 100,
+      "executionMs" : 4285,
+      "count" : 99940,
+      "roomId" : "1",
+      "targetMet" : false
+    },
+    "userMessageHistory" : {
+      "executionMs" : 8,
+      "userId" : "75141",
+      "count" : 45,
+      "targetMet" : true,
+      "targetMs" : 200
+    },
+    "activeUsersInWindow" : {
+      "targetMet" : false,
+      "targetMs" : 500,
+      "uniqueUsers" : 100000,
+      "executionMs" : 2468
+    },
+    "roomsForUser" : {
+      "executionMs" : 10,
+      "userId" : "75141",
+      "rooms" : [ {
+        "lastActivity" : "2026-04-07T01:40:06.864190Z",
+        "roomId" : "13"
+      }, {
+        "lastActivity" : "2026-04-07T01:38:38.565567Z",
+        "roomId" : "15"
+      }, {
+        "lastActivity" : "2026-04-07T01:38:25.105909Z",
+        "roomId" : "12"
+      }, {
+        "lastActivity" : "2026-04-07T01:38:14.854113Z",
+        "roomId" : "9"
+      }, {
+        "lastActivity" : "2026-04-07T01:38:11.935061Z",
+        "roomId" : "6"
+      }, {
+        "lastActivity" : "2026-04-07T01:35:37.777761Z",
+        "roomId" : "19"
+      }, {
+        "lastActivity" : "2026-04-07T01:35:16.407982Z",
+        "roomId" : "8"
+      }, {
+        "lastActivity" : "2026-04-07T01:34:28.582475Z",
+        "roomId" : "1"
+      }, {
+        "lastActivity" : "2026-04-07T01:33:48.854146Z",
+        "roomId" : "16"
+      }, {
+        "lastActivity" : "2026-04-07T01:33:37.511267Z",
+        "roomId" : "7"
+      }, {
+        "lastActivity" : "2026-04-07T01:32:39.557061Z",
+        "roomId" : "20"
+      }, {
+        "lastActivity" : "2026-04-07T01:31:24.829418Z",
+        "roomId" : "3"
+      }, {
+        "lastActivity" : "2026-04-07T01:30:27.270576Z",
+        "roomId" : "4"
+      }, {
+        "lastActivity" : "2026-04-07T01:28:18.845444Z",
+        "roomId" : "10"
+      }, {
+        "lastActivity" : "2026-04-07T01:27:54.971557Z",
+        "roomId" : "17"
+      }, {
+        "lastActivity" : "2026-04-07T01:21:18.992360Z",
+        "roomId" : "5"
+      }, {
+        "lastActivity" : "2026-04-07T01:17:07.612754Z",
+        "roomId" : "2"
+      }, {
+        "lastActivity" : "2026-04-07T01:16:27.567487Z",
+        "roomId" : "18"
+      }, {
+        "lastActivity" : "2026-04-07T01:11:38.989187Z",
+        "roomId" : "11"
+      } ],
+      "targetMet" : true,
+      "targetMs" : 50
+    }
+  },
+  "analyticsQueries" : {
+    "messagesPerSecond" : [ {
+      "second" : "2026-04-07T01:08:22Z",
+      "count" : 32008
+    }, {
+      "second" : "2026-04-07T01:09:55Z",
+      "count" : 100758
+    }, {
+      "second" : "2026-04-07T01:09:56Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:09:57Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:09:58Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:09:59Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:10:00Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:10:01Z",
+      "count" : 814
+    }, {
+      "second" : "2026-04-07T01:10:02Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:10:03Z",
+      "count" : 1225
+    }, {
+      "second" : "2026-04-07T01:10:04Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:10:05Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:10:06Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:10:07Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:10:08Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:10:09Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:10:10Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:10:11Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:10:12Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:10:13Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:10:14Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:10:15Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:10:16Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:10:17Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:10:18Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:10:19Z",
+      "count" : 976
+    }, {
+      "second" : "2026-04-07T01:10:20Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:10:21Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:10:22Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:10:23Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:10:24Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:10:25Z",
+      "count" : 1062
+    }, {
+      "second" : "2026-04-07T01:10:26Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:10:27Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:10:28Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:10:29Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:10:30Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:10:31Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:10:32Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:10:33Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:10:34Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:10:35Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:10:36Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:10:37Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:10:38Z",
+      "count" : 974
+    }, {
+      "second" : "2026-04-07T01:10:39Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:10:40Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:10:41Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:10:42Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:10:43Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:10:44Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:10:45Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:10:46Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:10:47Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:10:48Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:10:49Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:10:50Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:10:51Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T01:10:52Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:10:53Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:10:54Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:10:55Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:10:56Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:10:57Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:10:58Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:10:59Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:11:00Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:11:01Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:11:02Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:11:03Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:11:04Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:11:05Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:11:06Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:11:07Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:11:08Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:11:09Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:11:10Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:11:11Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:11:12Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:11:13Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:11:14Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:11:15Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:11:16Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:11:17Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:11:18Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:11:19Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:11:20Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:11:21Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:11:22Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:11:23Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:11:24Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:11:25Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:11:26Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:11:27Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:11:28Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:11:29Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:11:30Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:11:31Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:11:32Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:11:33Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:11:34Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:11:35Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:11:36Z",
+      "count" : 1080
+    }, {
+      "second" : "2026-04-07T01:11:37Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:11:38Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:11:39Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:11:40Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:11:41Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:11:42Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:11:43Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:11:44Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:11:45Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:11:46Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:11:47Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:11:48Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:11:49Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:11:50Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:11:51Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:11:52Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:11:53Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:11:54Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:11:55Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:11:56Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:11:57Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:11:58Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:11:59Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:12:00Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:12:01Z",
+      "count" : 888
+    }, {
+      "second" : "2026-04-07T01:12:02Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:12:03Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:12:04Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:12:05Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:12:06Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:12:07Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:12:08Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:12:09Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:12:10Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:12:11Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:12:12Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:12:13Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:12:14Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:12:15Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:12:16Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:12:17Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:12:18Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:12:19Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:12:20Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:12:21Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:12:22Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:12:23Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:12:24Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:12:25Z",
+      "count" : 992
+    }, {
+      "second" : "2026-04-07T01:12:26Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:12:27Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:12:28Z",
+      "count" : 771
+    }, {
+      "second" : "2026-04-07T01:12:30Z",
+      "count" : 1326
+    }, {
+      "second" : "2026-04-07T01:12:31Z",
+      "count" : 1491
+    }, {
+      "second" : "2026-04-07T01:12:32Z",
+      "count" : 1444
+    }, {
+      "second" : "2026-04-07T01:12:33Z",
+      "count" : 1096
+    }, {
+      "second" : "2026-04-07T01:12:34Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:12:35Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:12:36Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:12:37Z",
+      "count" : 986
+    }, {
+      "second" : "2026-04-07T01:12:38Z",
+      "count" : 985
+    }, {
+      "second" : "2026-04-07T01:12:39Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:12:40Z",
+      "count" : 988
+    }, {
+      "second" : "2026-04-07T01:12:41Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:12:42Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:12:43Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:12:44Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:12:45Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:12:46Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:12:47Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:12:48Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:12:49Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:12:50Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:12:51Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:12:52Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:12:53Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:12:54Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:12:55Z",
+      "count" : 976
+    }, {
+      "second" : "2026-04-07T01:12:56Z",
+      "count" : 1110
+    }, {
+      "second" : "2026-04-07T01:12:57Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:12:58Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:12:59Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:13:00Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:13:01Z",
+      "count" : 982
+    }, {
+      "second" : "2026-04-07T01:13:02Z",
+      "count" : 1074
+    }, {
+      "second" : "2026-04-07T01:13:03Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:13:04Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:13:05Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:13:06Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:13:07Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:13:08Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:13:09Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:13:10Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:13:11Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:13:12Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:13:13Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:13:14Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:13:15Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:13:16Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:13:17Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:13:18Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:13:19Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:13:20Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:13:21Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:13:22Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:13:23Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:13:24Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:13:25Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:13:26Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:13:27Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:13:28Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:13:29Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:13:30Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:13:31Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:13:32Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:13:33Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:13:34Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:13:35Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:13:36Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:13:37Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:13:38Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:13:39Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:13:40Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:13:41Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:13:42Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:13:43Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:13:44Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:13:45Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:13:46Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:13:47Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:13:48Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:13:49Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:13:50Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:13:51Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:13:52Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:13:53Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:13:54Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:13:55Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:13:56Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:13:57Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:13:58Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:13:59Z",
+      "count" : 973
+    }, {
+      "second" : "2026-04-07T01:14:00Z",
+      "count" : 974
+    }, {
+      "second" : "2026-04-07T01:14:01Z",
+      "count" : 864
+    }, {
+      "second" : "2026-04-07T01:14:02Z",
+      "count" : 1081
+    }, {
+      "second" : "2026-04-07T01:14:03Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:14:04Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:14:05Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:14:06Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:14:07Z",
+      "count" : 902
+    }, {
+      "second" : "2026-04-07T01:14:08Z",
+      "count" : 1122
+    }, {
+      "second" : "2026-04-07T01:14:09Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:14:10Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:14:11Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:14:12Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:14:13Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:14:14Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:14:15Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:14:16Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:14:17Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:14:18Z",
+      "count" : 962
+    }, {
+      "second" : "2026-04-07T01:14:19Z",
+      "count" : 1106
+    }, {
+      "second" : "2026-04-07T01:14:20Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:14:21Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:14:22Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:14:23Z",
+      "count" : 402
+    }, {
+      "second" : "2026-04-07T01:14:24Z",
+      "count" : 329
+    }, {
+      "second" : "2026-04-07T01:14:25Z",
+      "count" : 716
+    }, {
+      "second" : "2026-04-07T01:14:26Z",
+      "count" : 1442
+    }, {
+      "second" : "2026-04-07T01:14:27Z",
+      "count" : 1379
+    }, {
+      "second" : "2026-04-07T01:14:28Z",
+      "count" : 1331
+    }, {
+      "second" : "2026-04-07T01:14:29Z",
+      "count" : 1280
+    }, {
+      "second" : "2026-04-07T01:14:30Z",
+      "count" : 1183
+    }, {
+      "second" : "2026-04-07T01:14:31Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:14:32Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:14:33Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:14:34Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:14:35Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:14:36Z",
+      "count" : 1074
+    }, {
+      "second" : "2026-04-07T01:14:37Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:14:38Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:14:39Z",
+      "count" : 1129
+    }, {
+      "second" : "2026-04-07T01:14:40Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:14:41Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:14:42Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:14:43Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:14:44Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:14:45Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:14:46Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:14:47Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:14:48Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:14:49Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:14:50Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:14:51Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:14:52Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:14:53Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:14:54Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:14:55Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:14:56Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:14:57Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:14:58Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:14:59Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:15:00Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:15:01Z",
+      "count" : 914
+    }, {
+      "second" : "2026-04-07T01:15:02Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:15:03Z",
+      "count" : 1101
+    }, {
+      "second" : "2026-04-07T01:15:04Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:15:05Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:15:06Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:15:07Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:15:08Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:15:09Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:15:10Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:15:11Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:15:12Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:15:13Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:15:14Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:15:15Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:15:16Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:15:17Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:15:18Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:15:19Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:15:20Z",
+      "count" : 952
+    }, {
+      "second" : "2026-04-07T01:15:21Z",
+      "count" : 750
+    }, {
+      "second" : "2026-04-07T01:15:22Z",
+      "count" : 898
+    }, {
+      "second" : "2026-04-07T01:15:23Z",
+      "count" : 839
+    }, {
+      "second" : "2026-04-07T01:15:24Z",
+      "count" : 787
+    }, {
+      "second" : "2026-04-07T01:15:25Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:15:26Z",
+      "count" : 1405
+    }, {
+      "second" : "2026-04-07T01:15:27Z",
+      "count" : 1374
+    }, {
+      "second" : "2026-04-07T01:15:28Z",
+      "count" : 1193
+    }, {
+      "second" : "2026-04-07T01:15:29Z",
+      "count" : 964
+    }, {
+      "second" : "2026-04-07T01:15:30Z",
+      "count" : 1074
+    }, {
+      "second" : "2026-04-07T01:15:31Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:15:32Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:15:33Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:15:34Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:15:35Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:15:36Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:15:37Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:15:38Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:15:39Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:15:40Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:15:41Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:15:42Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:15:43Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:15:44Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T01:15:45Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:15:46Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:15:47Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:15:48Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:15:49Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:15:50Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:15:51Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:15:52Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:15:53Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:15:54Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:15:55Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:15:56Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:15:57Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:15:58Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:15:59Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:16:00Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:16:01Z",
+      "count" : 959
+    }, {
+      "second" : "2026-04-07T01:16:02Z",
+      "count" : 1103
+    }, {
+      "second" : "2026-04-07T01:16:03Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:16:04Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:16:05Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:16:06Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:16:07Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:16:08Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:09Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:16:10Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:16:11Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:16:12Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:16:13Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:16:14Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:16:15Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:16:16Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:16:17Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:16:18Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:16:19Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:16:20Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:16:21Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:16:22Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:16:23Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:24Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:16:25Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:16:26Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:16:27Z",
+      "count" : 948
+    }, {
+      "second" : "2026-04-07T01:16:28Z",
+      "count" : 1103
+    }, {
+      "second" : "2026-04-07T01:16:29Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:16:30Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:16:31Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:16:32Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:16:33Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:16:34Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:35Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:36Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:16:37Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:16:38Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:39Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:16:40Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:16:41Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:16:42Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:16:43Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:16:44Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:16:45Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:16:46Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:16:47Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:16:48Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:16:49Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:16:50Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:16:51Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:16:52Z",
+      "count" : 975
+    }, {
+      "second" : "2026-04-07T01:16:53Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:16:54Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:16:55Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:16:56Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:16:57Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:16:58Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:16:59Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:17:00Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:17:01Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:17:02Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:17:03Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:17:04Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:17:05Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:17:06Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:17:07Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:17:08Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:17:09Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:17:10Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:17:11Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:17:12Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:17:13Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:17:14Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:17:15Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:17:16Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:17:17Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:17:18Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:17:19Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:17:20Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:17:21Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:17:22Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:17:23Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:17:24Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:17:25Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:17:26Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:17:27Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:17:28Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:17:29Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:17:30Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:17:31Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:17:32Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:17:33Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:17:34Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:17:35Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:17:36Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:17:37Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:17:38Z",
+      "count" : 1063
+    }, {
+      "second" : "2026-04-07T01:17:39Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:17:40Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:17:41Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:17:42Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:17:43Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:17:44Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:17:45Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:17:46Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:17:47Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:17:48Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:17:49Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:17:50Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:17:51Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:17:52Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:17:53Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:17:54Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:17:55Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:17:56Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:17:57Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:17:58Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:17:59Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:18:00Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:18:01Z",
+      "count" : 870
+    }, {
+      "second" : "2026-04-07T01:18:02Z",
+      "count" : 887
+    }, {
+      "second" : "2026-04-07T01:18:03Z",
+      "count" : 1169
+    }, {
+      "second" : "2026-04-07T01:18:04Z",
+      "count" : 1118
+    }, {
+      "second" : "2026-04-07T01:18:05Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:18:06Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:18:07Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:18:08Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:18:09Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:18:10Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:18:11Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:18:12Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:18:13Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:18:14Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:18:15Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:18:16Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:18:17Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:18:18Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:18:19Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:18:20Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:18:21Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:18:22Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:18:23Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:18:24Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:18:25Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:18:26Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:18:27Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:18:28Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:18:29Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:18:30Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:18:31Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:18:32Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:18:33Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:18:34Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:18:35Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:18:36Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:18:37Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:18:38Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:18:39Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:18:40Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:18:41Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:18:42Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:18:43Z",
+      "count" : 979
+    }, {
+      "second" : "2026-04-07T01:18:44Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:18:45Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:18:46Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:18:47Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:18:48Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:18:49Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:18:50Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:18:51Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:18:52Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:18:53Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:18:54Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:18:55Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:18:56Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:18:57Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:18:58Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:18:59Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:19:00Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:19:01Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:19:02Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:19:03Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:19:04Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:19:05Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:19:06Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:19:07Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:19:08Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:19:09Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:19:10Z",
+      "count" : 987
+    }, {
+      "second" : "2026-04-07T01:19:11Z",
+      "count" : 1075
+    }, {
+      "second" : "2026-04-07T01:19:12Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:19:13Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:19:14Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:19:15Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:19:16Z",
+      "count" : 1058
+    }, {
+      "second" : "2026-04-07T01:19:17Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:19:18Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:19:19Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:19:20Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:19:21Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:19:22Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:19:23Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:19:24Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:19:25Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:19:26Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:19:27Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:19:28Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:19:29Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:19:30Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:19:31Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:19:32Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:19:33Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:19:34Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:19:35Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:19:36Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:19:37Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:19:38Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:19:39Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:19:40Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:19:41Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:19:42Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:19:43Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:19:44Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:19:45Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:19:46Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:19:47Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:19:48Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:19:49Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:19:50Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:19:51Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:19:52Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:19:53Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:19:54Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:19:55Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:19:56Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:19:57Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:19:58Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:19:59Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:20:00Z",
+      "count" : 827
+    }, {
+      "second" : "2026-04-07T01:20:01Z",
+      "count" : 901
+    }, {
+      "second" : "2026-04-07T01:20:02Z",
+      "count" : 1102
+    }, {
+      "second" : "2026-04-07T01:20:03Z",
+      "count" : 1178
+    }, {
+      "second" : "2026-04-07T01:20:04Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:20:05Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:20:06Z",
+      "count" : 960
+    }, {
+      "second" : "2026-04-07T01:20:07Z",
+      "count" : 528
+    }, {
+      "second" : "2026-04-07T01:20:08Z",
+      "count" : 1358
+    }, {
+      "second" : "2026-04-07T01:20:09Z",
+      "count" : 1199
+    }, {
+      "second" : "2026-04-07T01:20:10Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:20:11Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:20:12Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:20:13Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:20:14Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:20:15Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:20:16Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:20:17Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:20:18Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:20:19Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:20:20Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:20:21Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:20:22Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:20:23Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:20:24Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:20:25Z",
+      "count" : 933
+    }, {
+      "second" : "2026-04-07T01:20:26Z",
+      "count" : 961
+    }, {
+      "second" : "2026-04-07T01:20:27Z",
+      "count" : 1217
+    }, {
+      "second" : "2026-04-07T01:20:28Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:20:29Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:20:30Z",
+      "count" : 956
+    }, {
+      "second" : "2026-04-07T01:20:31Z",
+      "count" : 1089
+    }, {
+      "second" : "2026-04-07T01:20:32Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:20:33Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:20:34Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:20:35Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:20:36Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:20:37Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:20:38Z",
+      "count" : 983
+    }, {
+      "second" : "2026-04-07T01:20:39Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:20:40Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:20:41Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:20:42Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:20:43Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:20:44Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:20:45Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:20:46Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:20:47Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:20:48Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:20:49Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:20:50Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:20:51Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:20:52Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:20:53Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:20:54Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:20:55Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:20:56Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:20:57Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:20:58Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:20:59Z",
+      "count" : 968
+    }, {
+      "second" : "2026-04-07T01:21:00Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:21:01Z",
+      "count" : 914
+    }, {
+      "second" : "2026-04-07T01:21:02Z",
+      "count" : 1108
+    }, {
+      "second" : "2026-04-07T01:21:03Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:21:04Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:21:05Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:21:06Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:21:07Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:21:08Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:21:09Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:21:10Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:21:11Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:21:12Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:21:13Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:21:14Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:21:15Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:21:16Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:21:17Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:21:18Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:21:19Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:21:20Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:21:21Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:21:22Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:21:23Z",
+      "count" : 975
+    }, {
+      "second" : "2026-04-07T01:21:24Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:21:25Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:21:26Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:21:27Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:21:28Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:21:29Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:21:30Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:21:31Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:21:32Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:21:33Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:21:34Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:21:35Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:21:36Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:21:37Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:21:38Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:21:39Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:21:40Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:21:41Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:21:42Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:21:43Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:21:44Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:21:45Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:21:46Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:21:47Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:21:48Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:21:49Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:21:50Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:21:51Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:21:52Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:21:53Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:21:54Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:21:55Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:21:56Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:21:57Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:21:58Z",
+      "count" : 1058
+    }, {
+      "second" : "2026-04-07T01:21:59Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T01:22:00Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T01:22:01Z",
+      "count" : 1063
+    }, {
+      "second" : "2026-04-07T01:22:02Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:22:03Z",
+      "count" : 969
+    }, {
+      "second" : "2026-04-07T01:22:04Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:22:05Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:22:06Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:22:07Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:22:08Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:22:09Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:22:10Z",
+      "count" : 941
+    }, {
+      "second" : "2026-04-07T01:22:11Z",
+      "count" : 986
+    }, {
+      "second" : "2026-04-07T01:22:12Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:22:13Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:22:14Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:22:15Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:22:16Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:22:17Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:22:18Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:22:19Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:22:20Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:22:21Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:22:22Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:22:23Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:22:24Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:22:25Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:22:26Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:22:27Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:22:28Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:22:29Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:22:30Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:22:31Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:22:32Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:22:33Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:22:34Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:22:35Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:22:36Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:22:37Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:22:38Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:22:39Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:22:40Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:22:41Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:22:42Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:22:43Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:22:44Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:22:45Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:22:46Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:22:47Z",
+      "count" : 956
+    }, {
+      "second" : "2026-04-07T01:22:48Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:22:49Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:22:50Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:22:51Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:22:52Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:22:53Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:22:54Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:22:55Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:22:56Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:22:57Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:22:58Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T01:22:59Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:23:00Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:23:01Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:23:02Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:23:03Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:23:04Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:23:05Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:23:06Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:23:07Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:23:08Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:23:09Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T01:23:10Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:23:11Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:23:12Z",
+      "count" : 1106
+    }, {
+      "second" : "2026-04-07T01:23:13Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:23:14Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:23:15Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:23:16Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:23:17Z",
+      "count" : 986
+    }, {
+      "second" : "2026-04-07T01:23:18Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:23:19Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:23:20Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:23:21Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:23:22Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:23:23Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:23:24Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:23:25Z",
+      "count" : 974
+    }, {
+      "second" : "2026-04-07T01:23:26Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:23:27Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:23:28Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:23:29Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:23:30Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:23:31Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:23:32Z",
+      "count" : 987
+    }, {
+      "second" : "2026-04-07T01:23:33Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:23:34Z",
+      "count" : 967
+    }, {
+      "second" : "2026-04-07T01:23:35Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:23:36Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:23:37Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:23:38Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:23:39Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:23:40Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:23:41Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:23:42Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:23:43Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:23:44Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:23:45Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:23:46Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:23:47Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:23:48Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:23:49Z",
+      "count" : 693
+    }, {
+      "second" : "2026-04-07T01:23:50Z",
+      "count" : 1204
+    }, {
+      "second" : "2026-04-07T01:23:51Z",
+      "count" : 1169
+    }, {
+      "second" : "2026-04-07T01:23:52Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:23:53Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:23:54Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:23:55Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:23:56Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:23:57Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:23:58Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:23:59Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:24:00Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:24:01Z",
+      "count" : 827
+    }, {
+      "second" : "2026-04-07T01:24:02Z",
+      "count" : 671
+    }, {
+      "second" : "2026-04-07T01:24:03Z",
+      "count" : 1286
+    }, {
+      "second" : "2026-04-07T01:24:04Z",
+      "count" : 1227
+    }, {
+      "second" : "2026-04-07T01:24:05Z",
+      "count" : 1079
+    }, {
+      "second" : "2026-04-07T01:24:06Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:24:07Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:24:08Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:24:09Z",
+      "count" : 966
+    }, {
+      "second" : "2026-04-07T01:24:10Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:24:11Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:24:12Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:24:13Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:24:14Z",
+      "count" : 951
+    }, {
+      "second" : "2026-04-07T01:24:15Z",
+      "count" : 1084
+    }, {
+      "second" : "2026-04-07T01:24:16Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:24:17Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:24:18Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:24:19Z",
+      "count" : 988
+    }, {
+      "second" : "2026-04-07T01:24:20Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:24:21Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:24:22Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:24:23Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:24:24Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:24:25Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:24:26Z",
+      "count" : 971
+    }, {
+      "second" : "2026-04-07T01:24:27Z",
+      "count" : 904
+    }, {
+      "second" : "2026-04-07T01:24:28Z",
+      "count" : 1174
+    }, {
+      "second" : "2026-04-07T01:24:29Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:24:30Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:24:31Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:24:32Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:24:33Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:24:34Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:24:35Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:24:36Z",
+      "count" : 844
+    }, {
+      "second" : "2026-04-07T01:24:37Z",
+      "count" : 1175
+    }, {
+      "second" : "2026-04-07T01:24:38Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:24:39Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:24:40Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:24:41Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:24:42Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:24:43Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:24:44Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:24:45Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:24:46Z",
+      "count" : 937
+    }, {
+      "second" : "2026-04-07T01:24:47Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:24:48Z",
+      "count" : 1081
+    }, {
+      "second" : "2026-04-07T01:24:49Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:24:50Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:24:51Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:24:52Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:24:53Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:24:54Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:24:55Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:24:56Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:24:57Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:24:58Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:24:59Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:25:00Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:25:01Z",
+      "count" : 948
+    }, {
+      "second" : "2026-04-07T01:25:02Z",
+      "count" : 1100
+    }, {
+      "second" : "2026-04-07T01:25:03Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:25:04Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:25:05Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:25:06Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:25:07Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:25:08Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:25:09Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:25:10Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:25:11Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:25:12Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:25:13Z",
+      "count" : 1062
+    }, {
+      "second" : "2026-04-07T01:25:14Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:25:15Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:25:16Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:25:17Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:25:18Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:25:19Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:25:20Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:25:21Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:25:22Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:25:23Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:25:24Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:25:25Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:25:26Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:25:27Z",
+      "count" : 959
+    }, {
+      "second" : "2026-04-07T01:25:28Z",
+      "count" : 1084
+    }, {
+      "second" : "2026-04-07T01:25:29Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:25:30Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:25:31Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:25:32Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:25:33Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:25:34Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:25:35Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:25:36Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:25:37Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:25:38Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:25:39Z",
+      "count" : 968
+    }, {
+      "second" : "2026-04-07T01:25:40Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:25:41Z",
+      "count" : 1099
+    }, {
+      "second" : "2026-04-07T01:25:42Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:25:43Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:25:44Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:25:45Z",
+      "count" : 873
+    }, {
+      "second" : "2026-04-07T01:25:46Z",
+      "count" : 1185
+    }, {
+      "second" : "2026-04-07T01:25:47Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:25:48Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:25:49Z",
+      "count" : 615
+    }, {
+      "second" : "2026-04-07T01:25:50Z",
+      "count" : 1386
+    }, {
+      "second" : "2026-04-07T01:25:51Z",
+      "count" : 883
+    }, {
+      "second" : "2026-04-07T01:25:52Z",
+      "count" : 1141
+    }, {
+      "second" : "2026-04-07T01:25:53Z",
+      "count" : 857
+    }, {
+      "second" : "2026-04-07T01:25:54Z",
+      "count" : 563
+    }, {
+      "second" : "2026-04-07T01:25:55Z",
+      "count" : 754
+    }, {
+      "second" : "2026-04-07T01:25:56Z",
+      "count" : 640
+    }, {
+      "second" : "2026-04-07T01:25:57Z",
+      "count" : 1213
+    }, {
+      "second" : "2026-04-07T01:25:58Z",
+      "count" : 1217
+    }, {
+      "second" : "2026-04-07T01:25:59Z",
+      "count" : 1351
+    }, {
+      "second" : "2026-04-07T01:26:00Z",
+      "count" : 1245
+    }, {
+      "second" : "2026-04-07T01:26:01Z",
+      "count" : 1140
+    }, {
+      "second" : "2026-04-07T01:26:02Z",
+      "count" : 1130
+    }, {
+      "second" : "2026-04-07T01:26:03Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:26:04Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:26:05Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:26:06Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:26:07Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:26:08Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:26:09Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:26:10Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:26:11Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:26:12Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:26:13Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:26:14Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:26:15Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:26:16Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:26:17Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:26:18Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:26:19Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:26:20Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:26:21Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:26:22Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:26:23Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:26:24Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:26:25Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:26:26Z",
+      "count" : 1058
+    }, {
+      "second" : "2026-04-07T01:26:27Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:26:28Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:26:29Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:26:30Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:26:31Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:26:32Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:26:33Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:26:34Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:26:35Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:26:36Z",
+      "count" : 971
+    }, {
+      "second" : "2026-04-07T01:26:37Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:26:38Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:26:39Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:26:40Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:26:41Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:26:42Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:26:43Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:26:44Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:26:45Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:26:46Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:26:47Z",
+      "count" : 982
+    }, {
+      "second" : "2026-04-07T01:26:48Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:26:49Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:26:50Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:26:51Z",
+      "count" : 1072
+    }, {
+      "second" : "2026-04-07T01:26:52Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:26:53Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:26:54Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:26:55Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:26:56Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:26:57Z",
+      "count" : 974
+    }, {
+      "second" : "2026-04-07T01:26:58Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:26:59Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:27:00Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:27:01Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:27:02Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:27:03Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:27:04Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:27:05Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:27:06Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:27:07Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:27:08Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:27:09Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:27:10Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:27:11Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:27:12Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:27:13Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:27:14Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:27:15Z",
+      "count" : 750
+    }, {
+      "second" : "2026-04-07T01:27:16Z",
+      "count" : 1107
+    }, {
+      "second" : "2026-04-07T01:27:17Z",
+      "count" : 1220
+    }, {
+      "second" : "2026-04-07T01:27:18Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:27:19Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:27:20Z",
+      "count" : 957
+    }, {
+      "second" : "2026-04-07T01:27:21Z",
+      "count" : 983
+    }, {
+      "second" : "2026-04-07T01:27:22Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:27:23Z",
+      "count" : 1097
+    }, {
+      "second" : "2026-04-07T01:27:24Z",
+      "count" : 983
+    }, {
+      "second" : "2026-04-07T01:27:25Z",
+      "count" : 1075
+    }, {
+      "second" : "2026-04-07T01:27:26Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:27:27Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:27:28Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:27:29Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:27:30Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:27:31Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:27:32Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:27:33Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:27:34Z",
+      "count" : 881
+    }, {
+      "second" : "2026-04-07T01:27:35Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:27:36Z",
+      "count" : 1069
+    }, {
+      "second" : "2026-04-07T01:27:37Z",
+      "count" : 862
+    }, {
+      "second" : "2026-04-07T01:27:38Z",
+      "count" : 1101
+    }, {
+      "second" : "2026-04-07T01:27:39Z",
+      "count" : 1080
+    }, {
+      "second" : "2026-04-07T01:27:40Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:27:41Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:27:42Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:27:43Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:27:44Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:27:45Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:27:46Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:27:47Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:27:48Z",
+      "count" : 936
+    }, {
+      "second" : "2026-04-07T01:27:49Z",
+      "count" : 1122
+    }, {
+      "second" : "2026-04-07T01:27:50Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:27:51Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:27:52Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:27:53Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:27:54Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:27:55Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:27:56Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:27:57Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:27:58Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:27:59Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:28:00Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:28:01Z",
+      "count" : 858
+    }, {
+      "second" : "2026-04-07T01:28:02Z",
+      "count" : 1147
+    }, {
+      "second" : "2026-04-07T01:28:03Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:28:04Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:28:05Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:28:06Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:28:07Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:28:08Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:28:09Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:28:10Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:28:11Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:28:12Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:28:13Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:28:14Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:28:15Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:28:16Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:28:17Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T01:28:18Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:28:19Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:28:20Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:28:21Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:28:22Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:28:23Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:28:24Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:28:25Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:28:26Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:28:27Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:28:28Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:28:29Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:28:30Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:28:31Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:28:32Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T01:28:33Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:28:34Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:28:35Z",
+      "count" : 850
+    }, {
+      "second" : "2026-04-07T01:28:36Z",
+      "count" : 1124
+    }, {
+      "second" : "2026-04-07T01:28:37Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:28:38Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:28:39Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:28:40Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:28:41Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:28:42Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:28:43Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:28:44Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:28:45Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:28:46Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:28:47Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:28:48Z",
+      "count" : 1058
+    }, {
+      "second" : "2026-04-07T01:28:49Z",
+      "count" : 505
+    }, {
+      "second" : "2026-04-07T01:28:50Z",
+      "count" : 769
+    }, {
+      "second" : "2026-04-07T01:28:51Z",
+      "count" : 586
+    }, {
+      "second" : "2026-04-07T01:28:52Z",
+      "count" : 959
+    }, {
+      "second" : "2026-04-07T01:28:53Z",
+      "count" : 1089
+    }, {
+      "second" : "2026-04-07T01:28:54Z",
+      "count" : 1270
+    }, {
+      "second" : "2026-04-07T01:28:55Z",
+      "count" : 967
+    }, {
+      "second" : "2026-04-07T01:28:56Z",
+      "count" : 518
+    }, {
+      "second" : "2026-04-07T01:28:57Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:28:58Z",
+      "count" : 869
+    }, {
+      "second" : "2026-04-07T01:28:59Z",
+      "count" : 900
+    }, {
+      "second" : "2026-04-07T01:29:00Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:29:01Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:29:02Z",
+      "count" : 1096
+    }, {
+      "second" : "2026-04-07T01:29:03Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:29:04Z",
+      "count" : 1191
+    }, {
+      "second" : "2026-04-07T01:29:05Z",
+      "count" : 640
+    }, {
+      "second" : "2026-04-07T01:29:06Z",
+      "count" : 762
+    }, {
+      "second" : "2026-04-07T01:29:07Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:29:08Z",
+      "count" : 1254
+    }, {
+      "second" : "2026-04-07T01:29:09Z",
+      "count" : 1291
+    }, {
+      "second" : "2026-04-07T01:29:10Z",
+      "count" : 1210
+    }, {
+      "second" : "2026-04-07T01:29:11Z",
+      "count" : 1216
+    }, {
+      "second" : "2026-04-07T01:29:12Z",
+      "count" : 1239
+    }, {
+      "second" : "2026-04-07T01:29:13Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:29:14Z",
+      "count" : 1120
+    }, {
+      "second" : "2026-04-07T01:29:15Z",
+      "count" : 1186
+    }, {
+      "second" : "2026-04-07T01:29:16Z",
+      "count" : 1160
+    }, {
+      "second" : "2026-04-07T01:29:17Z",
+      "count" : 1120
+    }, {
+      "second" : "2026-04-07T01:29:18Z",
+      "count" : 1084
+    }, {
+      "second" : "2026-04-07T01:29:19Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:29:20Z",
+      "count" : 921
+    }, {
+      "second" : "2026-04-07T01:29:21Z",
+      "count" : 1134
+    }, {
+      "second" : "2026-04-07T01:29:22Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:29:23Z",
+      "count" : 952
+    }, {
+      "second" : "2026-04-07T01:29:24Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:29:25Z",
+      "count" : 992
+    }, {
+      "second" : "2026-04-07T01:29:26Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:29:27Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:29:28Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:29:29Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:29:30Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:29:31Z",
+      "count" : 1062
+    }, {
+      "second" : "2026-04-07T01:29:32Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:29:33Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:29:34Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:29:35Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:29:36Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:29:37Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:29:38Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:29:39Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:29:40Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:29:41Z",
+      "count" : 950
+    }, {
+      "second" : "2026-04-07T01:29:42Z",
+      "count" : 1090
+    }, {
+      "second" : "2026-04-07T01:29:43Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:29:44Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:29:45Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:29:46Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:29:47Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:29:48Z",
+      "count" : 1078
+    }, {
+      "second" : "2026-04-07T01:29:49Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:29:50Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:29:51Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:29:52Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:29:53Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:29:54Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:29:55Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:29:56Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:29:57Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:29:58Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:29:59Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:30:00Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:30:01Z",
+      "count" : 671
+    }, {
+      "second" : "2026-04-07T01:30:02Z",
+      "count" : 526
+    }, {
+      "second" : "2026-04-07T01:30:03Z",
+      "count" : 937
+    }, {
+      "second" : "2026-04-07T01:30:04Z",
+      "count" : 1138
+    }, {
+      "second" : "2026-04-07T01:30:05Z",
+      "count" : 1170
+    }, {
+      "second" : "2026-04-07T01:30:06Z",
+      "count" : 1126
+    }, {
+      "second" : "2026-04-07T01:30:07Z",
+      "count" : 1183
+    }, {
+      "second" : "2026-04-07T01:30:08Z",
+      "count" : 1159
+    }, {
+      "second" : "2026-04-07T01:30:09Z",
+      "count" : 1101
+    }, {
+      "second" : "2026-04-07T01:30:10Z",
+      "count" : 1115
+    }, {
+      "second" : "2026-04-07T01:30:11Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:30:12Z",
+      "count" : 1086
+    }, {
+      "second" : "2026-04-07T01:30:13Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:30:14Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:30:15Z",
+      "count" : 1010
+    }, {
+      "second" : "2026-04-07T01:30:16Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:30:17Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:30:18Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:30:19Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:30:20Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:30:21Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:30:22Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:30:23Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:30:24Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:30:25Z",
+      "count" : 694
+    }, {
+      "second" : "2026-04-07T01:30:26Z",
+      "count" : 579
+    }, {
+      "second" : "2026-04-07T01:30:27Z",
+      "count" : 1166
+    }, {
+      "second" : "2026-04-07T01:30:28Z",
+      "count" : 1180
+    }, {
+      "second" : "2026-04-07T01:30:29Z",
+      "count" : 1101
+    }, {
+      "second" : "2026-04-07T01:30:30Z",
+      "count" : 1090
+    }, {
+      "second" : "2026-04-07T01:30:31Z",
+      "count" : 1156
+    }, {
+      "second" : "2026-04-07T01:30:32Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:30:33Z",
+      "count" : 1119
+    }, {
+      "second" : "2026-04-07T01:30:34Z",
+      "count" : 1092
+    }, {
+      "second" : "2026-04-07T01:30:35Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:30:36Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:30:37Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:30:38Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:30:39Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:30:40Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:30:41Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:30:42Z",
+      "count" : 979
+    }, {
+      "second" : "2026-04-07T01:30:43Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:30:44Z",
+      "count" : 1074
+    }, {
+      "second" : "2026-04-07T01:30:45Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:30:46Z",
+      "count" : 975
+    }, {
+      "second" : "2026-04-07T01:30:47Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:30:48Z",
+      "count" : 992
+    }, {
+      "second" : "2026-04-07T01:30:49Z",
+      "count" : 987
+    }, {
+      "second" : "2026-04-07T01:30:50Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:30:51Z",
+      "count" : 959
+    }, {
+      "second" : "2026-04-07T01:30:52Z",
+      "count" : 1116
+    }, {
+      "second" : "2026-04-07T01:30:53Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:30:54Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:30:55Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:30:56Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:30:57Z",
+      "count" : 958
+    }, {
+      "second" : "2026-04-07T01:30:58Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:30:59Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:31:00Z",
+      "count" : 985
+    }, {
+      "second" : "2026-04-07T01:31:01Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:31:02Z",
+      "count" : 1070
+    }, {
+      "second" : "2026-04-07T01:31:03Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:31:04Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:31:05Z",
+      "count" : 1086
+    }, {
+      "second" : "2026-04-07T01:31:06Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:31:07Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:31:08Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:31:09Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:31:10Z",
+      "count" : 1003
+    }, {
+      "second" : "2026-04-07T01:31:11Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:31:12Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:31:13Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:31:14Z",
+      "count" : 1040
+    }, {
+      "second" : "2026-04-07T01:31:15Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:31:16Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:31:17Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:31:18Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:31:19Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:31:20Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:31:21Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:31:22Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:31:23Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:31:24Z",
+      "count" : 1078
+    }, {
+      "second" : "2026-04-07T01:31:25Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:31:26Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:31:27Z",
+      "count" : 965
+    }, {
+      "second" : "2026-04-07T01:31:28Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:31:29Z",
+      "count" : 910
+    }, {
+      "second" : "2026-04-07T01:31:30Z",
+      "count" : 988
+    }, {
+      "second" : "2026-04-07T01:31:31Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:31:32Z",
+      "count" : 1100
+    }, {
+      "second" : "2026-04-07T01:31:33Z",
+      "count" : 1089
+    }, {
+      "second" : "2026-04-07T01:31:34Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:31:35Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:31:36Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:31:37Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:31:38Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:31:39Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:31:40Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:31:41Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:31:42Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:31:43Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:31:44Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:31:45Z",
+      "count" : 863
+    }, {
+      "second" : "2026-04-07T01:31:46Z",
+      "count" : 799
+    }, {
+      "second" : "2026-04-07T01:31:47Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:31:48Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:31:49Z",
+      "count" : 1143
+    }, {
+      "second" : "2026-04-07T01:31:50Z",
+      "count" : 1088
+    }, {
+      "second" : "2026-04-07T01:31:51Z",
+      "count" : 1082
+    }, {
+      "second" : "2026-04-07T01:31:52Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:31:53Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:31:54Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:31:55Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:31:56Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:31:57Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:31:58Z",
+      "count" : 1007
+    }, {
+      "second" : "2026-04-07T01:31:59Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:32:00Z",
+      "count" : 828
+    }, {
+      "second" : "2026-04-07T01:32:01Z",
+      "count" : 1081
+    }, {
+      "second" : "2026-04-07T01:32:02Z",
+      "count" : 969
+    }, {
+      "second" : "2026-04-07T01:32:03Z",
+      "count" : 1137
+    }, {
+      "second" : "2026-04-07T01:32:04Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:32:05Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:32:06Z",
+      "count" : 945
+    }, {
+      "second" : "2026-04-07T01:32:07Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:32:08Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:32:09Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:32:10Z",
+      "count" : 1009
+    }, {
+      "second" : "2026-04-07T01:32:11Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:32:12Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:32:13Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:32:14Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:32:15Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:32:16Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:32:17Z",
+      "count" : 429
+    }, {
+      "second" : "2026-04-07T01:32:18Z",
+      "count" : 547
+    }, {
+      "second" : "2026-04-07T01:32:19Z",
+      "count" : 1150
+    }, {
+      "second" : "2026-04-07T01:32:20Z",
+      "count" : 1170
+    }, {
+      "second" : "2026-04-07T01:32:21Z",
+      "count" : 1110
+    }, {
+      "second" : "2026-04-07T01:32:22Z",
+      "count" : 1090
+    }, {
+      "second" : "2026-04-07T01:32:23Z",
+      "count" : 1055
+    }, {
+      "second" : "2026-04-07T01:32:24Z",
+      "count" : 1162
+    }, {
+      "second" : "2026-04-07T01:32:25Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:32:26Z",
+      "count" : 1129
+    }, {
+      "second" : "2026-04-07T01:32:27Z",
+      "count" : 1091
+    }, {
+      "second" : "2026-04-07T01:32:28Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:32:29Z",
+      "count" : 1099
+    }, {
+      "second" : "2026-04-07T01:32:30Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:32:31Z",
+      "count" : 1106
+    }, {
+      "second" : "2026-04-07T01:32:32Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:32:33Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:32:34Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:32:35Z",
+      "count" : 1133
+    }, {
+      "second" : "2026-04-07T01:32:36Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:32:37Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:32:38Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:32:39Z",
+      "count" : 961
+    }, {
+      "second" : "2026-04-07T01:32:40Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:32:41Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:32:42Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:32:43Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:32:44Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:32:45Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:32:46Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:32:47Z",
+      "count" : 1014
+    }, {
+      "second" : "2026-04-07T01:32:48Z",
+      "count" : 979
+    }, {
+      "second" : "2026-04-07T01:32:49Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:32:50Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:32:51Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:32:52Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:32:53Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:32:54Z",
+      "count" : 919
+    }, {
+      "second" : "2026-04-07T01:32:55Z",
+      "count" : 968
+    }, {
+      "second" : "2026-04-07T01:32:56Z",
+      "count" : 1112
+    }, {
+      "second" : "2026-04-07T01:32:57Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:32:58Z",
+      "count" : 1004
+    }, {
+      "second" : "2026-04-07T01:32:59Z",
+      "count" : 831
+    }, {
+      "second" : "2026-04-07T01:33:00Z",
+      "count" : 890
+    }, {
+      "second" : "2026-04-07T01:33:01Z",
+      "count" : 803
+    }, {
+      "second" : "2026-04-07T01:33:02Z",
+      "count" : 1208
+    }, {
+      "second" : "2026-04-07T01:33:03Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:33:04Z",
+      "count" : 1134
+    }, {
+      "second" : "2026-04-07T01:33:05Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:33:06Z",
+      "count" : 945
+    }, {
+      "second" : "2026-04-07T01:33:07Z",
+      "count" : 1073
+    }, {
+      "second" : "2026-04-07T01:33:08Z",
+      "count" : 849
+    }, {
+      "second" : "2026-04-07T01:33:09Z",
+      "count" : 831
+    }, {
+      "second" : "2026-04-07T01:33:10Z",
+      "count" : 966
+    }, {
+      "second" : "2026-04-07T01:33:11Z",
+      "count" : 1081
+    }, {
+      "second" : "2026-04-07T01:33:12Z",
+      "count" : 1119
+    }, {
+      "second" : "2026-04-07T01:33:13Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:33:14Z",
+      "count" : 1099
+    }, {
+      "second" : "2026-04-07T01:33:15Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:33:16Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:33:17Z",
+      "count" : 836
+    }, {
+      "second" : "2026-04-07T01:33:18Z",
+      "count" : 892
+    }, {
+      "second" : "2026-04-07T01:33:19Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:33:20Z",
+      "count" : 835
+    }, {
+      "second" : "2026-04-07T01:33:21Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:33:22Z",
+      "count" : 1115
+    }, {
+      "second" : "2026-04-07T01:33:23Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:33:24Z",
+      "count" : 917
+    }, {
+      "second" : "2026-04-07T01:33:25Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:33:26Z",
+      "count" : 1106
+    }, {
+      "second" : "2026-04-07T01:33:27Z",
+      "count" : 793
+    }, {
+      "second" : "2026-04-07T01:33:28Z",
+      "count" : 901
+    }, {
+      "second" : "2026-04-07T01:33:29Z",
+      "count" : 924
+    }, {
+      "second" : "2026-04-07T01:33:30Z",
+      "count" : 932
+    }, {
+      "second" : "2026-04-07T01:33:31Z",
+      "count" : 910
+    }, {
+      "second" : "2026-04-07T01:33:32Z",
+      "count" : 1033
+    }, {
+      "second" : "2026-04-07T01:33:33Z",
+      "count" : 962
+    }, {
+      "second" : "2026-04-07T01:33:34Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:33:35Z",
+      "count" : 979
+    }, {
+      "second" : "2026-04-07T01:33:36Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:33:37Z",
+      "count" : 835
+    }, {
+      "second" : "2026-04-07T01:33:38Z",
+      "count" : 1142
+    }, {
+      "second" : "2026-04-07T01:33:39Z",
+      "count" : 1128
+    }, {
+      "second" : "2026-04-07T01:33:40Z",
+      "count" : 1172
+    }, {
+      "second" : "2026-04-07T01:33:41Z",
+      "count" : 1120
+    }, {
+      "second" : "2026-04-07T01:33:42Z",
+      "count" : 1102
+    }, {
+      "second" : "2026-04-07T01:33:43Z",
+      "count" : 973
+    }, {
+      "second" : "2026-04-07T01:33:44Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:33:45Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:33:46Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:33:47Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:33:48Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:33:49Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:33:50Z",
+      "count" : 1093
+    }, {
+      "second" : "2026-04-07T01:33:51Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:33:52Z",
+      "count" : 1115
+    }, {
+      "second" : "2026-04-07T01:33:53Z",
+      "count" : 941
+    }, {
+      "second" : "2026-04-07T01:33:54Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T01:33:55Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:33:56Z",
+      "count" : 1122
+    }, {
+      "second" : "2026-04-07T01:33:57Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:33:58Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:33:59Z",
+      "count" : 1141
+    }, {
+      "second" : "2026-04-07T01:34:00Z",
+      "count" : 794
+    }, {
+      "second" : "2026-04-07T01:34:01Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:34:02Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:34:03Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:34:04Z",
+      "count" : 1147
+    }, {
+      "second" : "2026-04-07T01:34:05Z",
+      "count" : 1076
+    }, {
+      "second" : "2026-04-07T01:34:06Z",
+      "count" : 1097
+    }, {
+      "second" : "2026-04-07T01:34:07Z",
+      "count" : 882
+    }, {
+      "second" : "2026-04-07T01:34:08Z",
+      "count" : 1030
+    }, {
+      "second" : "2026-04-07T01:34:09Z",
+      "count" : 1064
+    }, {
+      "second" : "2026-04-07T01:34:10Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:34:11Z",
+      "count" : 1083
+    }, {
+      "second" : "2026-04-07T01:34:12Z",
+      "count" : 1150
+    }, {
+      "second" : "2026-04-07T01:34:13Z",
+      "count" : 1105
+    }, {
+      "second" : "2026-04-07T01:34:14Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T01:34:15Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:34:16Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:34:17Z",
+      "count" : 1088
+    }, {
+      "second" : "2026-04-07T01:34:18Z",
+      "count" : 1079
+    }, {
+      "second" : "2026-04-07T01:34:19Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:34:20Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:34:21Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:34:22Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:34:23Z",
+      "count" : 332
+    }, {
+      "second" : "2026-04-07T01:34:24Z",
+      "count" : 700
+    }, {
+      "second" : "2026-04-07T01:34:25Z",
+      "count" : 1104
+    }, {
+      "second" : "2026-04-07T01:34:26Z",
+      "count" : 1086
+    }, {
+      "second" : "2026-04-07T01:34:27Z",
+      "count" : 1011
+    }, {
+      "second" : "2026-04-07T01:34:28Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:34:29Z",
+      "count" : 982
+    }, {
+      "second" : "2026-04-07T01:34:30Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:34:31Z",
+      "count" : 786
+    }, {
+      "second" : "2026-04-07T01:34:32Z",
+      "count" : 884
+    }, {
+      "second" : "2026-04-07T01:34:33Z",
+      "count" : 956
+    }, {
+      "second" : "2026-04-07T01:34:34Z",
+      "count" : 645
+    }, {
+      "second" : "2026-04-07T01:34:35Z",
+      "count" : 750
+    }, {
+      "second" : "2026-04-07T01:34:36Z",
+      "count" : 906
+    }, {
+      "second" : "2026-04-07T01:34:37Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:34:38Z",
+      "count" : 859
+    }, {
+      "second" : "2026-04-07T01:34:39Z",
+      "count" : 799
+    }, {
+      "second" : "2026-04-07T01:34:40Z",
+      "count" : 988
+    }, {
+      "second" : "2026-04-07T01:34:41Z",
+      "count" : 939
+    }, {
+      "second" : "2026-04-07T01:34:42Z",
+      "count" : 736
+    }, {
+      "second" : "2026-04-07T01:34:43Z",
+      "count" : 893
+    }, {
+      "second" : "2026-04-07T01:34:44Z",
+      "count" : 925
+    }, {
+      "second" : "2026-04-07T01:34:45Z",
+      "count" : 878
+    }, {
+      "second" : "2026-04-07T01:34:46Z",
+      "count" : 1089
+    }, {
+      "second" : "2026-04-07T01:34:47Z",
+      "count" : 829
+    }, {
+      "second" : "2026-04-07T01:34:48Z",
+      "count" : 909
+    }, {
+      "second" : "2026-04-07T01:34:49Z",
+      "count" : 1134
+    }, {
+      "second" : "2026-04-07T01:34:50Z",
+      "count" : 714
+    }, {
+      "second" : "2026-04-07T01:34:51Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:34:52Z",
+      "count" : 1126
+    }, {
+      "second" : "2026-04-07T01:34:53Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:34:54Z",
+      "count" : 1107
+    }, {
+      "second" : "2026-04-07T01:34:55Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:34:56Z",
+      "count" : 902
+    }, {
+      "second" : "2026-04-07T01:34:57Z",
+      "count" : 1145
+    }, {
+      "second" : "2026-04-07T01:34:58Z",
+      "count" : 1150
+    }, {
+      "second" : "2026-04-07T01:34:59Z",
+      "count" : 871
+    }, {
+      "second" : "2026-04-07T01:35:00Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:35:01Z",
+      "count" : 886
+    }, {
+      "second" : "2026-04-07T01:35:02Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:35:03Z",
+      "count" : 1099
+    }, {
+      "second" : "2026-04-07T01:35:04Z",
+      "count" : 980
+    }, {
+      "second" : "2026-04-07T01:35:05Z",
+      "count" : 919
+    }, {
+      "second" : "2026-04-07T01:35:06Z",
+      "count" : 1038
+    }, {
+      "second" : "2026-04-07T01:35:07Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T01:35:08Z",
+      "count" : 852
+    }, {
+      "second" : "2026-04-07T01:35:09Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:35:10Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:35:11Z",
+      "count" : 970
+    }, {
+      "second" : "2026-04-07T01:35:12Z",
+      "count" : 918
+    }, {
+      "second" : "2026-04-07T01:35:13Z",
+      "count" : 801
+    }, {
+      "second" : "2026-04-07T01:35:14Z",
+      "count" : 727
+    }, {
+      "second" : "2026-04-07T01:35:15Z",
+      "count" : 888
+    }, {
+      "second" : "2026-04-07T01:35:16Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:35:17Z",
+      "count" : 968
+    }, {
+      "second" : "2026-04-07T01:35:18Z",
+      "count" : 818
+    }, {
+      "second" : "2026-04-07T01:35:19Z",
+      "count" : 787
+    }, {
+      "second" : "2026-04-07T01:35:20Z",
+      "count" : 742
+    }, {
+      "second" : "2026-04-07T01:35:21Z",
+      "count" : 794
+    }, {
+      "second" : "2026-04-07T01:35:22Z",
+      "count" : 822
+    }, {
+      "second" : "2026-04-07T01:35:23Z",
+      "count" : 666
+    }, {
+      "second" : "2026-04-07T01:35:24Z",
+      "count" : 734
+    }, {
+      "second" : "2026-04-07T01:35:25Z",
+      "count" : 807
+    }, {
+      "second" : "2026-04-07T01:35:26Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:35:27Z",
+      "count" : 710
+    }, {
+      "second" : "2026-04-07T01:35:28Z",
+      "count" : 747
+    }, {
+      "second" : "2026-04-07T01:35:29Z",
+      "count" : 821
+    }, {
+      "second" : "2026-04-07T01:35:30Z",
+      "count" : 797
+    }, {
+      "second" : "2026-04-07T01:35:31Z",
+      "count" : 622
+    }, {
+      "second" : "2026-04-07T01:35:32Z",
+      "count" : 758
+    }, {
+      "second" : "2026-04-07T01:35:33Z",
+      "count" : 847
+    }, {
+      "second" : "2026-04-07T01:35:34Z",
+      "count" : 818
+    }, {
+      "second" : "2026-04-07T01:35:35Z",
+      "count" : 857
+    }, {
+      "second" : "2026-04-07T01:35:36Z",
+      "count" : 883
+    }, {
+      "second" : "2026-04-07T01:35:37Z",
+      "count" : 744
+    }, {
+      "second" : "2026-04-07T01:35:38Z",
+      "count" : 649
+    }, {
+      "second" : "2026-04-07T01:35:39Z",
+      "count" : 749
+    }, {
+      "second" : "2026-04-07T01:35:40Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:35:41Z",
+      "count" : 822
+    }, {
+      "second" : "2026-04-07T01:35:42Z",
+      "count" : 763
+    }, {
+      "second" : "2026-04-07T01:35:43Z",
+      "count" : 761
+    }, {
+      "second" : "2026-04-07T01:35:44Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:35:45Z",
+      "count" : 932
+    }, {
+      "second" : "2026-04-07T01:35:46Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:35:47Z",
+      "count" : 1094
+    }, {
+      "second" : "2026-04-07T01:35:48Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:35:49Z",
+      "count" : 1134
+    }, {
+      "second" : "2026-04-07T01:35:50Z",
+      "count" : 1171
+    }, {
+      "second" : "2026-04-07T01:35:51Z",
+      "count" : 980
+    }, {
+      "second" : "2026-04-07T01:35:52Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:35:53Z",
+      "count" : 1114
+    }, {
+      "second" : "2026-04-07T01:35:54Z",
+      "count" : 1084
+    }, {
+      "second" : "2026-04-07T01:35:55Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:35:56Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:35:57Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:35:58Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:35:59Z",
+      "count" : 1089
+    }, {
+      "second" : "2026-04-07T01:36:00Z",
+      "count" : 970
+    }, {
+      "second" : "2026-04-07T01:36:01Z",
+      "count" : 819
+    }, {
+      "second" : "2026-04-07T01:36:02Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:36:03Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:36:04Z",
+      "count" : 1146
+    }, {
+      "second" : "2026-04-07T01:36:05Z",
+      "count" : 1161
+    }, {
+      "second" : "2026-04-07T01:36:06Z",
+      "count" : 1160
+    }, {
+      "second" : "2026-04-07T01:36:07Z",
+      "count" : 809
+    }, {
+      "second" : "2026-04-07T01:36:08Z",
+      "count" : 1039
+    }, {
+      "second" : "2026-04-07T01:36:09Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:36:10Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:36:11Z",
+      "count" : 1015
+    }, {
+      "second" : "2026-04-07T01:36:12Z",
+      "count" : 1061
+    }, {
+      "second" : "2026-04-07T01:36:13Z",
+      "count" : 796
+    }, {
+      "second" : "2026-04-07T01:36:14Z",
+      "count" : 947
+    }, {
+      "second" : "2026-04-07T01:36:15Z",
+      "count" : 713
+    }, {
+      "second" : "2026-04-07T01:36:16Z",
+      "count" : 687
+    }, {
+      "second" : "2026-04-07T01:36:17Z",
+      "count" : 922
+    }, {
+      "second" : "2026-04-07T01:36:18Z",
+      "count" : 928
+    }, {
+      "second" : "2026-04-07T01:36:19Z",
+      "count" : 933
+    }, {
+      "second" : "2026-04-07T01:36:20Z",
+      "count" : 976
+    }, {
+      "second" : "2026-04-07T01:36:21Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:36:22Z",
+      "count" : 1163
+    }, {
+      "second" : "2026-04-07T01:36:23Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:36:24Z",
+      "count" : 970
+    }, {
+      "second" : "2026-04-07T01:36:25Z",
+      "count" : 857
+    }, {
+      "second" : "2026-04-07T01:36:26Z",
+      "count" : 975
+    }, {
+      "second" : "2026-04-07T01:36:27Z",
+      "count" : 976
+    }, {
+      "second" : "2026-04-07T01:36:28Z",
+      "count" : 970
+    }, {
+      "second" : "2026-04-07T01:36:29Z",
+      "count" : 906
+    }, {
+      "second" : "2026-04-07T01:36:30Z",
+      "count" : 853
+    }, {
+      "second" : "2026-04-07T01:36:31Z",
+      "count" : 876
+    }, {
+      "second" : "2026-04-07T01:36:32Z",
+      "count" : 926
+    }, {
+      "second" : "2026-04-07T01:36:33Z",
+      "count" : 1087
+    }, {
+      "second" : "2026-04-07T01:36:34Z",
+      "count" : 989
+    }, {
+      "second" : "2026-04-07T01:36:35Z",
+      "count" : 790
+    }, {
+      "second" : "2026-04-07T01:36:36Z",
+      "count" : 1100
+    }, {
+      "second" : "2026-04-07T01:36:37Z",
+      "count" : 1078
+    }, {
+      "second" : "2026-04-07T01:36:38Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:36:39Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:36:40Z",
+      "count" : 1065
+    }, {
+      "second" : "2026-04-07T01:36:41Z",
+      "count" : 973
+    }, {
+      "second" : "2026-04-07T01:36:42Z",
+      "count" : 1084
+    }, {
+      "second" : "2026-04-07T01:36:43Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:36:44Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:36:45Z",
+      "count" : 1037
+    }, {
+      "second" : "2026-04-07T01:36:46Z",
+      "count" : 1044
+    }, {
+      "second" : "2026-04-07T01:36:47Z",
+      "count" : 857
+    }, {
+      "second" : "2026-04-07T01:36:48Z",
+      "count" : 1056
+    }, {
+      "second" : "2026-04-07T01:36:49Z",
+      "count" : 1058
+    }, {
+      "second" : "2026-04-07T01:36:50Z",
+      "count" : 998
+    }, {
+      "second" : "2026-04-07T01:36:51Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:36:52Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:36:53Z",
+      "count" : 1051
+    }, {
+      "second" : "2026-04-07T01:36:54Z",
+      "count" : 1071
+    }, {
+      "second" : "2026-04-07T01:36:55Z",
+      "count" : 1012
+    }, {
+      "second" : "2026-04-07T01:36:56Z",
+      "count" : 1067
+    }, {
+      "second" : "2026-04-07T01:36:57Z",
+      "count" : 1050
+    }, {
+      "second" : "2026-04-07T01:36:58Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:36:59Z",
+      "count" : 1118
+    }, {
+      "second" : "2026-04-07T01:37:00Z",
+      "count" : 907
+    }, {
+      "second" : "2026-04-07T01:37:01Z",
+      "count" : 875
+    }, {
+      "second" : "2026-04-07T01:37:02Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:37:03Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:37:04Z",
+      "count" : 1119
+    }, {
+      "second" : "2026-04-07T01:37:05Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:37:06Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:37:07Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:37:08Z",
+      "count" : 1028
+    }, {
+      "second" : "2026-04-07T01:37:09Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:37:10Z",
+      "count" : 978
+    }, {
+      "second" : "2026-04-07T01:37:11Z",
+      "count" : 1052
+    }, {
+      "second" : "2026-04-07T01:37:12Z",
+      "count" : 1048
+    }, {
+      "second" : "2026-04-07T01:37:13Z",
+      "count" : 1107
+    }, {
+      "second" : "2026-04-07T01:37:14Z",
+      "count" : 1059
+    }, {
+      "second" : "2026-04-07T01:37:15Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:37:16Z",
+      "count" : 1045
+    }, {
+      "second" : "2026-04-07T01:37:17Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:37:18Z",
+      "count" : 1066
+    }, {
+      "second" : "2026-04-07T01:37:19Z",
+      "count" : 958
+    }, {
+      "second" : "2026-04-07T01:37:20Z",
+      "count" : 1016
+    }, {
+      "second" : "2026-04-07T01:37:21Z",
+      "count" : 965
+    }, {
+      "second" : "2026-04-07T01:37:22Z",
+      "count" : 894
+    }, {
+      "second" : "2026-04-07T01:37:23Z",
+      "count" : 772
+    }, {
+      "second" : "2026-04-07T01:37:24Z",
+      "count" : 768
+    }, {
+      "second" : "2026-04-07T01:37:25Z",
+      "count" : 729
+    }, {
+      "second" : "2026-04-07T01:37:26Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:37:27Z",
+      "count" : 727
+    }, {
+      "second" : "2026-04-07T01:37:28Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:37:29Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:37:30Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:37:31Z",
+      "count" : 956
+    }, {
+      "second" : "2026-04-07T01:37:32Z",
+      "count" : 898
+    }, {
+      "second" : "2026-04-07T01:37:33Z",
+      "count" : 933
+    }, {
+      "second" : "2026-04-07T01:37:34Z",
+      "count" : 958
+    }, {
+      "second" : "2026-04-07T01:37:35Z",
+      "count" : 898
+    }, {
+      "second" : "2026-04-07T01:37:36Z",
+      "count" : 975
+    }, {
+      "second" : "2026-04-07T01:37:37Z",
+      "count" : 978
+    }, {
+      "second" : "2026-04-07T01:37:38Z",
+      "count" : 1077
+    }, {
+      "second" : "2026-04-07T01:37:39Z",
+      "count" : 1035
+    }, {
+      "second" : "2026-04-07T01:37:40Z",
+      "count" : 1080
+    }, {
+      "second" : "2026-04-07T01:37:41Z",
+      "count" : 1080
+    }, {
+      "second" : "2026-04-07T01:37:42Z",
+      "count" : 1017
+    }, {
+      "second" : "2026-04-07T01:37:43Z",
+      "count" : 979
+    }, {
+      "second" : "2026-04-07T01:37:44Z",
+      "count" : 1075
+    }, {
+      "second" : "2026-04-07T01:37:45Z",
+      "count" : 985
+    }, {
+      "second" : "2026-04-07T01:37:46Z",
+      "count" : 912
+    }, {
+      "second" : "2026-04-07T01:37:47Z",
+      "count" : 1025
+    }, {
+      "second" : "2026-04-07T01:37:48Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:37:49Z",
+      "count" : 1031
+    }, {
+      "second" : "2026-04-07T01:37:50Z",
+      "count" : 1053
+    }, {
+      "second" : "2026-04-07T01:37:51Z",
+      "count" : 1060
+    }, {
+      "second" : "2026-04-07T01:37:52Z",
+      "count" : 991
+    }, {
+      "second" : "2026-04-07T01:37:53Z",
+      "count" : 1027
+    }, {
+      "second" : "2026-04-07T01:37:54Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:37:55Z",
+      "count" : 913
+    }, {
+      "second" : "2026-04-07T01:37:56Z",
+      "count" : 789
+    }, {
+      "second" : "2026-04-07T01:37:57Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:37:58Z",
+      "count" : 988
+    }, {
+      "second" : "2026-04-07T01:37:59Z",
+      "count" : 1063
+    }, {
+      "second" : "2026-04-07T01:38:00Z",
+      "count" : 846
+    }, {
+      "second" : "2026-04-07T01:38:01Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:38:02Z",
+      "count" : 904
+    }, {
+      "second" : "2026-04-07T01:38:03Z",
+      "count" : 776
+    }, {
+      "second" : "2026-04-07T01:38:04Z",
+      "count" : 762
+    }, {
+      "second" : "2026-04-07T01:38:05Z",
+      "count" : 884
+    }, {
+      "second" : "2026-04-07T01:38:06Z",
+      "count" : 938
+    }, {
+      "second" : "2026-04-07T01:38:07Z",
+      "count" : 802
+    }, {
+      "second" : "2026-04-07T01:38:08Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:38:09Z",
+      "count" : 891
+    }, {
+      "second" : "2026-04-07T01:38:10Z",
+      "count" : 904
+    }, {
+      "second" : "2026-04-07T01:38:11Z",
+      "count" : 969
+    }, {
+      "second" : "2026-04-07T01:38:12Z",
+      "count" : 881
+    }, {
+      "second" : "2026-04-07T01:38:13Z",
+      "count" : 969
+    }, {
+      "second" : "2026-04-07T01:38:14Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:38:15Z",
+      "count" : 891
+    }, {
+      "second" : "2026-04-07T01:38:16Z",
+      "count" : 953
+    }, {
+      "second" : "2026-04-07T01:38:17Z",
+      "count" : 885
+    }, {
+      "second" : "2026-04-07T01:38:18Z",
+      "count" : 665
+    }, {
+      "second" : "2026-04-07T01:38:19Z",
+      "count" : 818
+    }, {
+      "second" : "2026-04-07T01:38:20Z",
+      "count" : 878
+    }, {
+      "second" : "2026-04-07T01:38:21Z",
+      "count" : 747
+    }, {
+      "second" : "2026-04-07T01:38:22Z",
+      "count" : 623
+    }, {
+      "second" : "2026-04-07T01:38:23Z",
+      "count" : 479
+    }, {
+      "second" : "2026-04-07T01:38:24Z",
+      "count" : 695
+    }, {
+      "second" : "2026-04-07T01:38:25Z",
+      "count" : 928
+    }, {
+      "second" : "2026-04-07T01:38:26Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:38:27Z",
+      "count" : 786
+    }, {
+      "second" : "2026-04-07T01:38:28Z",
+      "count" : 775
+    }, {
+      "second" : "2026-04-07T01:38:29Z",
+      "count" : 894
+    }, {
+      "second" : "2026-04-07T01:38:30Z",
+      "count" : 809
+    }, {
+      "second" : "2026-04-07T01:38:31Z",
+      "count" : 681
+    }, {
+      "second" : "2026-04-07T01:38:32Z",
+      "count" : 703
+    }, {
+      "second" : "2026-04-07T01:38:33Z",
+      "count" : 701
+    }, {
+      "second" : "2026-04-07T01:38:34Z",
+      "count" : 778
+    }, {
+      "second" : "2026-04-07T01:38:35Z",
+      "count" : 880
+    }, {
+      "second" : "2026-04-07T01:38:36Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:38:37Z",
+      "count" : 971
+    }, {
+      "second" : "2026-04-07T01:38:38Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:38:39Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:38:40Z",
+      "count" : 1057
+    }, {
+      "second" : "2026-04-07T01:38:41Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:38:42Z",
+      "count" : 842
+    }, {
+      "second" : "2026-04-07T01:38:43Z",
+      "count" : 1041
+    }, {
+      "second" : "2026-04-07T01:38:44Z",
+      "count" : 1036
+    }, {
+      "second" : "2026-04-07T01:38:45Z",
+      "count" : 935
+    }, {
+      "second" : "2026-04-07T01:38:46Z",
+      "count" : 1021
+    }, {
+      "second" : "2026-04-07T01:38:47Z",
+      "count" : 801
+    }, {
+      "second" : "2026-04-07T01:38:48Z",
+      "count" : 865
+    }, {
+      "second" : "2026-04-07T01:38:49Z",
+      "count" : 809
+    }, {
+      "second" : "2026-04-07T01:38:50Z",
+      "count" : 968
+    }, {
+      "second" : "2026-04-07T01:38:51Z",
+      "count" : 906
+    }, {
+      "second" : "2026-04-07T01:38:52Z",
+      "count" : 966
+    }, {
+      "second" : "2026-04-07T01:38:53Z",
+      "count" : 946
+    }, {
+      "second" : "2026-04-07T01:38:54Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:38:55Z",
+      "count" : 994
+    }, {
+      "second" : "2026-04-07T01:38:56Z",
+      "count" : 1049
+    }, {
+      "second" : "2026-04-07T01:38:57Z",
+      "count" : 931
+    }, {
+      "second" : "2026-04-07T01:38:58Z",
+      "count" : 881
+    }, {
+      "second" : "2026-04-07T01:38:59Z",
+      "count" : 981
+    }, {
+      "second" : "2026-04-07T01:39:00Z",
+      "count" : 954
+    }, {
+      "second" : "2026-04-07T01:39:01Z",
+      "count" : 1047
+    }, {
+      "second" : "2026-04-07T01:39:02Z",
+      "count" : 1000
+    }, {
+      "second" : "2026-04-07T01:39:03Z",
+      "count" : 941
+    }, {
+      "second" : "2026-04-07T01:39:04Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:39:05Z",
+      "count" : 1054
+    }, {
+      "second" : "2026-04-07T01:39:06Z",
+      "count" : 1018
+    }, {
+      "second" : "2026-04-07T01:39:07Z",
+      "count" : 1005
+    }, {
+      "second" : "2026-04-07T01:39:08Z",
+      "count" : 894
+    }, {
+      "second" : "2026-04-07T01:39:09Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:39:10Z",
+      "count" : 969
+    }, {
+      "second" : "2026-04-07T01:39:11Z",
+      "count" : 987
+    }, {
+      "second" : "2026-04-07T01:39:12Z",
+      "count" : 1068
+    }, {
+      "second" : "2026-04-07T01:39:13Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:39:14Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:39:15Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:39:16Z",
+      "count" : 936
+    }, {
+      "second" : "2026-04-07T01:39:17Z",
+      "count" : 985
+    }, {
+      "second" : "2026-04-07T01:39:18Z",
+      "count" : 1026
+    }, {
+      "second" : "2026-04-07T01:39:19Z",
+      "count" : 995
+    }, {
+      "second" : "2026-04-07T01:39:20Z",
+      "count" : 971
+    }, {
+      "second" : "2026-04-07T01:39:21Z",
+      "count" : 886
+    }, {
+      "second" : "2026-04-07T01:39:22Z",
+      "count" : 1032
+    }, {
+      "second" : "2026-04-07T01:39:23Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:39:24Z",
+      "count" : 1008
+    }, {
+      "second" : "2026-04-07T01:39:25Z",
+      "count" : 859
+    }, {
+      "second" : "2026-04-07T01:39:26Z",
+      "count" : 804
+    }, {
+      "second" : "2026-04-07T01:39:27Z",
+      "count" : 774
+    }, {
+      "second" : "2026-04-07T01:39:28Z",
+      "count" : 929
+    }, {
+      "second" : "2026-04-07T01:39:29Z",
+      "count" : 1023
+    }, {
+      "second" : "2026-04-07T01:39:30Z",
+      "count" : 910
+    }, {
+      "second" : "2026-04-07T01:39:31Z",
+      "count" : 882
+    }, {
+      "second" : "2026-04-07T01:39:32Z",
+      "count" : 781
+    }, {
+      "second" : "2026-04-07T01:39:33Z",
+      "count" : 705
+    }, {
+      "second" : "2026-04-07T01:39:34Z",
+      "count" : 676
+    }, {
+      "second" : "2026-04-07T01:39:35Z",
+      "count" : 723
+    }, {
+      "second" : "2026-04-07T01:39:36Z",
+      "count" : 990
+    }, {
+      "second" : "2026-04-07T01:39:37Z",
+      "count" : 1002
+    }, {
+      "second" : "2026-04-07T01:39:38Z",
+      "count" : 1034
+    }, {
+      "second" : "2026-04-07T01:39:39Z",
+      "count" : 919
+    }, {
+      "second" : "2026-04-07T01:39:40Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:39:41Z",
+      "count" : 879
+    }, {
+      "second" : "2026-04-07T01:39:42Z",
+      "count" : 827
+    }, {
+      "second" : "2026-04-07T01:39:43Z",
+      "count" : 999
+    }, {
+      "second" : "2026-04-07T01:39:44Z",
+      "count" : 996
+    }, {
+      "second" : "2026-04-07T01:39:45Z",
+      "count" : 784
+    }, {
+      "second" : "2026-04-07T01:39:46Z",
+      "count" : 935
+    }, {
+      "second" : "2026-04-07T01:39:47Z",
+      "count" : 843
+    }, {
+      "second" : "2026-04-07T01:39:48Z",
+      "count" : 779
+    }, {
+      "second" : "2026-04-07T01:39:49Z",
+      "count" : 830
+    }, {
+      "second" : "2026-04-07T01:39:50Z",
+      "count" : 861
+    }, {
+      "second" : "2026-04-07T01:39:51Z",
+      "count" : 863
+    }, {
+      "second" : "2026-04-07T01:39:52Z",
+      "count" : 922
+    }, {
+      "second" : "2026-04-07T01:39:53Z",
+      "count" : 674
+    }, {
+      "second" : "2026-04-07T01:39:54Z",
+      "count" : 872
+    }, {
+      "second" : "2026-04-07T01:39:55Z",
+      "count" : 779
+    }, {
+      "second" : "2026-04-07T01:39:56Z",
+      "count" : 625
+    }, {
+      "second" : "2026-04-07T01:39:57Z",
+      "count" : 876
+    }, {
+      "second" : "2026-04-07T01:39:58Z",
+      "count" : 684
+    }, {
+      "second" : "2026-04-07T01:39:59Z",
+      "count" : 866
+    }, {
+      "second" : "2026-04-07T01:40:00Z",
+      "count" : 780
+    }, {
+      "second" : "2026-04-07T01:40:01Z",
+      "count" : 629
+    }, {
+      "second" : "2026-04-07T01:40:02Z",
+      "count" : 997
+    }, {
+      "second" : "2026-04-07T01:40:03Z",
+      "count" : 903
+    }, {
+      "second" : "2026-04-07T01:40:04Z",
+      "count" : 972
+    }, {
+      "second" : "2026-04-07T01:40:05Z",
+      "count" : 915
+    }, {
+      "second" : "2026-04-07T01:40:06Z",
+      "count" : 872
+    }, {
+      "second" : "2026-04-07T01:40:07Z",
+      "count" : 813
+    }, {
+      "second" : "2026-04-07T01:40:08Z",
+      "count" : 901
+    }, {
+      "second" : "2026-04-07T01:40:09Z",
+      "count" : 818
+    }, {
+      "second" : "2026-04-07T01:40:10Z",
+      "count" : 883
+    }, {
+      "second" : "2026-04-07T01:40:11Z",
+      "count" : 933
+    }, {
+      "second" : "2026-04-07T01:40:12Z",
+      "count" : 896
+    }, {
+      "second" : "2026-04-07T01:40:13Z",
+      "count" : 838
+    }, {
+      "second" : "2026-04-07T01:40:14Z",
+      "count" : 917
+    }, {
+      "second" : "2026-04-07T01:40:15Z",
+      "count" : 862
+    }, {
+      "second" : "2026-04-07T01:40:16Z",
+      "count" : 1001
+    }, {
+      "second" : "2026-04-07T01:40:17Z",
+      "count" : 659
+    }, {
+      "second" : "2026-04-07T01:40:18Z",
+      "count" : 837
+    }, {
+      "second" : "2026-04-07T01:40:19Z",
+      "count" : 870
+    }, {
+      "second" : "2026-04-07T01:40:20Z",
+      "count" : 884
+    }, {
+      "second" : "2026-04-07T01:40:21Z",
+      "count" : 1020
+    }, {
+      "second" : "2026-04-07T01:40:22Z",
+      "count" : 962
+    }, {
+      "second" : "2026-04-07T01:40:23Z",
+      "count" : 984
+    }, {
+      "second" : "2026-04-07T01:40:24Z",
+      "count" : 1006
+    }, {
+      "second" : "2026-04-07T01:40:25Z",
+      "count" : 943
+    }, {
+      "second" : "2026-04-07T01:40:26Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:40:27Z",
+      "count" : 409
+    }, {
+      "second" : "2026-04-07T01:40:28Z",
+      "count" : 705
+    }, {
+      "second" : "2026-04-07T01:40:29Z",
+      "count" : 993
+    }, {
+      "second" : "2026-04-07T01:40:30Z",
+      "count" : 914
+    }, {
+      "second" : "2026-04-07T01:40:31Z",
+      "count" : 942
+    }, {
+      "second" : "2026-04-07T01:40:32Z",
+      "count" : 1043
+    }, {
+      "second" : "2026-04-07T01:40:33Z",
+      "count" : 855
+    }, {
+      "second" : "2026-04-07T01:40:34Z",
+      "count" : 755
+    }, {
+      "second" : "2026-04-07T01:40:35Z",
+      "count" : 725
+    }, {
+      "second" : "2026-04-07T01:40:36Z",
+      "count" : 727
+    }, {
+      "second" : "2026-04-07T01:40:37Z",
+      "count" : 792
+    }, {
+      "second" : "2026-04-07T01:40:38Z",
+      "count" : 1042
+    }, {
+      "second" : "2026-04-07T01:40:39Z",
+      "count" : 1029
+    }, {
+      "second" : "2026-04-07T01:40:40Z",
+      "count" : 932
+    }, {
+      "second" : "2026-04-07T01:40:41Z",
+      "count" : 948
+    }, {
+      "second" : "2026-04-07T01:40:42Z",
+      "count" : 1019
+    }, {
+      "second" : "2026-04-07T01:40:43Z",
+      "count" : 1024
+    }, {
+      "second" : "2026-04-07T01:40:44Z",
+      "count" : 935
+    }, {
+      "second" : "2026-04-07T01:40:45Z",
+      "count" : 1022
+    }, {
+      "second" : "2026-04-07T01:40:46Z",
+      "count" : 1046
+    }, {
+      "second" : "2026-04-07T01:40:47Z",
+      "count" : 675
+    }, {
+      "second" : "2026-04-07T01:40:48Z",
+      "count" : 513
+    }, {
+      "second" : "2026-04-07T01:40:49Z",
+      "count" : 905
+    }, {
+      "second" : "2026-04-07T01:40:50Z",
+      "count" : 953
+    }, {
+      "second" : "2026-04-07T01:40:51Z",
+      "count" : 812
+    }, {
+      "second" : "2026-04-07T01:40:52Z",
+      "count" : 987
+    }, {
+      "second" : "2026-04-07T01:40:53Z",
+      "count" : 1013
+    }, {
+      "second" : "2026-04-07T01:40:54Z",
+      "count" : 821
+    }, {
+      "second" : "2026-04-07T01:40:55Z",
+      "count" : 860
+    }, {
+      "second" : "2026-04-07T01:40:56Z",
+      "count" : 977
+    }, {
+      "second" : "2026-04-07T01:40:57Z",
+      "count" : 781
+    } ],
+    "topActiveUsers" : [ {
+      "messageCount" : 45,
+      "userId" : "75141"
+    }, {
+      "messageCount" : 41,
+      "userId" : "44015"
+    }, {
+      "messageCount" : 41,
+      "userId" : "57370"
+    }, {
+      "messageCount" : 40,
+      "userId" : "65418"
+    }, {
+      "messageCount" : 40,
+      "userId" : "95061"
+    }, {
+      "messageCount" : 40,
+      "userId" : "63970"
+    }, {
+      "messageCount" : 40,
+      "userId" : "32042"
+    }, {
+      "messageCount" : 39,
+      "userId" : "63287"
+    }, {
+      "messageCount" : 39,
+      "userId" : "6053"
+    }, {
+      "messageCount" : 39,
+      "userId" : "51431"
+    } ],
+    "topActiveRooms" : [ {
+      "messageCount" : 100639,
+      "roomId" : "10"
+    }, {
+      "messageCount" : 100543,
+      "roomId" : "3"
+    }, {
+      "messageCount" : 100375,
+      "roomId" : "11"
+    }, {
+      "messageCount" : 100330,
+      "roomId" : "2"
+    }, {
+      "messageCount" : 100250,
+      "roomId" : "7"
+    }, {
+      "messageCount" : 100199,
+      "roomId" : "16"
+    }, {
+      "messageCount" : 100156,
+      "roomId" : "19"
+    }, {
+      "messageCount" : 100126,
+      "roomId" : "12"
+    }, {
+      "messageCount" : 100034,
+      "roomId" : "17"
+    }, {
+      "messageCount" : 100028,
+      "roomId" : "14"
+    } ],
+    "userParticipationPatterns" : [ {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "1"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "100"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "1000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "100000"
+    }, {
+      "hour" : "1",
+      "messageCount" : 23,
+      "userId" : "10001"
+    }, {
+      "hour" : "1",
+      "messageCount" : 26,
+      "userId" : "10002"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10003"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10004"
+    }, {
+      "hour" : "1",
+      "messageCount" : 11,
+      "userId" : "10005"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10006"
+    }, {
+      "hour" : "1",
+      "messageCount" : 12,
+      "userId" : "10007"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10008"
+    }, {
+      "hour" : "1",
+      "messageCount" : 12,
+      "userId" : "10009"
+    }, {
+      "hour" : "1",
+      "messageCount" : 23,
+      "userId" : "1001"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10010"
+    }, {
+      "hour" : "1",
+      "messageCount" : 12,
+      "userId" : "10011"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10012"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10013"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10014"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10015"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10016"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10017"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10018"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10019"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "1002"
+    }, {
+      "hour" : "1",
+      "messageCount" : 25,
+      "userId" : "10020"
+    }, {
+      "hour" : "1",
+      "messageCount" : 30,
+      "userId" : "10021"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10022"
+    }, {
+      "hour" : "1",
+      "messageCount" : 14,
+      "userId" : "10023"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10024"
+    }, {
+      "hour" : "1",
+      "messageCount" : 24,
+      "userId" : "10025"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10026"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10027"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10028"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10029"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "1003"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10030"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10031"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10032"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10033"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10034"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10035"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10036"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10037"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10038"
+    }, {
+      "hour" : "1",
+      "messageCount" : 23,
+      "userId" : "10039"
+    }, {
+      "hour" : "1",
+      "messageCount" : 11,
+      "userId" : "1004"
+    }, {
+      "hour" : "1",
+      "messageCount" : 24,
+      "userId" : "10040"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10041"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10042"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10043"
+    }, {
+      "hour" : "1",
+      "messageCount" : 25,
+      "userId" : "10044"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10045"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10046"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10047"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10048"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10049"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "1005"
+    }, {
+      "hour" : "1",
+      "messageCount" : 28,
+      "userId" : "10050"
+    }, {
+      "hour" : "1",
+      "messageCount" : 14,
+      "userId" : "10051"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10052"
+    }, {
+      "hour" : "1",
+      "messageCount" : 21,
+      "userId" : "10053"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10054"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10055"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10056"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10057"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "10058"
+    }, {
+      "hour" : "1",
+      "messageCount" : 13,
+      "userId" : "10059"
+    }, {
+      "hour" : "1",
+      "messageCount" : 19,
+      "userId" : "1006"
+    }, {
+      "hour" : "1",
+      "messageCount" : 14,
+      "userId" : "10060"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10061"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10062"
+    }, {
+      "hour" : "1",
+      "messageCount" : 33,
+      "userId" : "10063"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10064"
+    }, {
+      "hour" : "1",
+      "messageCount" : 13,
+      "userId" : "10065"
+    }, {
+      "hour" : "1",
+      "messageCount" : 11,
+      "userId" : "10066"
+    }, {
+      "hour" : "1",
+      "messageCount" : 16,
+      "userId" : "10067"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10068"
+    }, {
+      "hour" : "1",
+      "messageCount" : 28,
+      "userId" : "10069"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "1007"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10070"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10071"
+    }, {
+      "hour" : "1",
+      "messageCount" : 14,
+      "userId" : "10072"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10073"
+    }, {
+      "hour" : "1",
+      "messageCount" : 22,
+      "userId" : "10074"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10075"
+    }, {
+      "hour" : "1",
+      "messageCount" : 13,
+      "userId" : "10076"
+    }, {
+      "hour" : "1",
+      "messageCount" : 27,
+      "userId" : "10077"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10078"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10079"
+    }, {
+      "hour" : "1",
+      "messageCount" : 24,
+      "userId" : "1008"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10080"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10081"
+    }, {
+      "hour" : "1",
+      "messageCount" : 18,
+      "userId" : "10082"
+    }, {
+      "hour" : "1",
+      "messageCount" : 15,
+      "userId" : "10083"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10084"
+    }, {
+      "hour" : "1",
+      "messageCount" : 20,
+      "userId" : "10085"
+    }, {
+      "hour" : "1",
+      "messageCount" : 17,
+      "userId" : "10086"
+    } ]
+  }
+}
+==============================
+✅ Metrics API call successful (HTTP 200)
